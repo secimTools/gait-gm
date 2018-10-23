@@ -1,14 +1,9 @@
-#######################################################################################
-# DATE: 2018/May/10                                                                   #
-#                                                                                     #
-# MODULE: all_by_all_correlation.R                                                    #
-#                                                                                     #
-# VERSION: 1.0                                                                        #
-#                                                                                     #
-# AUTHOR: Francisco Huertas (f.huertas@ufl.edu)                                       #
-#                                                                                     #
-# DESCRIPTION: This tool performs a correlation analysis over two different datasets. #
-#                                                                                     #
+######################################################################################
+# AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
+#
+# DESCRIPTION: Perform a correlation analysis of two datasets.
+#
+# VERSION: 1.0
 #######################################################################################
 
 #################
@@ -31,7 +26,7 @@ corr_main_func <- function(x, y, meth, thres, corrMatPath, outputPath, figurePat
 
     :param meth: Methodology for the correlation function. One of 'pearson', 'spearman' or 'kendall'.
     :type meth: string
-    
+
     :param thres: Threshold to cut the correlations for the output table.
     :type thres: float
 
@@ -39,8 +34,8 @@ corr_main_func <- function(x, y, meth, thres, corrMatPath, outputPath, figurePat
     :type corrMatPath: string
 
     :param outputPath: Full path for the Output table
-    :type outputPath: string       
-    
+    :type outputPath: string
+
     :param figurePath: Full Path for the Network-like output figure
     :type figurePath: string
   "
@@ -85,16 +80,16 @@ corr_main_func <- function(x, y, meth, thres, corrMatPath, outputPath, figurePat
   # Final pvalue matrix
   pval_mat <- pval_mat_counts/N
   finalTable <- return_result(corr_orig, pval_mat, thres)
-  
+
   # Write outputs
   plot_relations_network(finalTable, figurePath)
   write.table(corr_orig, corrMatPath, sep = "\t", row.names = TRUE, col.names = NA, quote = FALSE)
   write.table(finalTable, outputPath, sep = "\t", row.names = FALSE, col.names = TRUE, quote = FALSE)
 }
 
-######################
-# Auxiliar Functions #
-######################
+#######################
+# Auxiliary Functions #
+#######################
 
 # Check Near Zero Variance
 checkZeroVar <- function(matrix){
@@ -111,8 +106,6 @@ checkZeroVar <- function(matrix){
     :return newMatrix: Matrix without near zero variance variables.
     :rtype newMatrix: matrix
   "
-  
-  # Libraries
   library(caret)
 
   nzv_cols <- nearZeroVar(matrix)
@@ -202,7 +195,7 @@ plot_relations_network <- function(relations.sif, figurePath){
     :param figurePath: Full path for saving the pdf output.
     :type figurePath: string
   "
-  
+
   # Libraries
   library(igraph)
 
@@ -221,7 +214,7 @@ plot_relations_network <- function(relations.sif, figurePath){
 
   plot.igraph(graph,
               layout=layout.fruchterman.reingold,
-              vertex.size=4, 
+              vertex.size=4,
               vertex.frame.color="gray",
               vertex.label.color="black",
               vertex.label.cex=0.3)
@@ -235,6 +228,6 @@ plot_relations_network <- function(relations.sif, figurePath){
          text.col = "black",
          horiz = F)
   title(main = paste(as.character(numRelations), "Strongest correlations\nBetween Genes and Metabolites", sep = " "))
-  
+
   dev.off()
 }
