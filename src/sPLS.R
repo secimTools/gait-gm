@@ -1,23 +1,13 @@
+######################################################################################
+# AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
+# CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
+#
+# DESCRIPTION: Performs a sparse PLS over subsets of gene Expression and metabolite data.
+#
+# VERSION: 1.0
 #######################################################################################
-# DATE: 2018/June/11                                                                   #
-#                                                                                     #
-# MODULE: sPLS.R                                                                      #
-#                                                                                     #
-# VERSION: 1.0                                                                        #
-#                                                                                     #
-# AUTHOR: Francisco Huertas (f.huertas@ufl.edu)                                       #
-#                                                                                     #
-# DESCRIPTION: This tool performs an sparse PLS over subsets of gene Expression and   #
-#              metabolite data.                                                       #
-#                                                                                     #
-#######################################################################################
-
-#################
-# Main Function #
-#################
 
 sPLS <- function(geneData, metData, keepX){
-  
   "
   This function perform an sparse PLS (sPLS) using mixOmics spls function. Genes are the
   explanatory variable (X), while metabolites are the response variables (Y).
@@ -46,7 +36,7 @@ sPLS <- function(geneData, metData, keepX){
   geneData[indx] <- lapply(geneData[indx], function(x) as.numeric(as.character(x)))
   indx <- sapply(metData, is.factor)
   metData[indx] <- lapply(metData[indx], function(x) as.numeric(as.character(x)))
-    
+
   # Transpose matrices (Genes in columns, Subjects in rows)
   geneData_T <- t(geneData)
   metData_T <- t(metData)
@@ -59,7 +49,6 @@ sPLS <- function(geneData, metData, keepX){
 }
 
 plotInPdf <- function(splsObjects, figurePath, multipleNames){
-  
   "
   This function uses the cim() function from mixOmics to plot a heatmap with the sPLS results.
 
@@ -73,7 +62,7 @@ plotInPdf <- function(splsObjects, figurePath, multipleNames){
     :param multipleNames: List containing the different metabolite types (e.g. sphingomyelin).
     :type multipleNames: List
   "
-  
+
   pdf(file=figurePath, height = 12, width = 10)
 
   i <- 1
@@ -99,15 +88,14 @@ plotInPdf <- function(splsObjects, figurePath, multipleNames){
 }
 
 corrMat <- function(splsObjects, multipleNames, threshold){
-  
   "
   This function creates again the correlation matrix between genes and metabolites and creates a sif-like
   table with the most important correlations.
-  
+
   Arguments:
     :param splsObjects: List with all the SPLS objects from sPLS function.
     :type splsObects: List
-    
+
     :param multipleNames: List containing the different metabolite types (e.g. sphingomyelin).
     :type multipleNames: List
 
@@ -123,18 +111,18 @@ corrMat <- function(splsObjects, multipleNames, threshold){
   colnames(correlations) <- correlations[1,]
   correlations <- correlations[-1,]
   i <- 1
-  
+
   for (SPLS in splsObjects){
     comp=1:SPLS$ncomp
-    
+
     keep.X = apply(abs(SPLS$loadings$X[,comp, drop = FALSE]), 1, sum) > 0
     keep.Y = apply(abs(SPLS$loadings$Y[,comp, drop = FALSE]), 1, sum) > 0
-    
+
     cord.X = cor(SPLS$X[, keep.X, drop = FALSE], SPLS$variates$X[, comp], use = "pairwise")
     cord.Y = cor(SPLS$Y[, keep.Y, drop = FALSE], SPLS$variates$X[, comp], use = "pairwise")
 
     XY.SPLS = as.matrix(cord.X %*% t(cord.Y))
-    
+
     for(row in 1:nrow(XY.SPLS)) {
       for(col in 1:ncol(XY.SPLS)) {
         correlation <- as.numeric(round(XY.SPLS[row,col], digits = 3))
@@ -155,6 +143,6 @@ corrMat <- function(splsObjects, multipleNames, threshold){
     colnames(correlations) <- c("Metabolite", "Gene", "Correlation", "Subset")
     correlations <- correlations[order(correlations[4], abs(correlations[3]), decreasing = TRUE), ]
   }
-  
+
   return(correlations)
 }
