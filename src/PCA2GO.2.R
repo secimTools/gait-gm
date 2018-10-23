@@ -3,21 +3,20 @@
 # associated by belonging to a GO, given a selection of GOs
 # It prodices a matrix X.sel with columns the number of
 # conditions and rows the number of GO_genes
-# 
+#
 # Input data
 # X: expression data matrix
 # selection: GO selection object obtained by select.GO
 # fac_sel = criterion to select components, con be:
-# 	%accum = percentage of accumulated variability
-#	single% = percentage of variability of that PC
-#	abs.val = absolute value of the variabily of that PC
-#	rel.abs = fold variability of tot.var/rank(X)
+#   %accum = percentage of accumulated variability
+#   single% = percentage of variability of that PC
+#   abs.val = absolute value of the variabily of that PC
+#   rel.abs = fold variability of tot.var/rank(X)
 # var_cutoff = variability cut off value
 #
 # Ana Conesa aconesa@cipf.es 8 September 2007
 ############################################################
 
-# Paco edit (Name of function, doesn't work as PCA2GO.2)
 PCA2GO <- function (X, annotation, var_cutoff, fac_sel)
 {
 var_cutoff <- as.numeric(var_cutoff)
@@ -34,46 +33,45 @@ n.ge <- NULL
 X.loadings <- vector(mode = "list", length = 0)
 # PCAs for all GOs loop
    for (i in 1: length(go.sel)) {
-	gene.sel <- annotation[annotation[,2] == go.sel[i],1]
+    gene.sel <- annotation[annotation[,2] == go.sel[i],1]
         if (length(gene.sel) > 1) {
       total.genes <- unique(c(total.genes, gene.sel))
       gene.sel <- is.element(rownames(X), gene.sel)
       if (length(which(gene.sel)) > 1) {
          gene.sel <- X[gene.sel,]
          if (any(is.na(gene.sel))) { gene.sel <- pca4NA(gene.sel)}
-		pca.sel <- PCA.GENES(t(gene.sel))  # pca
-		eigen <- pca.sel$eigen$values
-		tot.var <- sum(eigen)
-		eigen.val <- c(eigen.val, tot.var)
-		rank <- length(which(eigen > 1e-16))
-		level <- 1
-		# num fac
-      	if (fac_sel == "accum") {
-			fac <- max(length(which(pca.sel$var.exp[,2] <= var_cutoff / sqrt(level))),1)
-		} else if (fac_sel == "single"){
-      		fac <- length(which(pca.sel$var.exp[,1] >= (var_cutoff / sqrt(level))))
-		} else if (fac_sel == "rel.abs"){
-			mean.expl.var <- tot.var/ nrow(gene.sel)
-			fac <- length(which(eigen >= (mean.expl.var*var_cutoff / sqrt(level))))
-		} else if (fac_sel == "abs.val"){
-			abs.val.bycomp <- mean(apply(pca.sel$Xoff,2,var)) * nrow(gene.sel)
-			fac <- length(which(eigen >= abs.val.bycomp * var_cutoff / sqrt(level)))
-		}
-		tot.variab <- c(tot.variab, pca.sel$var.exp[,1])
-		#variab <- c(variab, pca.sel$var.exp[1:fac,1])
-		if (fac > 0 ) { # num fac
-		
-            	variab <- c(variab, pca.sel$var.exp[1:fac,1])
-            	n.ge <- c(n.ge, nrow(gene.sel))
-      		n.go <- c(n.go, fac)
-      		data.h <- as.matrix(pca.sel$scores[,1:fac])
+        pca.sel <- PCA.GENES(t(gene.sel))  # pca
+        eigen <- pca.sel$eigen$values
+        tot.var <- sum(eigen)
+        eigen.val <- c(eigen.val, tot.var)
+        rank <- length(which(eigen > 1e-16))
+        level <- 1
+        # num fac
+          if (fac_sel == "accum") {
+            fac <- max(length(which(pca.sel$var.exp[,2] <= var_cutoff / sqrt(level))),1)
+        } else if (fac_sel == "single"){
+              fac <- length(which(pca.sel$var.exp[,1] >= (var_cutoff / sqrt(level))))
+        } else if (fac_sel == "rel.abs"){
+            mean.expl.var <- tot.var/ nrow(gene.sel)
+            fac <- length(which(eigen >= (mean.expl.var*var_cutoff / sqrt(level))))
+        } else if (fac_sel == "abs.val"){
+            abs.val.bycomp <- mean(apply(pca.sel$Xoff,2,var)) * nrow(gene.sel)
+            fac <- length(which(eigen >= abs.val.bycomp * var_cutoff / sqrt(level)))
+        }
+        tot.variab <- c(tot.variab, pca.sel$var.exp[,1])
+        #variab <- c(variab, pca.sel$var.exp[1:fac,1])
+        if (fac > 0 ) { # num fac
+                variab <- c(variab, pca.sel$var.exp[1:fac,1])
+                n.ge <- c(n.ge, nrow(gene.sel))
+              n.go <- c(n.go, fac)
+              data.h <- as.matrix(pca.sel$scores[,1:fac])
                 loads <-  as.matrix(pca.sel$loadings[, 1:fac])
-		colnames(data.h) <- paste(go.sel[i], c(1:fac), sep="_")
-      		X.sel <- cbind(X.sel,data.h) # attach to results matrix
+        colnames(data.h) <- paste(go.sel[i], c(1:fac), sep="_")
+              X.sel <- cbind(X.sel,data.h) # attach to results matrix
                 for (u in 1:fac)  { X.loadings[[length(X.loadings)+1]] <- loads[,u] }
-               	}
+                   }
             }
-	}
+    }
    }
 # Rearrange result
 rownames(X.sel) <- colnames(X)
@@ -141,30 +139,30 @@ PCA.GENES<-function(X)
 {
   #PCA.GENES is very useful to obtain principal components to a matrix that has more variables than individuals. 
   #R can not apply princomp is such case and when there are a lot of variables eigen(t(X)%*%X) can not be computed.
-  
+
   #X is a matrix that has on columns the genes considered as variables in the PCA analysis.
   #First we center the matrix by columns (Xoff) and then we obtain the eigenvalues and the eigenvectors of the matrix Xoff%*%t(Xoff) and we #use the equivalences between the loadings and scores to obtain the solution
   #Llamo scores1 y loadings1 a lo que busco y scores2 y loadings2 a los scores y loadings de la traspuesta
-  
+
   X <- as.matrix(X)
   n<-ncol(X)
   p<-nrow(X)
   offset<-apply(X,2,mean)
   Xoff<-X-(cbind(matrix(1,p,1))%*%rbind(offset))
-  
+
   #eigen command sorts the eigenvalues in decreasing orden.
-  
+
   eigen<-eigen(Xoff%*%t(Xoff)/(p-1))
   var<-cbind(eigen$values/sum(eigen$values),cumsum(eigen$values/sum(eigen$values)))
-  
+
   loadings2<-eigen$vectors
   scores2<-t(Xoff)%*%loadings2
-  
+
   normas2<-sqrt(apply(scores2^2,2,sum))
-  
+
   scores1<-loadings2%*%diag(normas2)
   loadings1<-scores2%*%diag(1/normas2)
-  
+
   output<-list(eigen,var,scores1,loadings1, Xoff)
   names(output)<-c("eigen","var.exp","scores","loadings", "Xoff")
   output
