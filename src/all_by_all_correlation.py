@@ -157,7 +157,7 @@ def getOptions():
     return args
 
 
-def main(args):
+def main():
     """
     Perform a correlation analysis of a Gene Expression Dataset and a Metabolomic Dataset.
 
