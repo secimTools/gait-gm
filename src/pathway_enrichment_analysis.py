@@ -10,7 +10,6 @@
 import argparse
 from argparse import RawDescriptionHelpFormatter
 import os
-import keggPeaModules as modules
 import relations_enrichment as RE
 import scipy.stats as st
 
@@ -116,12 +115,13 @@ def createDict(args):
         :param kegg_downloader: Table with kegg_downloader program output information
         :type kegg_downloader: file
 
-        :params deaGeneDataset deaMetDataset: Tables with Differential Expression Analysis information for gene expression
-            and metabolomics, respectively
+        :params deaGeneDataset deaMetDataset: Tables with Differential Expression Analysis
+            information for gene expression and metabolomics, respectively
         :types deaGeneDataset deaMetDataset: files
 
-        :params gene_id_col, met_id_col, gene_flag_col, met_flag_col: Column names of unique identifiers and desired
-            flag column of gene expression and metabolomics datasets, respectively
+        :params gene_id_col, met_id_col, gene_flag_col, met_flag_col: Column names of unique
+            identifiers and desired flag column of gene expression and metabolomics datasets,
+            respectively
         :type gene_id_col, met_id_col, gene_flag_col, met_flag_col: strings
 
     Returns:
@@ -188,9 +188,9 @@ def pathwayFisher(genes1step, step):
     numberOfItems = {}
     output = open("output" + str(step) + ".txt", "w")
     output.write(
-        "Genes"
-        + str(step)
-        + "stepAway\tDEG_with_DEM\tNoDEG_with_DEM\tDEG_with_NoDEM\tNoDEG_with_NoDEM\tPvalue\tOddsRatio\n"
+        "Genes" +
+        str(step) +
+        "stepAway\tDEG_with_DEM\tNoDEG_with_DEM\tDEG_with_NoDEM\tNoDEG_with_NoDEM\tPvalue\tOddsRatio\n"
     )
 
     for metabolite, genes in genes1step.iteritems():
@@ -218,21 +218,20 @@ def pathwayFisher(genes1step, step):
             [[DEM_DEG, DEM_NoDEG], [NoDEM_DEG, NoDEM_NoDEG]]
         )
         output.write(
-            str(numberOfGenes)
-            + "\t"
-            + str(DEM_DEG)
-            + "\t"
-            + str(DEM_NoDEG)
-            + "\t"
-            + str(NoDEM_DEG)
-            + "\t"
-            + str(NoDEM_NoDEG)
-            + "\t"
-            + str(pvalue)
-            + "\t"
-            + str(oddsratio)
-            + "\n"
-        )
+            str(numberOfGenes) +
+            "\t" +
+            str(DEM_DEG) +
+            "\t" +
+            str(DEM_NoDEG) +
+            "\t" +
+            str(NoDEM_DEG) +
+            "\t" +
+            str(NoDEM_NoDEG) +
+            "\t" +
+            str(pvalue) +
+            "\t" +
+            str(oddsratio) +
+            "\n")
 
     return ()
 

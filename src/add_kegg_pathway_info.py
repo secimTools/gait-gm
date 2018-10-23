@@ -158,26 +158,33 @@ def main(args):
     analyzed with add_kegg_anno_info.py.
 
     Arguments:
-        :params geneKeggAnnot metKeggAnnot: Output file from add_kegg_anno_info tool for genes or metabolites respectively.
+        :params geneKeggAnnot metKeggAnnot: Output file from add_kegg_anno_info tool for genes or
+        metabolites respectively.
         :types geneKeggAnnot metKeggAnnot: files
 
-        :params geneUniqId metUniqId: Name of the column with Unique identifiers for genes or metabolites respectively.
+        :params geneUniqId metUniqId: Name of the column with Unique identifiers for genes or
+        metabolites respectively.
         :types geneUniqId metUniqId: strings
 
-        :params geneName metName: Name of the column with the names of the genes or metabolites respectively.
+        :params geneName metName: Name of the column with the names of the genes or metabolites
+        respectively.
         :types geneName metName: strings
 
-        :params geneKeggId metKeggId: Name of the column with the KEGG Identifiers of the genes or metabolites respectively.
+        :params geneKeggId metKeggId: Name of the column with the KEGG Identifiers of the genes or
+        metabolites respectively.
         :types geneKeggId metKeggId: strings
 
     Return:
-        :returns geneOut metOut: Output tables with this structure: UniqueID FeatureName FeatureType Kegg_ID Pathway_ID Pathway_Name
+        :returns geneOut metOut: Output tables with this structure: UniqueID FeatureName
+        FeatureType Kegg_ID Pathway_ID Pathway_Name
         :rtypes geneOut metOut: files
 
-        :returns kgen2pathway kmet2pathway: Table with this information: kegg_identifiers "\t" pathway_identifiers
+        :returns kgen2pathway kmet2pathway: Table with this information: kegg_identifiers "\t"
+        pathway_identifiers
         :rtypes kgen2pathway kmet2pathway: files
 
-        :returns pathways: Table with this information: pathway_identifier "\t" Pathway_name"-"Specified_organism
+        :returns pathways: Table with this information: pathway_identifier "\t"
+        Pathway_name"-"Specified_organism
         :rtypes pathways: file
     """
 

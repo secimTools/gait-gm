@@ -3,7 +3,7 @@
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
 #
-# DESCRIPTION: This tool takes a wide dataset and append a unique identifier to it.
+# DESCRIPTION: Take a wide dataset and append a unique identifier to it.
 #
 # VERSION: 1.0
 #######################################################################################
@@ -114,7 +114,8 @@ def main(args):
         :param prefix: Prefix to add to the new Unique ID (optional)
         :type prefix: string
 
-        :param prefix2: Prefix to add to the old Unique ID (optional). Necessary if provided unique ID is numeric.
+        :param prefix2: Prefix to add to the old Unique ID (optional). Necessary if provided unique
+            ID is numeric.
         :type prefix2: string
 
     Returns:

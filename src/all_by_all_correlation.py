@@ -13,13 +13,13 @@ import warnings
 import argparse
 from argparse import RawDescriptionHelpFormatter
 import matplotlib
-matplotlib.use("Agg")
 import pandas as pd
 from rpy2.robjects import pandas2ri
 from rpy2.rinterface import RRuntimeWarning
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
 import keggPeaModules as modules
 from secimtools.dataManager import logger as sl
+matplotlib.use("Agg")
 
 
 def getOptions():
@@ -171,17 +171,21 @@ def main():
         :param geneAnnot metAnnot: Gene Expression/Metabolomics Annotation Datasets, respectively.
         :type geneAnnot metAnnot: files
 
-        :param geneAnnotName metAnnotName: Name of the column of the Annotation file that contains genes/metabolites names respectively.
+        :param geneAnnotName metAnnotName: Name of the column of the Annotation file that contains
+        genes/metabolites names respectively.
         :type geneAnnotName metAnnotName: strings
 
-        :param meth: Methodology for the correlation function. One of 'pearson', 'spearman' or 'kendall'.
+        :param meth: Methodology for the correlation function. One of 'pearson', 'spearman' or
+        'kendall'.
         :type meth: string
 
         :param thres: PValue Threshold to cut the correlations for the output table.
         :type thres: float
 
     Returns:
-        :return output: Output table with the following information: Metabolite "\t" Gene "\t" Correlation "\t" pvalue
+        :return output: Output table with the following information: Metabolite "\t" Gene "\t"
+        Correlation "\t" pvalue
+
         :rtype output: file
 
         :return corMat: Correlation Matrix

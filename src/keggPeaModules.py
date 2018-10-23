@@ -110,13 +110,15 @@ def keggAnno(feature_table, feature2keggs, featureOut, uniqIDNameCol, featureNam
     It will return an Annotation Dataset with this information and list possible ties.
 
     Arguments:
-        :param feature_table: Table that contains at least a column with a Unique Identifier and another one with the feature name.
+        :param feature_table: Table that contains at least a column with a Unique Identifier and
+        another one with the feature name.
         :type feature_table: pandas dataset
 
         :param feature2keggs: Dictionary created with KEGG Information: {KEGG_ID: FeatureName}
         :type feature2keggs: dictionary
 
-        :param featureOut: Initializated output table with this information: UniqId FeatureName Feature_Type Matched Name_in_KEGG KEGG_ID Similarity Tie Selected
+        :param featureOut: Initializated output table with this information: UniqId FeatureName
+        Feature_Type Matched Name_in_KEGG KEGG_ID Similarity Tie Selected
         :type featureOut: file
 
         :param uniqIDNameCol: Name of the column with Unique Identifiers.
@@ -146,16 +148,17 @@ def keggAnno(feature_table, feature2keggs, featureOut, uniqIDNameCol, featureNam
         # To not match NaN to KEGG
         if featureName.lower() in emptyList:
             tmpList_v1.append(
-                uniqueID
-                + "\t"
-                + featureName
-                + "\t"
-                + featureType
-                + "\tNA\tNA\tNA\tNA\tNA\tNA\n"
+                uniqueID +
+                "\t" +
+                featureName +
+                "\t" +
+                featureType +
+                "\tNA\tNA\tNA\tNA\tNA\tNA\n"
             )
         else:
             featureDict_v1 = {}
-            # Create dictionary for each metabolite: {keggMetName1: [similarity1, kegg_cpd1], keggMetName2: [similarity2, kegg_cpd2], ...}
+            # metabolite dict: {keggMetName1: [similarity1, kegg_cpd1], keggMetName2: [similarity2,
+            # kegg_cpd2], ...}
             for kegg_id, keggFeatureNames in feature2keggs.items():
                 if featureType == "Gene":
                     keggGeneNames = keggFeatureNames.split(";")[0].split(",")
@@ -213,29 +216,28 @@ def keggAnno(feature_table, feature2keggs, featureOut, uniqIDNameCol, featureNam
                         is_tie = "No"
                 else:
                     is_tie = "No"
-                # UniqueID  FeatureName  featureType  Matched  Name in Kegg  Kegg_cpd  Similarity  Tie  Selected
+            # UniqueID FeatureName featureType Matched KEGG_Name Kegg_cpd Similarity Tie  elected
                 tmpList_v1.append(
-                    uniqueID
-                    + "\t"
-                    + featureName
-                    + "\t"
-                    + featureType
-                    + "\t"
-                    + "Yes"
-                    + "\t"
-                    + str(
+                    uniqueID +
+                    "\t" +
+                    featureName +
+                    "\t" +
+                    featureType +
+                    "\t" +
+                    "Yes" +
+                    "\t" +
+                    str(
                         list(featureDict_v1.keys())[
                             list(featureDict_v1.values()).index(maximum_v1)
                         ]
-                    )
-                    + "\t"
-                    + str(maximum_v1[1])
-                    + "\t"
-                    + str(round(maximum_v1[0], 2))
-                    + "\t"
-                    + is_tie
-                    + "\tYes\n"
-                )
+                    ) +
+                    "\t" +
+                    str(maximum_v1[1]) +
+                    "\t" +
+                    str(round(maximum_v1[0], 2)) +
+                    "\t" +
+                    is_tie +
+                    "\tYes\n")
                 featureDict_v2 = dict(featureDict_v1)
                 del featureDict_v2[
                     list(featureDict_v2.keys())[
@@ -245,67 +247,65 @@ def keggAnno(feature_table, feature2keggs, featureOut, uniqIDNameCol, featureNam
                 for keggName in featureDict_v2:
                     if is_tie == "Yes":
                         if (
-                            keggName
-                            == list(featureDict_v1.keys())[
+                            keggName == list(featureDict_v1.keys())[
                                 list(featureDict_v1.values()).index(maximum_v2)
                             ]
                         ):
                             tmpList_v1.append(
-                                uniqueID
-                                + "\t"
-                                + featureName
-                                + "\t"
-                                + featureType
-                                + "\tYes\t"
-                                + str(keggName.strip())
-                                + "\t"
-                                + str(featureDict_v2[keggName][1])
-                                + "\t"
-                                + str(round(featureDict_v2[keggName][0], 2))
-                                + "\t"
-                                + is_tie
-                                + "\tNo\n"
+                                uniqueID +
+                                "\t" +
+                                featureName +
+                                "\t" +
+                                featureType +
+                                "\tYes\t" +
+                                str(keggName.strip()) +
+                                "\t" +
+                                str(featureDict_v2[keggName][1]) +
+                                "\t" +
+                                str(round(featureDict_v2[keggName][0], 2)) +
+                                "\t" +
+                                is_tie +
+                                "\tNo\n"
                             )
                         else:
                             tmpList_v2.append(
-                                uniqueID
-                                + "\t"
-                                + featureName
-                                + "\t"
-                                + featureType
-                                + "\tYes\t"
-                                + str(keggName.strip())
-                                + "\t"
-                                + str(featureDict_v2[keggName][1])
-                                + "\t"
-                                + str(round(featureDict_v2[keggName][0], 2))
-                                + "\tNo\tNo\n"
+                                uniqueID +
+                                "\t" +
+                                featureName +
+                                "\t" +
+                                featureType +
+                                "\tYes\t" +
+                                str(keggName.strip()) +
+                                "\t" +
+                                str(featureDict_v2[keggName][1]) +
+                                "\t" +
+                                str(round(featureDict_v2[keggName][0], 2)) +
+                                "\tNo\tNo\n"
                             )
                     else:
                         tmpList_v2.append(
-                            uniqueID
-                            + "\t"
-                            + featureName
-                            + "\t"
-                            + featureType
-                            + "\tYes\t"
-                            + str(keggName.strip())
-                            + "\t"
-                            + str(featureDict_v2[keggName][1])
-                            + "\t"
-                            + str(round(featureDict_v2[keggName][0], 2))
-                            + "\t"
-                            + is_tie
-                            + "\tNo\n"
-                        )
+                            uniqueID +
+                            "\t" +
+                            featureName +
+                            "\t" +
+                            featureType +
+                            "\tYes\t" +
+                            str(keggName.strip()) +
+                            "\t" +
+                            str(featureDict_v2[keggName][1]) +
+                            "\t" +
+                            str(round(featureDict_v2[keggName][0], 2)) +
+                            "\t" +
+                            is_tie +
+                            "\tNo\n")
             else:
                 tmpList_v1.append(
-                    uniqueID
-                    + "\t"
-                    + featureName
-                    + "\t"
-                    + featureType
-                    + "\tNo\tNA\tNA\tNA\tNA\tNA\n"
+                    uniqueID +
+                    "\t" +
+                    featureName +
+                    "\t" +
+                    featureType +
+                    "\tNo\tNA\tNA\tNA\tNA\tNA\n"
                 )
 
     # Writing results - first selected metabolites, last non-selected metabolites.
@@ -400,9 +400,9 @@ def metaboliteModification(metabolite):
     newMetNamesNoPrefix = []
     # If metabolite is an abbreviation of an aminoacid
     if (
-        (metabolite in dict(tuple(aminoacids.values())).keys())
-        or (metabolite in dict(tuple(aminoacids.values())).values())
-        or (metabolite in str(tuple(aminoacids.keys())))
+        (metabolite in dict(tuple(aminoacids.values())).keys()) or
+        (metabolite in dict(tuple(aminoacids.values())).values()) or
+        (metabolite in str(tuple(aminoacids.keys())))
     ):
         for aminoacid in aminoacids.keys():
             if (metabolite in aminoacids[aminoacid]) and (aminoacid not in newMetNames):
@@ -419,9 +419,9 @@ def metaboliteModification(metabolite):
                 newMetNames.append(metabolite)
     # If metabolite is an acid, use the -ate nomenclature
     if (
-        ("ic acid" in metabolite)
-        or ("ic_acid" in metabolite)
-        or ("icacid" in metabolite)
+        ("ic acid" in metabolite) or
+        ("ic_acid" in metabolite) or
+        ("icacid" in metabolite)
     ) and (re.sub(r"ic.?acid", "ate", metabolite) not in newMetNames):
         newMetNames.append(re.sub(r"ic.?acid", "ate", metabolite))
         newMetNames.append(re.sub(r"ic.?acid", "ic acid", metabolite))
@@ -440,7 +440,8 @@ def metaboliteModification(metabolite):
     #            synonyms = dictionarySynonyms[u'Synonym']
     #            for synonym in synonyms:
     #                # similarity > 0.2 to increase the speed
-    #                if (str(synonym) not in newMetNames) and (SequenceMatcher(a=metabolite, b=synonym).ratio() > 0.2):
+    #                if (str(synonym) not in newMetNames) and
+    #                   (SequenceMatcher(a=metabolite, b=synonym).ratio() > 0.2):
     #                    newMetNames.append(str(synonym))
     # If metabolite is an abbreviation of a lipid
     if any(lipid in metabolite for lipid in lipids.values()):
@@ -454,9 +455,9 @@ def metaboliteModification(metabolite):
     for newMetName in newMetNames:
         for mainPrefix in mainPrefixes:
             if (
-                mainPrefix.search(newMetName)
-                and (re.sub(mainPrefix, "", newMetName) not in newMetNamesNoPrefix)
-                and (newMetName not in aminoacids)
+                mainPrefix.search(newMetName) and
+                (re.sub(mainPrefix, "", newMetName) not in newMetNamesNoPrefix) and
+                (newMetName not in aminoacids)
             ):
                 newMetNameNoPrefix = re.sub(mainPrefix, "", newMetName)
                 newMetNames.insert(len(newMetNames), newMetNameNoPrefix)
@@ -470,27 +471,28 @@ def metaboliteModification(metabolite):
 def add2Dictionary(metabolite, newMetName, kegg_cpd, keggMetNames, metDict):
     """
     Compare input metabolite name with KEGG name.
-     
+
     If newMetName (metabolite without prefix) == keggMetName:
         Calculate similarity between metabolite (oirginal name) and keggMetName
-        
-    It creates different dictionaries for each metabolite (one per match) 
-        
+
+    It creates different dictionaries for each metabolite (one per match)
+
      Arguments:
         :param metabolite: Input metabolite name
         :type metabolite: string
-        
+
         :param newMetName: Input metabolite name without prefix and chemical words.
         :type newMetName: string
-        
+
         :param kegg_cpd: Kegg identifier of the metabolite
         :type kegg_cpd: string
-        
+
         :param keggMetNames: "List" of Kegg metabolite names associated to a Kegg identifier
         :type keggMetNames: string
-        
+
     Returns:
-        :return metDict: Output dictionary with this structure: {Metabolite_Name_in_Kegg: [similarity, Kegg_compound_identifier]
+        :return metDict: Output dictionary with this structure: {Metabolite_Name_in_Kegg:
+        [similarity, Kegg_compound_identifier]
         :rtype metDict: dictionary
     """
 
@@ -629,7 +631,8 @@ def keggAnnot2list(keggAnnotFile, UniqueID, featureName, featureKeggId, featureT
         :type featureType: string
 
     Returns:
-        :return featureDict: Dictionary with this information: (uniqueID + "\t" + featureName) = [nameInKegg, kegg_id]
+        :return featureDict: Dictionary with this information: (uniqueID + "\t" + featureName) =
+        [nameInKegg, kegg_id]
         :rtype featureDict: dictionary
 
         :return featureList: List with the information of the features without kegg_id
@@ -657,18 +660,18 @@ def keggAnnot2list(keggAnnotFile, UniqueID, featureName, featureKeggId, featureT
                 # For those that does not have kegg_id
                 if selected == "NA":
                     featureList.append(
-                        uniqueID
-                        + "\t"
-                        + featureName
-                        + "\t"
-                        + featureType
-                        + "\t"
-                        + "NA"
-                        + "\t"
-                        + "NA"
-                        + "\t"
-                        + "NA"
-                        + "\n"
+                        uniqueID +
+                        "\t" +
+                        featureName +
+                        "\t" +
+                        featureType +
+                        "\t" +
+                        "NA" +
+                        "\t" +
+                        "NA" +
+                        "\t" +
+                        "NA" +
+                        "\n"
                     )
             else:
                 kegg_id = line.split("\t")[keggIdCol]
@@ -676,18 +679,17 @@ def keggAnnot2list(keggAnnotFile, UniqueID, featureName, featureKeggId, featureT
                     featureDict[uniqueID + "\t" + featureName] = kegg_id
                 else:
                     featureList.append(
-                        uniqueID
-                        + "\t"
-                        + featureName
-                        + "\t"
-                        + featureType
-                        + "\t"
-                        + "NA"
-                        + "\t"
-                        + "NA"
-                        + "\t"
-                        + "NA"
-                        + "\n"
+                        uniqueID +
+                        "\t" +
+                        featureName +
+                        "\t" +
+                        featureType +
+                        "\t" +
+                        "NA" +
+                        "\t" +
+                        "NA" +
+                        "\t" +
+                        "NA" + "\n"
                     )
 
     return (featureDict, featureList)
@@ -706,24 +708,27 @@ def add_path_info(
     Find all pathways in KEGG related to a gene or a metabolite.
 
     Arguments:
-        :param featureDict: Dictionary with this information: (uniqueID + "\t" + featureName) = [nameInKegg, kegg_id]
+        :param featureDict: Dictionary with this information: (uniqueID + "\t" + featureName) =
+        [nameInKegg, kegg_id]
         :type featureDict: dictionary
-        
+
         :param featureList: List with the information of the features without kegg_id
         :type featureList: list
-        
+
         :param featureType: Type of the feature. One of 'Gene' or 'Metabolite'
         :type featureType: string
-        
-        :param keggId2pathway: Downloaded information from KEGG with the gene/metabolite KEGG Id and the Pathway ID
+
+        :param keggId2pathway: Downloaded information from KEGG with the gene/metabolite KEGG Id
+        and the Pathway ID
         :type keggId2pathway: file
-        
-        :param pathId2pathName: Downloaded information from KEGG with the Pathway ID and the Pathway Names
+
+        :param pathId2pathName: Downloaded information from KEGG with the Pathway ID and the
+        Pathway Names
         :type pathId2pathName: file
-        
+
         :param species: species identifier in kegg
         :type species: string
-        
+
         :param outputFile: Output File Name to write the results.
         :type outputFile: string
     """
@@ -769,7 +774,8 @@ def parseWord(toParseList, parser, nameIndex, species):
         :type species: string
 
     Returns:
-        :return outputList: Input list with parsed value included. outputList_v2 if removing gene symbol needed
+        :return outputList: Input list with parsed value included. outputList_v2 if removing gene
+        symbol needed
         :rtype outputList: list
     """
 
@@ -871,27 +877,27 @@ def fisherExactTest(args, path_feat):
     c+d = Total 0 flags
 
     Arguments:
-        :params deaGeneDataset deaMetDataset: Tables with Differential Expression Analysis information for gene expression
-            and metabolomics, respectively
+        :params deaGeneDataset deaMetDataset: Tables with Differential Expression Analysis
+        information for gene expression and metabolomics, respectively
         :types deaGeneDataset met_dataset: files
 
-        :params gene_id_col, met_id_col, gene_flag_col, met_flag_col: Column names of unique identifiers and desired
-            flag column of gene expression and metabolomics datasets, respectively
+        :params gene_id_col, met_id_col, gene_flag_col, met_flag_col: Column names of unique
+        identifiers and desired flag column of gene expression and metabolomics datasets,
+        respectively
         :type gene_id_col, met_id_col, gene_flag_col, met_flag_col: strings
 
         :params alpha, method: alpha-value and method desired for the FDR correction
         :type alpha, method: strings
 
     Returns:
-        :return output: Table with this structure: Pathway Name Odds_Ratio	P_value	FDR_Correction	Flag_#
+        :return output: Table with this structure: Pathway Name Odds_Ratio	P_value	FDR_Correction
+        Flag_#
         :rtype output: file
     """
 
-    # N)
-    N_gene = sum(1 for line in open(args.deaGeneDataset)) - 1
-    N_met = sum(1 for line in open(args.deaMetDataset)) - 1
-    N = N_gene + N_met
-
+    # N_gene = sum(1 for line in open(args.deaGeneDataset)) - 1
+    # N_met = sum(1 for line in open(args.deaMetDataset)) - 1
+    # N = N_gene + N_met
     # a+b, c+d)
     metDeCounter = 0
     metNonDeCounter = 0
@@ -985,14 +991,17 @@ def Ids2Names(dataset, Id, annot, annotName):
         :param Id: Name of the column with Unique Identifiers.
         :type Id: string
 
-        :param annot: Annotation File (For Gene Expression/Metabolomics). This file must contain at least 2 columns.
+        :param annot: Annotation File (For Gene Expression/Metabolomics). This file must contain at
+        least 2 columns.
         :type annot: file
 
-        :param annotName: Name of the column of the Annotation File that contains the Feature Name (Genes/Metabolites)
+        :param annotName: Name of the column of the Annotation File that contains the Feature Name
+        (Genes/Metabolites)
         :type annotName: file
 
     Returns:
-        :return new_dataset: Wide dataset with feature names (genes/metabolites) instead of unique identifiers
+        :return new_dataset: Wide dataset with feature names (genes/metabolites) instead of unique
+        identifiers
         :rtype new_dataset: pandas dataset
     """
 
@@ -1025,7 +1034,8 @@ def prepareSPLSData(args):
         :param geneDataset metDataset: Gene expression and Metabolomics wide dataset, respectively.
         :type geneDataset metDataset: files
 
-        :param geneOption metOption: Options for subsetting Gene Expression and Metabolomics datasets, respectively.
+        :param geneOption metOption: Options for subsetting Gene Expression and Metabolomics
+        datasets, respectively.
         :type geneOption metOption: string
     """
 
@@ -1122,7 +1132,8 @@ def prepareSPLSMetGenericData(args):
         :type metId: string
 
     Returns:
-        :return metSubsetDict: Dictionary with this structure: keggName;keggCpdId = uniqueId;originalName
+        :return metSubsetDict: Dictionary with this structure: keggName;keggCpdId =
+        uniqueId;originalName
         :rtype metSubsetDict: dictionary
     """
 
@@ -1164,7 +1175,8 @@ def prepareSPLSMetMMCData(args):
         :type figure2: string
 
     Returns:
-        :return metSubsetDict: Dictionary with this structure: keggName;keggCpdId = uniqueId;originalName
+        :return metSubsetDict: Dictionary with this structure: keggName;keggCpdId =
+        uniqueId;originalName
         :rtype metSubsetDict: dictionary
     """
 
@@ -1214,7 +1226,8 @@ def prepareSPLSMetBothData(args):
         :type figure2: string
 
     Returns:
-        :return metSubsetDict: Dictionary with this structure: keggName;keggCpdId = uniqueId;originalName
+        :return metSubsetDict: Dictionary with this structure: keggName;keggCpdId =
+        uniqueId;originalName
         :rtype metSubsetDict: dictionary
     """
     metDataset = pd.read_table(args.metDataset, sep="\t", header=0)
@@ -1534,7 +1547,8 @@ def reduce_path_name(pathway, path2nameDict):
         :param pathway: metagene ID: "PathwayID_panaIndex"
         :type pathway: string
 
-        :param path2nameDict: Dictionary with KEGG Information linking pathway IDs with pathway names
+        :param path2nameDict: Dictionary with KEGG Information linking pathway IDs with pathway
+        names
         :type path2nameDict: Dictionary
 
     Returns:
@@ -1578,7 +1592,7 @@ def mmc_main(args, outputName, MMCResultTable):
         wide=args.input, design=args.design, uniqID=args.uniqID, logger=logger
     )
 
-    ## If there is no variance in a row, the correlations cannot be computed.
+    # If there is no variance in a row, the correlations cannot be computed.
     dat.wide["variance"] = dat.wide.apply(lambda x: ((x - x.mean()).sum() ** 2), axis=1)
     dat.wide = dat.wide[dat.wide["variance"] != 0.0]
     dat.wide.drop("variance", axis=1, inplace=True)
@@ -1593,7 +1607,7 @@ def mmc_main(args, outputName, MMCResultTable):
     mask = np.ones(dat.wide.shape[0], dtype=bool)
 
     # Count the number of variables not excluded from the clustering.
-    p = np.count_nonzero(mask)
+    # p = np.count_nonzero(mask)
 
     # Consider all values of tuning parameter sigma in this array.
     sigmas, step = np.linspace(
@@ -1628,12 +1642,10 @@ def mmc_main(args, outputName, MMCResultTable):
     return mmc_table
 
 
-def mmc_nontechnical_analysis(
+def mmc_nontechnical_analysis(args, df, mask, C, clustering, outputName, MMCResultTable):
     """
     Re-order values for user convenience based on the results of the technical analysis.
     """
-    args, df, mask, C, clustering, outputName, MMCResultTable
-):
 
     # Get the map from the name to the original row index.
     all_row_names = df.index.values

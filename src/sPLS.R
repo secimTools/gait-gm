@@ -2,7 +2,7 @@
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
 #
-# DESCRIPTION: Performs a sparse PLS over subsets of gene Expression and metabolite data.
+# DESCRIPTION: Perform a sparse PLS over subsets of gene Expression and metabolite data.
 #
 # VERSION: 1.0
 #######################################################################################

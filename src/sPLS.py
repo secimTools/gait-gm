@@ -3,25 +3,23 @@
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
 #
-# DESCRIPTION: Takes a column with the gene and/or metabolites names and return an annotation file
+# DESCRIPTION: Take a column with the gene and/or metabolites names and return an annotation file
 # with KEGG information (Name in KEGG, KEGG ID, ...)
 #
 # VERSION: 1.0
 #######################################################################################
 import os
 import logging
-import warnings
 import argparse
 from argparse import RawDescriptionHelpFormatter
 import matplotlib
-
-matplotlib.use("Agg")
 from rpy2 import robjects
 from rpy2.robjects import pandas2ri
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
 import keggPeaModules as modules
 from secimtools.dataManager import logger as sl
 
+matplotlib.use("Agg")
 
 def getOptions():
     parser = argparse.ArgumentParser(
@@ -182,8 +180,8 @@ def getOptions():
         dest="metAnno",
         action="store",
         required=False,
-        help="Metabolomics Annotation File\
-                      (Only if user want metabolite names in output).",
+        help="Metabolomics Annotation File \
+             (Only if user want metabolite names in output).",
     )
     metabolites.add_argument(
         "-mn",
@@ -191,8 +189,8 @@ def getOptions():
         dest="metName",
         action="store",
         required=False,
-        help="Metabolite Names column name\
-                      (Only if user want metabolite names in output, or in metOption=generic or both).",
+        help="Metabolite Names column name \
+             (Only if user want metabolite names in output, or in metOption=generic or both).",
     )
     metabolites.add_argument(
         "-mo",
@@ -392,7 +390,7 @@ def main():
         :param geneAnnot metAnnot: Gene Expression/Metabolomics Annotation Dataset.
         :type geneAnnot metAnnot: files
 
-        :param geneAnnotName metAnnotName: Name of the column of the Annotation file that contains genes/metabolites names.
+        :param geneAnnotName metAnnotName: annotation file column with gene/metabolite names.
         :type geneAnnotName metAnnotName: strings
 
         :param design: Design File
@@ -401,30 +399,32 @@ def main():
         :param keepX: Number of genes to keep in the sPLS model
         :param keepX: integer
 
-        :param geneOption metOption: Options for metabolite subsetting (one of 'generic', 'mmc' or 'both') and for
-                                    gene expression subsetting (one of 'all', 'geneList', 'path' or 'pana')
+        :param geneOption metOption: Options for metabolite subsetting (one of 'generic', 'mmc' or
+        'both') and for gene expression subsetting (one of 'all', 'geneList', 'path' or 'pana')
         :type geneOption metOption: strings
 
-        :param geneKeggAnno metKeggAnno: KEGG Annotation files for gene expression and metabolomics, respectively. From Add KEGG Anno Info Tool
+        :param geneKeggAnno metKeggAnno: KEGG Annotation files for gene expression and
+        metabolomics, respectively. From Add KEGG Anno Info Tool
         :type geneKeggAnno metKeggAnno: files
 
-        :param geneKeggPath metKeggPath: KEGG Pathway files for gene expression and metabolomics, respectively. From Add KEGG Pathway Info Tool
+        :param geneKeggPath metKeggPath: KEGG Pathway files for gene expression and metabolomics,
+        respectively. From Add KEGG Pathway Info Tool
         :type geneKeggPath metKeggPath: files
 
-        :param path2genes: Downloaded file from KEGG with this information: pathway_ID "\t" geneKEGG_ID
+        :param path2genes: Downloaded KEGG file with this information: pathway_ID "\t" geneKEGG_ID
         :type path2genes: file
 
     Returns:
         :return figure1: sPLS heatmaps
         :rtype figure1: pdf
 
-        :return splsOut: sif-like correlation matrix. It also includes one column describing the comparison.
+        :return splsOut: sif-like correlation matrix including a column describing the comparison.
         :rtype splsOut: file
 
-        :return figure2: MMC plots. Only given if mmc or both metabolite subsetting option is selected.
+        :return figure2: MMC plots if mmc or both metabolite subsetting option is selected.
         :rtype figure2: pdf
 
-        :return mmcOut: MMC Output table. Only given if mmc or both metabolite subsetting option is selected.
+        :return mmcOut: MMC Output table if mmc or both metabolite subsetting option is selected.
         :rtype mmcOut: file
 
         :return panaOut: Table describing genes that forms the metagenes (1/0)

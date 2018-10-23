@@ -96,11 +96,11 @@ def main(args):
         :param uniqid: Name of the column with the unique identifier
         :type uniqid: string
 
-        :param thresholds: Desired thresholds to decide the flag. Must be separed with ",", no spaces allowed.
+        :param thresholds: Desired flag thresholds. Must be separed with ",", no spaces allowed.
         :type thresholds: string
 
     Returns:
-        :return output: Table with the same information as the input, adding correspondent flags columns
+        :return output: Table with input and added correspondent flags columns
         :rtype output: file
 
         :return flags: Table with only the correspondent flags columns

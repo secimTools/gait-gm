@@ -141,10 +141,10 @@ def main(annotFile, uniqId, featureNames, parser, outputFile, featureType):
 
     output = open(outputFile, "w")
     output.write(
-        uniqId
-        + "\t"
-        + featureNames
-        + "\tFeature_Type\tMatched\tName_in_KEGG\tKEGG_ID\tSimilarity\tTie\tSelected\n"
+        uniqId +
+        "\t" +
+        featureNames +
+        "\tFeature_Type\tMatched\tName_in_KEGG\tKEGG_ID\tSimilarity\tTie\tSelected\n"
     )
 
     annotFile = pd.read_table(annotFile, delimiter="\t", header=0)
@@ -153,7 +153,7 @@ def main(annotFile, uniqId, featureNames, parser, outputFile, featureType):
 
     annotFile = annotFile[[uniqId, featureNames]]
 
-    # Output file -> UniqueID  Feature_Name  Matched  Name_In_Kegg  KEGG_ID  Similarity  Tie  Selected
+    # Output file -> UniqueID Feature_Name Matched Name_In_Kegg KEGG_ID Similarity Tie Selected
     modules.keggAnno(annotFile, parser, output, uniqId, featureNames, featureType)
 
     output.close()
