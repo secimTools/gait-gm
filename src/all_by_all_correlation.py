@@ -1,0 +1,189 @@
+#!/usr/bin/env python
+######################################################################################
+# DATE: 2018/May/10
+# 
+# MODULE: all_by_all_correlation.py
+#
+# VERSION: 1.0
+# 
+# AUTHOR: Francisco Huertas (f.huertas@ufl.edu)
+#
+# DESCRIPTION: This tool performs a correlation analysis over two different datasets.
+#
+#######################################################################################
+# Import built-in packages
+import os
+import logging
+import warnings
+import argparse
+from argparse import RawDescriptionHelpFormatter
+
+# Import add-on packages
+import matplotlib
+matplotlib.use('Agg')
+import pandas as pd
+from rpy2.robjects import pandas2ri
+from rpy2.rinterface import RRuntimeWarning
+from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
+
+# Import local data libraries
+import keggPeaModules as modules
+from secimtools.dataManager import logger as sl
+
+def getOptions():
+
+    parser = argparse.ArgumentParser(description="allByAllCorr", formatter_class=RawDescriptionHelpFormatter)
+    
+    tool = parser.add_argument_group(description="Input")
+    tool.add_argument('-g',"--geneDataset", dest="geneDataset", action='store', 
+                      required=True, help="Gene Expression dataset.")
+    tool.add_argument('-gid',"--geneId", dest="geneId", action='store', 
+                      required=True, help="Gene Unique ID column name.")
+    tool.add_argument('-ga',"--geneAnnot", dest="geneAnnot", action='store', 
+                      required=False, help="Gene Expression Annotation Dataset.")   
+    tool.add_argument('-gn',"--geneName", dest="geneName", action='store', 
+                      required=False, help="Gene Expression Annotation Dataset column to use.") 
+                      
+    tool.add_argument('-m',"--metDataset", dest="metDataset", action='store', 
+                      required=True, help="Metabolomic Datset.")
+    tool.add_argument('-mid',"--metId", dest="metId", action='store', 
+                      required=True, help="Metabolite Unique ID column name.")
+    tool.add_argument('-ma',"--metAnnot", dest="metAnnot", action='store', 
+                      required=False, help="Metabolomic Annotation Dataset.") 
+    tool.add_argument('-mn',"--metName", dest="metName", action='store', 
+                      required=False, help="Metabolomics Annotation Dataset column to use.") 
+                      
+    tool.add_argument('-me',"--meth", dest="meth", action='store', 
+                      required=True, help="correlation coefficient to be computed.")
+    tool.add_argument('-t',"--thres", dest="thres", action='store', 
+                      required=True, help="Pvalue threshold for the output.")
+    
+    output = parser.add_argument_group(description="Output")
+    output.add_argument('-o',"--output", dest="output", action="store", 
+                        required=True, help="Output Table.")
+    output.add_argument('-c',"--corMat", dest="corMat", action="store", 
+                        required=True, help="Correlation Matrix.")
+    output.add_argument('-f',"--fig", dest="fig", action="store", 
+                        required=True, help="Output figure name for results [pdf].")
+    
+    args = parser.parse_args()
+
+    # Standardized paths   
+    args.geneDataset = os.path.abspath(args.geneDataset)
+    args.metDataset = os.path.abspath(args.metDataset)
+    args.output = os.path.abspath(args.output)
+    args.corMat = os.path.abspath(args.corMat)
+    args.fig = os.path.abspath(args.fig)
+    
+    if args.geneAnnot:
+        args.geneAnnot = os.path.abspath(args.geneAnnot)
+    else:
+        args.geneAnnot = ''
+        args.geneAnnotName = ''
+    if args.metAnnot:
+        args.metAnnot = os.path.abspath(args.metAnnot)
+    else:
+        args.metAnnot = ''
+        args.metAnnotName = ''
+    if not args.thres:
+        args.thres = ''
+        
+    return(args)
+
+def main(args):
+    
+    """
+    This tool performs a correlation analysis between a Gene Expression Dataset and a Metabolomic Dataset.
+    
+    Arguments:
+        :param geneDataset metDataset: Gene expression/Metabolomics wide dataset, respectively.
+        :type geneDataset metDataset: files
+        
+        :param geneId metId: Name of the Genes/metabolites unique identifier column, respectively.
+        :type geneId metId: strings
+        
+        :param geneAnnot metAnnot: Gene Expression/Metabolomics Annotation Datasets, respectively.
+        :type geneAnnot metAnnot: files
+        
+        :param geneAnnotName metAnnotName: Name of the column of the Annotation file that contains genes/metabolites names respectively.
+        :type geneAnnotName metAnnotName: strings
+        
+        :param meth: Methodology for the correlation function. One of 'pearson', 'spearman' or 'kendall'.
+        :type meth: string
+        
+        :param thres: PValue Threshold to cut the correlations for the output table.
+        :type thres: float
+        
+    Returns:
+        :return output: Output table with the following information: Metabolite "\t" Gene "\t" Correlation "\t" pvalue
+        :rtype output: file
+        
+        :return corMat: Correlation Matrix
+        :rtype corMat: file
+        
+        :return fig: Network-like output figure
+        :rtype fig: pdf
+    """
+    
+    # Establish path for all_by_all_correlation script
+    myPath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
+    my_r_script_path = os.path.join(myPath, "all_by_all_correlation.R")
+    logger.info(my_r_script_path)
+    
+    # Activate pandas2ri
+    pandas2ri.activate()
+
+    # Load the R function containing all by all correlation
+    with open(my_r_script_path, 'r') as f:
+        rFile = f.read()
+
+    # name of main function is corr_main_func
+    allByAllCorrScript = STAP(rFile, 'corr_main_func')
+
+    # Prepare Data - Gene Expression Data
+    geneTable = pd.read_table(args.geneDataset, sep = "\t", header=0)
+    if args.geneAnnot:
+        R_gene_df = modules.Ids2Names(geneTable, args.geneId, args.geneAnnot, args.geneName)
+    else:
+        geneTable = geneTable.set_index(args.geneId)
+        R_gene_df = pandas2ri.py2ri(geneTable)
+        
+    # Prepare Data - Metabolomics Data
+    metTable = pd.read_table(args.metDataset, sep = "\t", header=0)
+    if args.metAnnot:
+        R_met_df = modules.Ids2Names(metTable, args.metId, args.metAnnot, args.metName)
+    else:
+        metTable = metTable.set_index(args.metId)
+        R_met_df = pandas2ri.py2ri(metTable)    
+    
+    # Run R function
+    allByAllCorrScript.corr_main_func(x=R_gene_df, y=R_met_df, meth=args.meth, thres=args.thres,
+                                      corrMatPath=args.corMat, outputPath=args.output, figurePath=args.fig)
+    
+if __name__ == '__main__':
+    
+    # Do not print package loading warnings from R
+    warnings.filterwarnings("ignore", category=RRuntimeWarning)
+    
+    # Command line options
+    args = getOptions()
+    
+    # Activate Logger
+    logger = logging.getLogger()
+    sl.setLogger(logger)
+    logger.info(u"Importing data with the following parameters: "
+                "\n\tGene Dataset:  {}"
+                "\n\tGene UniqueID:  {}"
+                "\n\tMet Dataset:{}"
+                "\n\tMet UniqueID:  {}"
+                "\n\tMethod:  {}"
+                "\n\tThreshold:  {}".
+                format(args.geneDataset, args.geneId, args.metDataset, args.metId, args.meth, args.thres))
+                
+    # Check for duplicates
+    modules.checkForDuplicates(args.geneDataset, args.geneId)
+    modules.checkForDuplicates(args.metDataset, args.metId)
+    
+    # Run main script
+    main(args)
+    
