@@ -11,15 +11,15 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', ]
+requirements = ['secimtools']
 
-setup_requirements = [ ]
+setup_requirements = []
 
-test_requirements = [ ]
+test_requirements = []
 
 setup(
     author="Oleksandr Moskalenko",
-    author_email='audreyr@example.com',
+    author_email='om@rc.ufl.edu',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -49,7 +49,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/moskalenko/gait_gm',
+    url='https://github.com/secimTools/SECIMTools',
     version='1.0.0',
     zip_safe=False,
 )
