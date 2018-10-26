@@ -54,10 +54,10 @@ lint: ## check style with flake8
 	flake8 gait_gm tests
 
 test-release: dist ## package and upload a release to TestPyPI
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	twine upload --repository pypitest dist/*
 
 release: dist ## package and upload a release
-	twine upload dist/*
+	twine upload --repository pypi dist/*
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
