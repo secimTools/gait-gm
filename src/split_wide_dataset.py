@@ -97,7 +97,7 @@ def getOptions():
     return args
 
 
-def main(args):
+def main():
     """
     Creates a Wide Dataset, a Design File, and an Annotation File.
 

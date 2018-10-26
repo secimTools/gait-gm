@@ -82,7 +82,7 @@ def getOptions():
     return args
 
 
-def main(args):
+def main():
     """
     Add binary flags (0/1) to a differential expression dataset depending on p-value thresholds.
 
