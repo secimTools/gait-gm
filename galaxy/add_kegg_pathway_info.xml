@@ -1,0 +1,239 @@
+<tool id="secimtools_add_kegg_pathway_info" name="Add KEGG Pathway Information" version="0.4.0">
+  <description>using KEGGIDs</description>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements" />
+  <command detect_errors="exit_code" interpreter="python">
+    add_kegg_pathway_info.py
+      -sp=$species
+      #if $dataSets.whichDataSet == "geneDataset":
+        -gka=$dataSets.geneKeggAnnot
+        -gid=$dataSets.geneUniqId
+        -gn=$dataSets.geneName
+        -gkid=$dataSets.geneKeggId
+        -go=$geneOutput
+        -kg2p=$gene_keggID2pathID
+      #end if
+      #if $dataSets.whichDataSet == "metDataset":
+        -mka=$dataSets.metKeggAnnot
+        -mid=$dataSets.metUniqId
+        -mn=$dataSets.metName
+        -mkid=$dataSets.metKeggId
+        -mo=$metOutput
+        -km2p=$met_keggID2pathID
+      #end if
+      #if $dataSets.whichDataSet == "both":
+        -gka=$dataSets.geneKeggAnnot
+        -gid=$dataSets.geneUniqId
+        -gn=$dataSets.geneName
+        -gkid=$dataSets.geneKeggId
+        -go=$geneOutput
+        -kg2p=$gene_keggID2pathID
+        -mka=$dataSets.metKeggAnnot
+        -mid=$dataSets.metUniqId
+        -mn=$dataSets.metName
+        -mkid=$dataSets.metKeggId
+        -mo=$metOutput
+        -km2p=$met_keggID2pathID
+      #end if
+      -p=$pathways
+  </command>
+  <inputs>
+    <param name="species" type="select" label="Select your Species from the List" >
+     <option value="hsa">Homo sapiens</option>
+     <option value="mmu">Mus musculus</option>
+     <option value="rno">Rattus norvegicus</option>
+     <option value="dme">Drosophila melanogaster</option>
+     <option value="ath">Arabidopsis thaliana</option>
+     <option value="sce">Saccharomyces cerevisiae</option>
+     <option value="eco">Escherichia coli</option>
+    </param>
+    <conditional name="dataSets">
+      <param name="whichDataSet" type="select" display="radio" label="Select the Datasets you want to add KEGG pathway information to.  Note: datasets must contain KEGGIDs.">
+        <option value="both" selected="true">Gene Expression + Metabolomic Files with KEGGIDs</option>
+        <option value="geneDataset">Gene Expression File with KEGGIDs</option> 
+        <option value="metDataset">Metabolomic File with KEGGIDs</option>
+        <validator type="no_options" message="You must select at least one option." /> 
+      </param>
+      <when value="both">
+        <param name="geneKeggAnnot" type="data" format="tabular" label="Gene to KEGGID Link File" help="Select the Gene to KEGGID Link File that contains KEGG identifiers from your history"/>
+        <param name="geneUniqId" type="text" size="30" value="" label="Gene unique FeatureID" help="Name of the column in your Gene to KEGGID Link File that contains unique FeatureIDs."/> 
+        <param name="geneName" type="text" size="30" value="" label="Gene Symbol" help="Name of the column in your Gene to KEGGID Link File that contains Gene Symbols."/>
+        <param name="geneKeggId" type="text" size="30" value="" label="Gene KEGGID" help="Name of the column in your Gene to KEGGID Link File that contains KEGGIDs."/> 
+        <param name="metKeggAnnot" type="data" format="tabular" label="Metabolite to KEGGID Link File" help="Select the Metabolite to KEGGID Link File that contains KEGG identifiers from your history"/>
+        <param name="metUniqId" type="text" size="30" value="" label="Metabolite unique FeatureID" help="Name of the column in your Metabolite to KEGGID Link File that contains unique FeatureIDs."/>
+        <param name="metName" type="text" size="30" value="" label="Metabolite Names" help="Name of the column in your Metabolite to KEGGID Link File that contains Metabolite Names."/>
+        <param name="metKeggId" type="text" size="30" value="" label="Metabolite KEGGID" help="Name of the column in your Metabolite to KEGGID Link File that contains KEGGIDs."/>
+      </when>
+      <when value="geneDataset">
+        <param name="geneKeggAnnot" type="data" format="tabular" label="Gene to KEGGID Link File" help="Select the Gene to KEGGID Link File that contains KEGG identifiers from your history"/>
+        <param name="geneUniqId" type="text" size="30" value="" label="Gene unique FeatureID" help="Name of the column in your Gene to KEGGID Link File that contains unique FeatureIDs."/> 
+        <param name="geneName" type="text" size="30" value="" label="Gene Symbol" help="Name of the column in your Gene to KEGGID Link File that contains Gene Symbols."/>
+        <param name="geneKeggId" type="text" size="30" value="" label="Gene KEGGID" help="Name of the column in your Gene to KEGGID Link File that contains KEGGIDs."/> 
+      </when>
+      <when value="metDataset">
+        <param name="metKeggAnnot" type="data" format="tabular" label="Metabolite to KEGGID Link File" help="Select the Metabolite to KEGGID Link File that contains KEGG identifiers from your history"/>
+        <param name="metUniqId" type="text" size="30" value="" label="Metabolite unique FeatureID" help="Name of the column in your Metabolite to KEGGID Link File that contains unique FeatureIDs."/>
+        <param name="metName" type="text" size="30" value="" label="Metabolite Names" help="Name of the column in your Metabolite to KEGGID Link File that contains Metabolite Names."/>
+        <param name="metKeggId" type="text" size="30" value="" label="Metabolite KEGGID" help="Name of the column in your Metabolite to KEGGID Link File that contains KEGGIDs."/>
+      </when>
+    </conditional>
+  </inputs>
+  <outputs>
+    <data format="tabular" name="gene_keggID2pathID" label="${tool.name} on ${on_string}: GeneKeggID2PathwayID">
+      <filter>(dataSets['whichDataSet'] == 'geneDataset') or (dataSets['whichDataSet'] == 'both')</filter>
+    </data>
+    <data format="tabular" name="met_keggID2pathID" label="${tool.name} on ${on_string}: MetaboliteKeggID2PathwayID">
+      <filter>(dataSets['whichDataSet'] == 'metDataset') or (dataSets['whichDataSet'] == 'both')</filter>
+    </data>
+    <data format="tabular" name="pathways" label="${tool.name} on ${on_string}: PathwayID2PathwayNames"/>
+    <data format="tabular" name="geneOutput" label="${tool.name} on ${on_string}: Gene KEGG Pathway File">
+      <filter>(dataSets['whichDataSet'] == 'geneDataset') or (dataSets['whichDataSet'] == 'both')</filter>
+    </data>
+    <data format="tabular" name="metOutput" label="${tool.name} on ${on_string}: Metabolite KEGG Pathway File">
+      <filter>(dataSets['whichDataSet'] == 'metDataset') or (dataSets['whichDataSet'] == 'both')</filter>
+    </data>
+  </outputs>
+  <tests>
+    <test>
+      <param name="species" value="rno"/>
+      <param name="whichDataSet" value="both"/>
+      <param name="geneKeggAnnot" value="gene_to_keggId_link_01fhl.tsv"/>
+      <param name="geneUniqId" value="UniqueID"/>
+      <param name="geneName" value="GeneSymbol"/>
+      <param name="geneKeggId" value="KEGGID"/>
+      <param name="metKeggAnnot" value="metabolite_to_keggId_link_01fhl.tsv"/>
+      <param name="metUniqId" value="UniqueID"/>
+      <param name="metName" value="MetName"/>
+      <param name="metKeggId" value="KEGGID"/>
+      <output name="kgen2pathway" file="KGEN2PATHWAY"/>
+      <output name="kmet2pathway" file="KMET2PATHWAY"/>
+      <output name="pathways" file="PATHWAYS"/>
+      <output name="output" file="kegg_downloader_table"/>
+    </test>
+  </tests>
+  <help><![CDATA[
+
+**Tool Description**
+
+  This tool takes a Gene to KEGG Link dataset, a Metabolomic to KEGG Link dataset or both and adds KEGG Pathway Names using KEGGIDs. The tool was designed to take the output from the ''Link Name to KEGGID' tool as input (for example the Gene to KEGGID Link dataset) but other datasets containing KEGGIDs can be used as well.
+
+  The user will get different outputs from the 'Add KEGG Pathway Info Tool', depending on the input. If a Gene to KEGGID Link dataset is given as input the tool outputs the following three files:  1) a Gene KEGG Pathway dataset containing the FeatureID, Feature_Name, Feature_Type and KEGGID  columns from the input file and KEGG_PathwayIDs and KEGG Pathway Names from KEGG, 2) a GeneKeggID2PathwayID dataset containing all gene KEGGIDs in KEGG and their associated pathway KEGGIDs and 3) a PathwayID2PathwayNames dataset containing all of the pathway KEGGIDs and their associated KEGG pathway names.  
+
+  Analoguous files are generated by the tool if a Metabolite to KEGGID Link dataset is input by the user. 
+
+  Note: FeatureIDs and KEGGIDs may not be unique in the output.
+
+--------------------------------------------------------------------------------
+
+**INPUT**
+
+**Gene Dataset containing KEGGIDs - for example, output from the Link Name to KEGG IDtool**
+
+  +----------+-----------+--------------+---------+--------------+---------+------------+-----+----------+
+  | UniqueId | Gene_Name | Feature_Type | Matched | Name_in_KEGG | KEGGID  | Similarity | Tie | Selected |
+  +==========+===========+==============+=========+==============+=========+============+=====+==========+
+  | Gene_1   | one       | Gene         | Yes     | one*         | mmu:... | 1.0        | No  | Yes      |
+  +----------+-----------+--------------+---------+--------------+---------+------------+-----+----------+
+  | Gene_2   | two       | Gene         | Yes     | two*         | mmu:... | 1.0        | No  | Yes      |
+  +----------+-----------+--------------+---------+--------------+---------+------------+-----+----------+
+  | Gene_3   | three     | Gene         | Yes     | three*       | mmu:... | 1.0        | No  | Yes      |
+  +----------+-----------+--------------+---------+--------------+---------+------------+-----+----------+
+  | Gene_4   | four      | Gene         | No      | NA           | NA      | NA         | Na  | NA       |
+  +----------+-----------+--------------+---------+--------------+---------+------------+-----+----------+
+  | ...      | ...       | ...          | ...     | ...          | ...     | ...        | ... | ...      |
+  +----------+-----------+--------------+---------+--------------+---------+------------+-----+----------+
+
+**Metabolite Dataset containing KEGGIDs - for example, output from the Link Name to KEGGID tool**
+
+  +----------+----------+--------------+---------+--------------+----------+------------+-----+----------+
+  | UniqueId | Met_Name | Feature_Type | Matched | Name_in_KEGG | KEGGID   | Similarity | Tie | Selected |
+  +==========+==========+==============+=========+==============+==========+============+=====+==========+
+  | Met_1    | one      | Metabolite   | Yes     | one*         | cpd:...  | 1.0        | No  | Yes      |
+  +----------+----------+--------------+---------+--------------+----------+------------+-----+----------+
+  | Met_2    | two      | Metabolite   | Yes     | two*         | cpd:...  | 1.0        | No  | Yes      |
+  +----------+----------+--------------+---------+--------------+----------+------------+-----+----------+
+  | Met_3    | three    | Metabolite   | Yes     | three*       | cpd:...  | 1.0        | No  | Yes      |
+  +----------+----------+--------------+---------+--------------+----------+------------+-----+----------+
+  | Met_4    | four     | Metabolite   | No      | NA           | NA       | NA         | Na  | NA       |
+  +----------+----------+--------------+---------+--------------+----------+------------+-----+----------+
+  | ...      | ...      | ...          | ...     | ...          | ...      | ...        | ... | ...      |
+  +----------+----------+--------------+---------+--------------+----------+------------+-----+----------+
+
+**Gene unique FeatureID and/or Metabolite unique ID**
+
+  Name of the column in your KEGGID Link File that contains unique identifiers (for genes and/or metabolites).
+
+**Gene Symbol**
+
+  Name of the column in your KEGGID Link File that has Gene Symbols (for genes) or Metabolite Names (for metabolite data).
+
+**Gene KEGGID and/or Metabolite KEGGID**
+
+  Name of the column in your KEGGID Link File that contains KEGGIDs (for genes and/or metabolites).
+
+--------------------------------------------------------------------------------
+
+**OUTPUT**
+
+  The user will get different output from the tool, depending on whether they include the 'Gene to KEGGID Link' File, the 'Metabolite to KEGGID Link' File, or both.
+
+  (1) **GeneKeggID2PathwayID.** Downloaded file from KEGG for the selected species that contains ALL KEGGIDs to PathwayIDs.
+  (2) **MetaboliteKeggID2PathwayID.** Downloaded file from KEGG for the selected species that contains ALL the Metabolite KeggIDs to PathwayIDs.
+  (3) **Pathways Names.** Downloaded file from KEGG for the selected species that contains ALL the PathwayIDs to Pathway Names.
+  (4) **Gene KEGG Pathway File.** Tabular file with genes, feature types, KEGGIDs, PathwayIDs and Pathway Names.
+
+  +-------------+--------------+--------------+---------+--------------+--------------+
+  | FeatureID   | Gene_Symbol  | Feature_Type | KEGGID  | PathwayID    | Pathway_Name |
+  +=============+==============+==============+=========+==============+==============+
+  | FeatureID_1 | one          | Gene         | mmu:... | path:mmu:... | Pathway_A    |
+  +-------------+--------------+--------------+---------+--------------+--------------+
+  | FeatureID_2 | two          | Gene         | mmu:... | path:mmu:... | Pathway_B    |
+  +-------------+--------------+--------------+---------+--------------+--------------+
+  | FeatureID_3 | three        | Gene         | mmu:... | path:mmu:... | Pathway_C    |
+  +-------------+--------------+--------------+---------+--------------+--------------+
+  | FeatureID_4 | four         | Gene         | mmu:... | path:mmu:... | Pathway_D    |
+  +-------------+--------------+--------------+---------+--------------+--------------+
+  | ...         | ...          | ...          | ...     | ...          | ...          |
+  +-------------+--------------+--------------+---------+--------------+--------------+
+
+
+
+  (5) **Metabolite KEGG Pathway File.** Tabular file with metabolites, feature types, KEGGIDs, PathwayIDs and Pathway Names.
+
+  +-------------+-----------------+--------------+---------+--------------+--------------+
+  | FeatureID   | Metabolite_Name | Feature_Type | KEGGID  | PathwayID    | Pathway_Name |
+  +=============+=================+==============+=========+==============+==============+
+  | FeatureID_1 | one             | Metabolite   | cdp:... | path:map:... | Pathway_A    |
+  +-------------+-----------------+--------------+---------+--------------+--------------+
+  | FeatureID_2 | two             | Metabolite   | cdp:... | path:map:... | Pathway_B    |
+  +-------------+-----------------+--------------+---------+--------------+--------------+
+  | FeatureID_3 | three           | Metabolite   | cdp:... | path:map:... | Pathway_C    |
+  +-------------+-----------------+--------------+---------+--------------+--------------+
+  | FeatureID_4 | four            | Metabolite   | cdp:... | path:map:... | Pathway_D    |
+  +-------------+-----------------+--------------+---------+--------------+--------------+
+  | ...         | ...             | ...          | ...     | ...          | ...          |
+  +-------------+-----------------+--------------+---------+--------------+--------------+
+
+  ]]>
+  </help>
+  <citations>
+    <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
+    author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
+    title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
+    journal = {BMC Bioinformatics},
+    year = {in press}
+    }</citation>
+    <citation type="bibtex">@article{garcia2010paintomics,
+    title={Paintomics: a web based tool for the joint visualization of transcriptomics and metabolomics data},
+    author={Garc{\'\i}a-Alcalde, Fernando and Garc{\'\i}a-L{\'o}pez, Federico and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
+    journal={Bioinformatics},
+    volume={27},
+    number={1},
+    pages={137--139},
+    year={2010},
+    publisher={Oxford University Press}
+    }</citation>
+  </citations>
+</tool>

@@ -1,0 +1,126 @@
+<tool id="secimtools_ensembl2symbol" name="Map ENSEMBLIDs to Gene Symbols." version="0.1.0">
+  <description></description>
+  <macros>
+      <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements" />
+  <stdio> 
+    <exit_code range="1" level="fatal" description="Repeated Unique IDs"/> 
+  </stdio> 
+  <command detect_errors="exit_code" interpreter="python">
+  ensembl2symbol.py
+    -s=$species
+    -ga=$geneAnnot
+    -id=$uniqId
+    -e=$ensemblId
+    -o=$output
+  </command>
+  <inputs>
+    <param name="species" type="select" label="Select the species your ENSEMBLIDs are from" >
+     <option value="human">Homo sapiens</option>
+     <option value="mouse">Mus musculus</option>
+     <option value="rat">Rattus norvegicus</option>
+     <option value="fruitfly">Drosophila melanogaster</option>
+    </param>
+    <param name="geneAnnot" type="data" format="tabular" label="Select the Dataset from your History containing the ENSEMBLIDs"/>
+    <param name="uniqId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the column in your dataset containing unique FeatureIDs."/> 
+    <param name="ensemblId" type="text" size="30" value="" label="ENSEMBLID" help="Name of the column containing the ENSEMBLIDs to use for linking to gene symbols."/> 
+  </inputs>
+  <outputs>
+    <data format="tabular" name="output" label="${tool.name} on ${on_string}: ENSEMBL to GeneSymbol Annotation File"/>
+  </outputs>
+  <tests>
+    <test>
+      <param name="species" value="rat"/>
+      <param name="geneAnnot" value="gene_annotation_file_01fhl.tsv"/>
+      <param name="uniqId" value="UniqueID"/>
+      <param name="ensemblId" value="GeneName"/>
+      <param name="Output" value="ensembl2symbol_annotation_file_01fhl.tsv"/>
+    </test>
+  </tests>
+  <help><![CDATA[
+
+**Tool Description**
+
+  This tool takes a dataset containing unique FeatureIDs and ENSEMBLIDs and provides gene symbols. The link from the ENSEMBLIDs to gene symbols is made using Biomart. The tool adds the following columns to the input dataset:  GeneSymbol, Score, Selected,  and Tie. The GeneSymbol column contains the short identifiers (typically 3 letter abbreviations) of the gene name. The Score column contains a value that represents how well the ENSEMBLID matched the returned GeneSymbol using the PyPi package Gene 3.0.0 (https://www.ncbi.nlm.nih.gov/pubmed/23175613). The Selected column = 'Yes' when an ENSEMBLID uniquely matches a GeneSymbol or when that row has the highest Score value.  The Selected column = 'No' in the absence of a unique match for rows lower than the maximum score. If there is a tie in the Score the alphabetically first value is selected and the Tie column has a value of Yes. We note that FeatureID may not be unique in the resulting output dataset.
+
+--------------------------------------------------------------------------------
+
+**INPUT**
+
+**Dataset with unique FeatureIDs and ENSEMBLIDs**
+
+  +-------------+--------------+-----+
+  | FeatureID   | ENSEMBLID    | ... |
+  +=============+==============+=====+
+  | FeatureID_1 | ENS...       | ... |
+  +-------------+--------------+-----+
+  | FeatureID_2 | ENS...       | ... |
+  +-------------+--------------+-----+
+  | FeatureID_3 | ENS...       | ... |
+  +-------------+--------------+-----+
+  | ...         | ...          | ... |
+  +-------------+--------------+-----+
+
+    **NOTE:** This file must contain at least two columns, a column with unique FeatureIDs and a column containing ENSEMBLIDs. Other columns may be present.
+
+**Unique FeatureID**
+
+  Name of the column in your input dataset that has unique FeatureIDs.
+
+**ENSEMBLID**
+
+ Name of the column containing the ENSEMBLIDs.
+
+--------------------------------------------------------------------------------
+
+**OUTPUT**
+
+  The user will get a single output file.
+
+**Output Table**
+
+  +------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID   | ENSEMBLID | ...          | GeneSymbol  | Score     | Selected |
+  +============+============+==============+=============+===========+==========+
+  | FeatureID_1 | ENS...    | ...          | one*        | 13.550056 | Yes      |
+  +------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID_2 | ENS...    | ...          | two*        | 12.984067 | Yes      |
+  +------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID_2 | ENS...    | ...          | three*      | 11.995048 | No       |
+  +------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID_3 | ENS...    | ...          | four*       | 12.549084 | Yes      |
+  +------------+------------+--------------+-------------+-----------+----------+
+  | ...        | ...        | ...          | ...         | ...       | ...      |
+  +------------+------------+--------------+-------------+-----------+----------+
+
+  ]]>
+  </help>
+  <citations>
+    <citation type="bibtex">@article{wu2014mygene,
+    title={MyGene. info: gene annotation query as a service},
+    author={Wu, Chunlei and Mark, Adam and Su, Andrew I},
+    journal={bioRxiv},
+    pages={009332},
+    year={2014},
+    publisher={Cold Spring Harbor Laboratory}
+    }</citation>
+    <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
+    author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
+    title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
+    journal = {BMC Bioinformatics},
+    year = {in press}
+    }</citation>
+    <citation type="bibtex">
+    @article{garcia2010paintomics,
+    title={Paintomics: a web based tool for the joint visualization of transcriptomics and metabolomics data},
+    author={Garc{\'\i}a-Alcalde, Fernando and Garc{\'\i}a-L{\'o}pez, Federico and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
+    journal={Bioinformatics},
+    volume={27},
+    number={1},
+    pages={137--139},
+    year={2010},
+    publisher={Oxford University Press}
+    }</citation>
+  </citations>
+</tool>

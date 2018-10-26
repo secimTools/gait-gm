@@ -1,0 +1,216 @@
+<tool id="allByAllCorr" name="Metabolite - Gene Correlation" version="0.2.0">
+  <description></description>
+  <macros>
+    <import>macros.xml</import>
+  </macros>
+  <expand macro="requirements" />
+  <command detect_errors="exit_code" interpreter="python">
+    all_by_all_correlation.py
+      -g=$geneDataset
+      -gid=$geneId
+      #if $geneAnnotation.useGeneAnnot == "Yes":
+        -ga=$geneAnnotation.geneAnnot
+        -gn=$geneAnnotation.geneAnnotName
+      #end if
+      -m=$metDataset
+      -mid=$metId
+      #if $metAnnotation.useMetAnnot == "Yes":
+        -ma=$metAnnotation.metAnnot
+        -mn=$metAnnotation.metAnnotName
+      #end if
+      -me=$method
+      -t=$threshold
+      -o=$output
+      -c=$corMat
+      -f=$figure
+  </command>
+  <inputs>
+    <param name="geneDataset" type="data" format="tabular" label="Gene Expression Wide Dataset" help="Select the Gene Expression Wide Dataset from your history"/>
+    <param name="geneId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the Column in your Gene Expression Wide Dataset that contains unique identifiers."/>
+    <conditional name="geneAnnotation">
+      <param name="useGeneAnnot" type="select" label="Use Annotation File?" help="You can chose to input a file containing gene annotation information (e.g. gene names, identifiers, etc.) for labeling output files.">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </param>
+      <when value="Yes">
+        <param name="geneAnnot" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history"/>
+        <param name="geneAnnotName" type="text" value="" label="Gene Labels" help="Name of the column in the Gene Expression Annotation File to use for labeling output files."/>
+      </when>
+    </conditional>
+    <param name="metDataset" type="data" format="tabular" label="Metabolite Wide Dataset" help="Select the Metabolite Wide Dataset from your history"/>
+    <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/>
+    <conditional name="metAnnotation">
+      <param name="useMetAnnot" type="select" label="Use Annotation File?" help="You can chose to input a file containing metabolite annotation information (e.g. metabolite names, identifiers, etc.) for labeling output files.">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </param>
+      <when value="Yes">
+        <param name="metAnnot" type="data" format="tabular" label="Metabolite Annotation File" help="Select the Metabolite Annotation File from your history"/>
+        <param name="metAnnotName" type="text" value="" label="Metabolite Labels" help="Name of the column in the Metabolite Annotation File to use for labeling output files"/>
+      </when>
+    </conditional>
+    <param name="method" type="select" label="Correlation Method" help="Select a correlation method.">
+      <option value="pearson">Pearson</option>
+      <option value="spearman">Spearman</option>
+      <option value="kendall">Kendall</option>
+    </param>
+    <param name="threshold" type="text" value="0.05" label="P-Value threshold." help="Default: 0.05"/>
+  </inputs>
+  <outputs>
+    <data format="tabular" name="output" label="${tool.name} on ${on_string}: Correlation File"/>
+    <data format="tabular" name="corMat" label="${tool.name} on ${on_string}: Correlation Matrix"/>
+    <data format="pdf" name="figure" label="${tool.name} on ${on_string}: Correlation Figure"/>
+  </outputs>
+  <tests>
+    <test>
+      <param name="geneDataset" value="gene_wide_dataset_01fhl.tsv"/>
+      <param name="geneId" value="UniqueID"/>
+      <param name="geneAnnot" value="gene_annotation_file_01fhl.tsv"/>
+      <param name="geneName" value="GeneName"/>
+      <param name="metDataset" value="metabolite_wide_dataset_01fhl.tsv"/>
+      <param name="metId" value="UniqueID"/>
+      <param name="metAnnot" value="metabolite_annotation_file_01fhl.tsv"/>
+      <param name="metName" value="MetName"/>
+      <output name="output" file="correlation_file_01fhl.tsv"/>
+      <output name="corMat" file="correlation_matrix_01fhl.tsv"/>
+      <output name="figure" file="correlation_figure_01fhl.pdf"/>
+    </test>
+  </tests>
+  <help><![CDATA[
+
+**Tool Description**
+
+  The tool performs a correlation analysis between genes (in a gene expression wide dataset) and metabolites (in a metabolite wide dataset) 
+  to generate a table of correlation coefficients. P-values for the correlation coefficients are calculated by simulating individual gene and 
+  metabolite datasets 1000 times using a normal distribution with means and standard deviations generated from the data. Sample size reflects 
+  the input datasets. Correlations are calculated on the simulated data. Correlations must be higher/lower than 95% of the randomly simulated 
+  values to be considered significant. 
+
+--------------------------------------------------------------------------------
+
+**Input**
+
+  (1) **Gene Expression Dataset**  A wide formatted dataset containing measurements for each sample (where samples are in columns):
+
+    +-----------+---------+---------+---------+-----+
+    | UniqueID  | sample1 | sample2 | sample3 | ... |
+    +===========+=========+=========+=========+=====+
+    | gene_1    | 1.2     | 3.5     | 2.9     | ... |
+    +-----------+---------+---------+---------+-----+
+    | gene_2    | 1.6     | 3.2     | 3.2     | ... |
+    +-----------+---------+---------+---------+-----+
+    | gene_3    | 1.4     | 3.0     | 3.1     | ... |
+    +-----------+---------+---------+---------+-----+
+    | gene_4    | 1.6     | 2.9     | 3.1     | ... |
+    +-----------+---------+---------+---------+-----+
+    | ...       | ...     | ...     | ...     | ... |
+    +-----------+---------+---------+---------+-----+
+
+  (2) **Unique Gene FeatureID**  Name of the column in your Gene Expression Wide Dataset that contains unique gene identifiers.  **NOTE:** This identifier must be the gene symbol.
+
+  (3) **Metabolomic Wide Dataset**  A wide formatted metabolomic dataset that contains measurements for each sample (where samples are in columns):
+
+    +------------+---------+---------+---------+-----+
+    | UniqueID   | sample1 | sample2 | sample3 | ... |
+    +============+=========+=========+=========+=====+
+    | met_1      | 10      | 20      | 10      | ... |
+    +------------+---------+---------+---------+-----+
+    | met_2      | 5       | 22      | 30      | ... |
+    +------------+---------+---------+---------+-----+
+    | met_3      | 30      | 27      | 2       | ... |
+    +------------+---------+---------+---------+-----+
+    | met_4      | 32      | 17      | 8       | ... |
+    +------------+---------+---------+---------+-----+
+    | ...        | ...     | ...     | ...     | ... |
+    +------------+---------+---------+---------+-----+
+
+  (4) **Unique Metabolite FeatureID**  Name of the column in your Metabolite Wide Dataset that contains unique metabolite identifiers.
+
+  (5) **Annotation Files**  The user can provide (optional) Annotation Files for the Gene Expression and/or Metabolite Datasets to label the results for easier readability. The user must provide the name of the column with the desired feature name (e.g. Gene Symbol).
+
+    +-----------+------------+-------------+-----+
+    | UniqueID  | ENSEMBL_ID | Gene_Symbol | ... |
+    +===========+============+=============+=====+
+    | gene_1    | ENS...     | one         | ... |
+    +-----------+------------+-------------+-----+
+    | gene_2    | ENS...     | two         | ... |
+    +-----------+------------+-------------+-----+
+    | gene_3    | ENS...     | three       | ... |
+    +-----------+------------+-------------+-----+
+    | gene_4    | ENS...     | four        | ... |
+    +-----------+------------+-------------+-----+
+    | ...       | ...        | ...         | ... |
+    +-----------+------------+-------------+-----+
+
+  (6) **Correlation method**  Select the correlation coefficient to be computed from the list. Pearson, kendall, or spearman are available.
+
+  (7) **P-Value threshold**  User specified value that limits the data in the resulting 'Correlation File' to only those correlations with P-values less than this value.
+
+--------------------------------------------------------------------------------
+
+**Output**
+
+  The user will obtain three outputs from the Gene - Metabolite Correlation Tool:
+
+  (1) **Correlation File.** A file sorted by the absolute values of the correlation coeficient and including the P-value. The file contains only the correlation coefficients where the associated P-values is less than a user-specified value (default = 0.05).
+
+    +--------+------------+-------------+-----------+
+    | Gene   | Metabolite | Correlation | (p-value) |
+    +========+============+=============+===========+
+    | gene_1 | met_1      | 0.99        | 0.000     |
+    +--------+------------+-------------+-----------+
+    | gene_2 | met_4      | -0.98       | 0.000     |
+    +--------+------------+-------------+-----------+
+    | gene_3 | met_5      | 0.96        | 0.001     |
+    +--------+------------+-------------+-----------+
+    | gene_4 | met_1      | 0.95        | 0.002     |
+    +--------+------------+-------------+-----------+
+    | ...    | ...        | ...         | ...       |
+    +--------+------------+-------------+-----------+
+
+  (2) **Correlation Matrix.** Output correlation matrix.
+
+    +--------+-------+-------+-------+-------+-----+
+    | Gene   | met_1 | met_2 | met_3 | met_4 | ... |
+    +========+=======+=======+=======+=======+=====+
+    | gene_1 | 0.99  | 0.56  | 0.25  | 0.33  | ... |
+    +--------+-------+-------+-------+-------+-----+
+    | gene_2 | -0.57 | 0.63  | -0.14 | 0.01  | ... |
+    +--------+-------+-------+-------+-------+-----+
+    | gene_3 | 0.62  | 0.96  | 0.20  | 0.32  | ... |
+    +--------+-------+-------+-------+-------+-----+
+    | gene_4 | 0.95  | 0.25  | 0.16  | 0.44  | ... |
+    +--------+-------+-------+-------+-------+-----+
+    | ...    | ...   | ...   | ...   | ...   | ... |
+    +--------+-------+-------+-------+-------+-----+
+
+  (3) **Correlation Figure.** Network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coeficients. Maximum number of correlations in the netork is 500.
+
+  ]]>
+  </help>
+  <citations>
+    <citation type="bibtex">@article{dejean2013mixomics,
+    title={mixOmics: Omics data integration project},
+    author={Dejean, Sebastien and Gonzalez, Ignacio and L{\^e} Cao, Kim-Anh and Monget, Pierre and Coquery, J and Yao, F and Liquet, B and Rohart, F},
+    journal={R package},
+    year={2013}
+    }</citation>
+    <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
+    author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
+    title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
+    journal = {BMC Bioinformatics},
+    year = {in press}
+    }</citation>
+    <citation type="bibtex">
+    @article{garcia2010paintomics,
+    title={Paintomics: a web based tool for the joint visualization of transcriptomics and metabolomics data},
+    author={Garc{\'\i}a-Alcalde, Fernando and Garc{\'\i}a-L{\'o}pez, Federico and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
+    journal={Bioinformatics},
+    volume={27},
+    number={1},
+    pages={137--139},
+    year={2010},
+    publisher={Oxford University Press}
+    }</citation>
+  </citations>
+</tool>
