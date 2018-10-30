@@ -100,3 +100,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Test output runs
+tests/galaxy/test-output

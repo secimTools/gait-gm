@@ -1,0 +1,132 @@
+UniqueID	MetName
+Met_1	SM (OH) C16:1
+Met_2	SM (OH) C22:1
+Met_3	SM (OH) C22:2
+Met_4	SM (OH) C24:1
+Met_5	SM C16:0
+Met_6	SM C16:1
+Met_7	SM C18:0
+Met_8	SM C18:1
+Met_9	SM C22:3
+Met_10	SM C24:0
+Met_11	SM C24:1
+Met_12	SM C26:1
+Met_13	C14:1
+Met_14	C16:1
+Met_15	C16:1-OH
+Met_16	C18:1
+Met_17	C18:2
+Met_18	C2
+Met_19	lysoPC a C16:0
+Met_20	lysoPC a C16:1
+Met_21	lysoPC a C17:0
+Met_22	lysoPC a C18:0
+Met_23	lysoPC a C18:1
+Met_24	lysoPC a C20:4
+Met_25	lysoPC a C24:0
+Met_26	lysoPC a C28:1
+Met_27	PC aa C28:1
+Met_28	PC aa C30:0
+Met_29	PC aa C32:0
+Met_30	PC aa C32:1
+Met_31	PC aa C32:2
+Met_32	PC aa C32:3
+Met_33	PC aa C34:1
+Met_34	PC aa C34:2
+Met_35	PC aa C34:3
+Met_36	PC aa C34:4
+Met_37	PC aa C36:0
+Met_38	PC aa C36:1
+Met_39	PC aa C36:2
+Met_40	PC aa C36:3
+Met_41	PC aa C36:4
+Met_42	PC aa C36:5
+Met_43	PC aa C36:6
+Met_44	PC aa C38:0
+Met_45	PC aa C38:1
+Met_46	PC aa C38:3
+Met_47	PC aa C38:4
+Met_48	PC aa C38:5
+Met_49	PC aa C38:6
+Met_50	PC aa C40:1
+Met_51	PC aa C40:2
+Met_52	PC aa C40:3
+Met_53	PC aa C40:4
+Met_54	PC aa C40:5
+Met_55	PC aa C40:6
+Met_56	PC aa C42:1
+Met_57	PC aa C42:2
+Met_58	PC aa C42:4
+Met_59	PC aa C42:5
+Met_60	PC aa C42:6
+Met_61	PC ae C30:0
+Met_62	PC ae C30:1
+Met_63	PC ae C30:2
+Met_64	PC ae C32:1
+Met_65	PC ae C32:2
+Met_66	PC ae C34:0
+Met_67	PC ae C34:1
+Met_68	PC ae C34:2
+Met_69	PC ae C34:3
+Met_70	PC ae C36:0
+Met_71	PC ae C36:1
+Met_72	PC ae C36:2
+Met_73	PC ae C36:3
+Met_74	PC ae C36:4
+Met_75	PC ae C36:5
+Met_76	PC ae C38:0
+Met_77	PC ae C38:1
+Met_78	PC ae C38:2
+Met_79	PC ae C38:3
+Met_80	PC ae C38:4
+Met_81	PC ae C38:5
+Met_82	PC ae C38:6
+Met_83	PC ae C40:1
+Met_84	PC ae C40:2
+Met_85	PC ae C40:3
+Met_86	PC ae C40:4
+Met_87	PC ae C40:5
+Met_88	PC ae C40:6
+Met_89	PC ae C42:0
+Met_90	PC ae C42:1
+Met_91	PC ae C42:2
+Met_92	PC ae C42:3
+Met_93	PC ae C42:4
+Met_94	PC ae C44:3
+Met_95	PC ae C44:4
+Met_96	PC ae C44:5
+Met_97	PC ae C44:6
+Met_98	H1
+Met_99	Ala
+Met_100	ADMA
+Met_101	Arg
+Met_102	Asn
+Met_103	Asp
+Met_104	Carnosine
+Met_105	Cit
+Met_106	Creatinin
+Met_107	DOPA
+Met_108	Dopamine
+Met_109	Glutamine
+Met_110	Glutamate
+Met_111	Gly
+Met_112	Histidine
+Met_113	Histamine
+Met_114	Ile
+Met_115	Kynurenine
+Met_116	Leu
+Met_117	Lys
+Met_118	Met
+Met_119	NTyr
+Met_120	Orn
+Met_121	Phe
+Met_122	Pro
+Met_123	Putrescine
+Met_124	Ser
+Met_125	Serotonin
+Met_126	Spermidine
+Met_127	Spermine
+Met_128	Taurine
+Met_129	Thyr
+Met_130	Tyr
+Met_131	Val
