@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""The setup script."""
+"""The setup script for gait_gm."""
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
-    readme = readme_file.read()
+# with open('README.rst') as readme_file:
+#    readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['secimtools']
+requirements = ['secimtools', 'requests']
 
 setup_requirements = []
 
@@ -41,7 +41,8 @@ setup(
     },
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    # long_description=readme + '\n\n' + history,
+    long_description="Modeling Metabolites as a function of gene expression",
     include_package_data=True,
     keywords='gait_gm',
     name='gait_gm',
@@ -49,7 +50,19 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/secimTools/SECIMTools',
+    url='https://github.com/secimTools/gait-gm',
     version='1.0.0',
     zip_safe=False,
+    scripts=[
+        'src/add_kegg_anno_info.py',
+        'src/add_kegg_pathway_info.py',
+        'src/add_pval_flags.py',
+        'src/all_by_all_correlation.py',
+        'src/ensembl2symbol.py',
+        'src/keggPeaModules.py',
+        'src/split_wide_dataset.py',
+        'src/sPLS.py',
+        'src/all_by_all_correlation.R',
+        'src/sPLS.R'
+        ]
 )
