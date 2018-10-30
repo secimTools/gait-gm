@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/moskalenko/projects/software/bioinformatics/secim/GAIT-GM/_conda/1.0.0/bin/python
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
@@ -11,7 +11,7 @@ import re
 import os
 import sys
 import csv
-import urllib.request
+import requests
 import logging
 import tempfile
 from difflib import SequenceMatcher
@@ -73,8 +73,8 @@ def downloadGeneParser(species):
     """
 
     gene2keggsArray = {}
-    with urllib.request.urlopen("http://rest.kegg.jp/list/" + species) as genes:
-        gene2keggs = genes.read().decode("utf-8").splitlines()
+    with requests.get("http://rest.kegg.jp/list/" + species) as genes:
+        gene2keggs = genes.content.splitlines()
     for line in gene2keggs:
         geneId = line.split("\t")[0]
         geneNames = line.split("\t")[1]
@@ -93,8 +93,8 @@ def downloadMetParser():
     """
 
     met2keggsArray = {}
-    with urllib.request.urlopen("http://rest.kegg.jp/list/compound") as metabolites:
-        met2keggs = metabolites.read().decode("utf-8").splitlines()
+    with requests.get("http://rest.kegg.jp/list/compound") as metabolites:
+        met2keggs = metabolites.content.splitlines()
     for line in met2keggs:
         cpdId = line.split("\t")[0]
         cpdNames = line.split("\t")[1]
@@ -591,20 +591,33 @@ def downloadKeggInfo(args):
 
     # GeneKeggID2PathwayID
     if args.geneKeggAnnot:
-        urllib.request.urlretrieve(
-            "http://rest.kegg.jp/link/" + args.species + "/pathway", args.kgen2pathways
+        geneKeggAnnot = requests.get(
+            "http://rest.kegg.jp/link/" + args.species + "/pathway"
         )
+        geneKeggAnnot_file = args.species + "_geneKeggAnnot"
+        with open(geneKeggAnnot_file, 'w') as fh:
+            fh.write(geneKeggAnnot.content)
+        args.kgen2pathways = geneKeggAnnot_file
 
     # MetaboliteKeggID2PathwayID
     if args.metKeggAnnot:
-        urllib.request.urlretrieve(
-            "http://rest.kegg.jp/link/compound/pathway", args.kmet2pathways
+        metKeggAnnot = requests.get(
+            "http://rest.kegg.jp/link/compound/pathway"
         )
+        metKeggAnnot_file = "metKeggAnnot"
+        with open(metKeggAnnot_file, 'w') as fh:
+            fh.write(metKeggAnnot.content)
+        args.kmet2pathways = metKeggAnnot_file
 
     # PathwayID2PathwayNames
-    urllib.request.urlretrieve(
-        "http://rest.kegg.jp/list/pathway/" + args.species, args.pathways
-    )
+    if args.pathways:
+        pathways_data = requests.get(
+            "http://rest.kegg.jp/list/pathway/" + args.species
+        )
+        pathways_file = args.species + "_pathways"
+        with open(pathways_file, 'w') as fh:
+            fh.write(pathways_data.content)
+        args.pathways = pathways_file
 
     return args
 
