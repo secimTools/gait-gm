@@ -6,7 +6,7 @@ Modeling Metabolites as a function of gene expression
 
 A python package gait-gm based on this project is avialable from PyPI
 
-See [gait-gm on PyPi](https://pypi.org/project/gait-gm/1.0.0) - The web framework used
+See [gait-gm on PyPi](https://pypi.org/project/gait-gm)
 
 ### Prerequisites
 
@@ -32,9 +32,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* AUTHOR: **Francisco Huertas <f.huertas@ufl.edu>** - *Initial work*
+* AUTHOR: **Francisco Huertas** - *Initial work*
 
-* CONTRIBUTORS: **Alison Morse** <ammorse@ufl.edu> and **Oleksandr Moskalenko** <om@rc.ufl.edu>
+* CONTRIBUTORS: **Alison Morse** and **Oleksandr Moskalenko**
 
 ## License
 
