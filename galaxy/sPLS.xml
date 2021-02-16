@@ -1,4 +1,4 @@
-<tool id="secimtools_spls" name="Metabolite - Gene Integration" version="0.2.0">
+<tool id="secimtools_spls" name="Metabolite - Gene Integration" version="@WRAPPER_VERSION@">
   <description></description>
   <macros>
       <import>macros.xml</import>
@@ -7,7 +7,7 @@
   <stdio> 
     <exit_code range="2" level="fatal" description="Not enough metabolites for the Analysis."/> 
   </stdio> 
-  <command detect_errors="exit_code" interpreter="python">
+  <command detect_errors="exit_code"><![CDATA[
     sPLS.py
       -g=$metsOption.geneDataset
       -gid=$metsOption.geneId
@@ -64,7 +64,7 @@
       #end if
       -f1=$figure1
       -o1=$splsOut
-  </command>
+  ]]></command>
   <inputs>
     <param name="metDataset" type="data" format="tabular" label="Metabolite Wide Dataset for Integration" help="Select the Metabolite Wide Dataset from your history"/>
     <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/> 

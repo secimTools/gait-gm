@@ -1,10 +1,10 @@
-<tool id="allByAllCorr" name="Metabolite - Gene Correlation" version="0.2.0">
+<tool id="allByAllCorr" name="Metabolite - Gene Correlation" version="@WRAPPER_VERSION@">
   <description></description>
   <macros>
     <import>macros.xml</import>
   </macros>
   <expand macro="requirements" />
-  <command detect_errors="exit_code" interpreter="python">
+  <command detect_errors="exit_code"><![CDATA[
     all_by_all_correlation.py
       -g=$geneDataset
       -gid=$geneId
@@ -23,7 +23,7 @@
       -o=$output
       -c=$corMat
       -f=$figure
-  </command>
+  ]]></command>
   <inputs>
     <param name="geneDataset" type="data" format="tabular" label="Gene Expression Wide Dataset" help="Select the Gene Expression Wide Dataset from your history"/>
     <param name="geneId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the Column in your Gene Expression Wide Dataset that contains unique identifiers."/>

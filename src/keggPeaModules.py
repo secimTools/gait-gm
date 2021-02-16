@@ -76,6 +76,7 @@ def downloadGeneParser(species):
     with requests.get("http://rest.kegg.jp/list/" + species) as genes:
         gene2keggs = genes.content.splitlines()
     for line in gene2keggs:
+        line = line.decode('utf-8')
         geneId = line.split("\t")[0]
         geneNames = line.split("\t")[1]
         gene2keggsArray[geneId] = geneNames
@@ -96,6 +97,7 @@ def downloadMetParser():
     with requests.get("http://rest.kegg.jp/list/compound") as metabolites:
         met2keggs = metabolites.content.splitlines()
     for line in met2keggs:
+        line = line.decode('utf-8')
         cpdId = line.split("\t")[0]
         cpdNames = line.split("\t")[1]
         met2keggsArray[cpdId] = cpdNames
