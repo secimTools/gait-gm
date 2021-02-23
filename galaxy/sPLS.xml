@@ -140,7 +140,7 @@
         <param name="design" type="data" format="tabular" label="Design Dataset" help="Select the Design file to use with your Metabolite KEGGID Link File. This file can be generated using the 'Create: Design, Wide, and Annotation datasets' tool. Note that you need a column called 'sampleID' that contains the names of your samples."/>
         <param name="sigmaLow" type="float" size="6" value="0.05" label="Lower sigma bound" help="Default: 0.05." />
         <param name="sigmaHigh" type="float" size="6" value="0.50" label="Upper sigma bound" help="Default: 0.50." />
-        <param name="sigmaNum" type="float" size="6" value="451" label="Number of Sigma values" help="Number of values of sigma to search. Default: 451." />
+        <param name="sigmaNum" type="integer" size="6" value="451" label="Number of Sigma values" help="Number of values of sigma to search. Default: 451." />
         <param name="corr" type="select" value="pearson" label="Correlation method" help="Select correlation method for preliminary correlation before clustering. Default: Pearson." >
           <option value="pearson" selected="true">Pearson</option>
           <option value="kendall" selected="true">Kendall</option>
@@ -195,7 +195,7 @@
         <param name="design" type="data" format="tabular" label="Design File" help="Select the Design file to use with your Metabolite KEGGID Link File. This file can be generated using the 'Create: Design, Wide, and Annotation datasets' tool. Note that you need a 'sampleID' column."/>
         <param name="sigmaLow" type="float" size="6" value="0.05" label="Lower sigma bound" help="Default: 0.05." />
         <param name="sigmaHigh" type="float" size="6" value="0.50" label="Upper sigma bound" help="Default: 0.50." />
-        <param name="sigmaNum" type="float" size="6" value="451" label="Number of Sigma values" help="Number of values of sigma to search. Default: 451." />
+        <param name="sigmaNum" type="integer" size="6" value="451" label="Number of Sigma values" help="Number of values of sigma to search. Default: 451." />
         <param name="corr" type="select" value="pearson" label="Correlation method" help="Select correlation method for preliminary correlation prior to clustering. Default: Pearson." >
           <option value="pearson" selected="true">Pearson</option>
           <option value="kendall" selected="true">Kendall</option>

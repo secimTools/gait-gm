@@ -152,7 +152,7 @@ def getOptions():
     return args
 
 
-def main(args):
+def main():
     """
     Add KEGG Pathway information to each feature (gene/metabolite) that has been previously
     analyzed with add_kegg_anno_info.py.

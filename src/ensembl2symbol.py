@@ -122,6 +122,7 @@ def main():
         df_index=False,
     )
     genesTransformedTable = genesTransformed["out"]
+    print(genesTransformed)
     genesTransformedTable.drop(labels=["_id"], axis=1, inplace=True)
     genesTransformedTable = genesTransformedTable[["query", "symbol", "_score"]]
     genesTransformedTable.columns = [args.ensemblId, "GeneSymbol", "Score"]

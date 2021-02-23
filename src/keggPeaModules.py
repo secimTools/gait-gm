@@ -598,7 +598,7 @@ def downloadKeggInfo(args):
         )
         geneKeggAnnot_file = args.species + "_geneKeggAnnot"
         with open(geneKeggAnnot_file, 'w') as fh:
-            fh.write(geneKeggAnnot.content)
+            fh.write(geneKeggAnnot.content.decode("utf-8"))
         args.kgen2pathways = geneKeggAnnot_file
 
     # MetaboliteKeggID2PathwayID
@@ -608,7 +608,7 @@ def downloadKeggInfo(args):
         )
         metKeggAnnot_file = "metKeggAnnot"
         with open(metKeggAnnot_file, 'w') as fh:
-            fh.write(metKeggAnnot.content)
+            fh.write(metKeggAnnot.content.decode("utf-8"))
         args.kmet2pathways = metKeggAnnot_file
 
     # PathwayID2PathwayNames
@@ -618,7 +618,7 @@ def downloadKeggInfo(args):
         )
         pathways_file = args.species + "_pathways"
         with open(pathways_file, 'w') as fh:
-            fh.write(pathways_data.content)
+            fh.write(pathways_data.content.decode("utf-8"))
         args.pathways = pathways_file
 
     return args
@@ -1111,7 +1111,7 @@ def prepareSPLSData(args):
                 metSubTable = metSubTable.set_index(args.metId)
             metData.append(metSubTable)
             # convert to R dataframe
-            R_met_subdf = pandas2ri.py2ri(metSubTable)
+            R_met_subdf = pandas2ri.py2rpy(metSubTable)
             # Subset Gene Dataset
             if args.geneOption == "path":
                 R_gene_df = prepareSPLSGenePathData(args, uniqueIDs)
@@ -1331,7 +1331,7 @@ def prepareSPLSGeneAllData(args):
         geneTable = geneTable.set_index(args.geneId)
 
     # convert to R dataframe
-    R_gene_df = pandas2ri.py2ri(geneTable)
+    R_gene_df = pandas2ri.py2rpy(geneTable)
 
     return R_gene_df
 
@@ -1374,7 +1374,7 @@ def prepareSPLSGeneListData(args):
         geneTable_subset = geneTable_subset.set_index(args.geneId)
 
     # convert to R dataframe
-    R_gene_df = pandas2ri.py2ri(geneTable_subset)
+    R_gene_df = pandas2ri.py2rpy(geneTable_subset)
 
     return R_gene_df
 
@@ -1438,7 +1438,7 @@ def prepareSPLSGenePathData(args, uniqueIDs):
         else:
             geneTable_subset = geneTable_subset.set_index(args.geneId)
         # convert to R dataframe
-        R_gene_df = pandas2ri.py2ri(geneTable_subset)
+        R_gene_df = pandas2ri.py2rpy(geneTable_subset)
 
     return R_gene_df
 
@@ -1497,7 +1497,7 @@ def prepareSPLSGenePanaData(args):
     input_file = input_file.dropna()
     input_file = input_file.set_index("KEGG_ID")
     # convert to R dataframe
-    R_input_file = pandas2ri.py2ri(input_file)
+    R_input_file = pandas2ri.py2rpy(input_file)
 
     # Prepare genes2pathway
     pathway2genes = pd.read_table(
@@ -1505,7 +1505,7 @@ def prepareSPLSGenePanaData(args):
     )
     genes2pathway = pathway2genes[["geneId", "pathId"]]
     # convert to R dataframe
-    R_genes2pathway = pandas2ri.py2ri(genes2pathway)
+    R_genes2pathway = pandas2ri.py2rpy(genes2pathway)
 
     # Run PANA script
     panaOutput = PANAScript.PCA2GO(
@@ -1514,7 +1514,7 @@ def prepareSPLSGenePanaData(args):
         var_cutoff=args.cutoff,
         fac_sel=args.facSel,
     )
-    panaOutputTable = pandas2ri.ri2py(panaOutput[1])
+    panaOutputTable = pandas2ri.py2rpy(panaOutput[1])
 
     # Add Annotation
     if args.path2names:
@@ -1533,7 +1533,7 @@ def prepareSPLSGenePanaData(args):
         gene_df.insert(loc=0, column="pathNames", value=pathNames)
         gene_df = gene_df.set_index("pathNames")
         # convert to R dataframe
-        R_gene_df = pandas2ri.py2ri(gene_df)
+        R_gene_df = pandas2ri.py2rpy(gene_df)
         # panaOutputTable
         pathNames.insert(0, "KEGG_ID")
         panaOutputTable.columns = pathNames
@@ -1545,7 +1545,7 @@ def prepareSPLSGenePanaData(args):
     else:
         gene_df = pandas2ri.ri2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
-        R_gene_df = pandas2ri.py2ri(gene_df)
+        R_gene_df = pandas2ri.py2rpy(gene_df)
     # Write PANA Output table
     panaOutputTable = panaOutputTable.astype(str)
     panaOutputTable.to_csv(args.panaOut, sep="\t", header=True, index=True)

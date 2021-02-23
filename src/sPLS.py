@@ -263,7 +263,7 @@ def getOptions():
         "-sn",
         "--sigmaNum",
         dest="sigmaNum",
-        type=float,
+        type=int,
         required=False,
         default=451,
         help="Number of values of sigma to search" " (Default: 451).",
