@@ -19,7 +19,10 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import scipy.stats as st
-from rpy2.robjects import pandas2ri
+from rpy2 import robjects as robjects
+from rpy2.robjects.packages import importr
+from rpy2.robjects import r, pandas2ri
+from rpy2.robjects.conversion import localconverter
 from matplotlib.backends.backend_pdf import PdfPages
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
 from secimtools.dataManager import logger as sl
@@ -1111,7 +1114,9 @@ def prepareSPLSData(args):
                 metSubTable = metSubTable.set_index(args.metId)
             metData.append(metSubTable)
             # convert to R dataframe
-            R_met_subdf = pandas2ri.py2rpy(metSubTable)
+            with localconverter(robjects.default_converter + pandas2ri.converter):
+                R_met_subdf = robjects.conversion.py2rpy(metSubTable)
+                #R_met_subdf = pandas2ri.py2rpy(metSubTable)
             # Subset Gene Dataset
             if args.geneOption == "path":
                 R_gene_df = prepareSPLSGenePathData(args, uniqueIDs)
@@ -1331,7 +1336,9 @@ def prepareSPLSGeneAllData(args):
         geneTable = geneTable.set_index(args.geneId)
 
     # convert to R dataframe
-    R_gene_df = pandas2ri.py2rpy(geneTable)
+    with localconverter(robjects.default_converter + pandas2ri.converter):
+        R_gene_df = robjects.conversion.py2rpy(geneTable)
+        #R_gene_df = pandas2ri.py2rpy(geneTable)
 
     return R_gene_df
 
@@ -1374,7 +1381,9 @@ def prepareSPLSGeneListData(args):
         geneTable_subset = geneTable_subset.set_index(args.geneId)
 
     # convert to R dataframe
-    R_gene_df = pandas2ri.py2rpy(geneTable_subset)
+    with localconverter(robjects.default_converter + pandas2ri.converter):
+        R_gene_df = robjects.conversion.py2rpy(geneTable_subset)
+        #R_gene_df = pandas2ri.py2rpy(geneTable_subset)
 
     return R_gene_df
 
@@ -1438,7 +1447,9 @@ def prepareSPLSGenePathData(args, uniqueIDs):
         else:
             geneTable_subset = geneTable_subset.set_index(args.geneId)
         # convert to R dataframe
-        R_gene_df = pandas2ri.py2rpy(geneTable_subset)
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            R_gene_df = robjects.conversion.py2rpy(geneTable_subset)
+            #R_gene_df = pandas2ri.py2rpy(geneTable_subset)
 
     return R_gene_df
 
@@ -1497,7 +1508,9 @@ def prepareSPLSGenePanaData(args):
     input_file = input_file.dropna()
     input_file = input_file.set_index("KEGG_ID")
     # convert to R dataframe
-    R_input_file = pandas2ri.py2rpy(input_file)
+    with localconverter(robjects.default_converter + pandas2ri.converter):
+        R_input_file = robjects.conversion.py2rpy(input_file)
+        #R_input_file = pandas2ri.py2rpy(input_file)
 
     # Prepare genes2pathway
     pathway2genes = pd.read_table(
@@ -1505,7 +1518,9 @@ def prepareSPLSGenePanaData(args):
     )
     genes2pathway = pathway2genes[["geneId", "pathId"]]
     # convert to R dataframe
-    R_genes2pathway = pandas2ri.py2rpy(genes2pathway)
+    with localconverter(robjects.default_converter + pandas2ri.converter):
+        R_genes2pathway = robjects.conversion.py2rpy(genes2pathway)
+        #R_genes2pathway = pandas2ri.py2rpy(genes2pathway)
 
     # Run PANA script
     panaOutput = PANAScript.PCA2GO(
@@ -1518,7 +1533,9 @@ def prepareSPLSGenePanaData(args):
 
     # Add Annotation
     if args.path2names:
-        gene_df = pandas2ri.ri2py(panaOutput[0])
+        ## AMM monkeying
+        with localconverter(ro.default_converter + pandas2ri.converter):
+            gene_df = ro.conversion.rpy2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
         path2name = pd.read_table(
             args.path2names, sep="\t", names=["pathId", "pathName"]
@@ -1529,11 +1546,14 @@ def prepareSPLSGenePanaData(args):
         pathNames = []
         for pathway, row in gene_df.iterrows():
             pathNames.append(reduce_path_name(pathway, path2nameDict))
+
         # Gene "Wide" Dataset
         gene_df.insert(loc=0, column="pathNames", value=pathNames)
         gene_df = gene_df.set_index("pathNames")
         # convert to R dataframe
-        R_gene_df = pandas2ri.py2rpy(gene_df)
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            R_gene_subdf = robjects.conversion.py2rpy(gene_df)
+            #R_gene_df = pandas2ri.py2rpy(gene_df)
         # panaOutputTable
         pathNames.insert(0, "KEGG_ID")
         panaOutputTable.columns = pathNames
@@ -1546,12 +1566,12 @@ def prepareSPLSGenePanaData(args):
         gene_df = pandas2ri.ri2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
         R_gene_df = pandas2ri.py2rpy(gene_df)
+
     # Write PANA Output table
     panaOutputTable = panaOutputTable.astype(str)
     panaOutputTable.to_csv(args.panaOut, sep="\t", header=True, index=True)
 
     return R_gene_df
-
 
 def reduce_path_name(pathway, path2nameDict):
     """
