@@ -7,14 +7,14 @@
   <stdio> 
     <exit_code range="1" level="fatal" description="Repeated Unique IDs"/> 
   </stdio> 
-  <command detect_errors="exit_code" interpreter="python">
+  <command detect_errors="exit_code"><![CDATA[
   ensembl2symbol.py
     -s=$species
     -ga=$geneAnnot
     -id=$uniqId
     -e=$ensemblId
     -o=$output
-  </command>
+  ]]></command>
   <inputs>
     <param name="species" type="select" label="Select the species your ENSEMBLIDs are from" >
      <option value="human">Homo sapiens</option>

@@ -4,7 +4,7 @@
     <import>macros.xml</import>
   </macros>
   <expand macro="requirements" />
-  <command detect_errors="exit_code" interpreter="python">
+  <command detect_errors="exit_code"><![CDATA[
     add_kegg_pathway_info.py
       -sp=$species
       #if $dataSets.whichDataSet == "geneDataset":
@@ -38,7 +38,7 @@
         -km2p=$met_keggID2pathID
       #end if
       -p=$pathways
-  </command>
+  ]]></command>
   <inputs>
     <param name="species" type="select" label="Select your Species from the List" >
      <option value="hsa">Homo sapiens</option>

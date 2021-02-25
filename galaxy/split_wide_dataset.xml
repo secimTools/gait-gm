@@ -7,7 +7,7 @@
   <stdio> 
     <exit_code range="1" level="fatal" description="Repeated Unique IDs"/> 
   </stdio> 
-  <command detect_errors="exit_code" interpreter="python">
+  <command detect_errors="exit_code"><![CDATA[
   split_wide_dataset.py
     -i=$input
     #if $cond_UniqID.hasUniqID == "y":
@@ -22,7 +22,7 @@
     -w=$wide
     -d=$design
     -a=$annot
-  </command>
+  ]]></command>
   <inputs>
     <param name="input" type="data" format="tabular" label="Input Wide Dataset" help="Input tab separated Wide Dataset. If input is not tab separated, see TIP below."/>
     <conditional name="cond_UniqID">
