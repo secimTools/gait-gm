@@ -38,7 +38,7 @@
         -km2p=$met_keggID2pathID
       #end if
       -p=$pathways
-  ]]</command>
+  ]]></command>
   <inputs>
     <param name="species" type="select" label="Select your Species from the List" >
      <option value="hsa">Homo sapiens</option>

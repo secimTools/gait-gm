@@ -22,7 +22,7 @@
     -w=$wide
     -d=$design
     -a=$annot
-  ]]</command>
+  ]]></command>
   <inputs>
     <param name="input" type="data" format="tabular" label="Input Wide Dataset" help="Input tab separated Wide Dataset. If input is not tab separated, see TIP below."/>
     <conditional name="cond_UniqID">

@@ -1,6 +1,10 @@
 <?xml version="1.0" ?>
 <macros>
+<<<<<<< HEAD
     <token name="@WRAPPER_VERSION@">21.1.21</token>
+=======
+    <token name="@WRAPPER_VERSION@">21.2.21</token>
+>>>>>>> 64e6d79221cca19fa4159389fab9531667e3042d
     <xml name="requirements">
         <requirements>
             <requirement type="package" version="@WRAPPER_VERSION@">secimtools</requirement>

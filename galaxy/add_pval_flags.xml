@@ -12,7 +12,7 @@
       -t=$thresholds
       -o=$output
       -fl=$flags
-  ]]</command>
+  ]]></command>
   <inputs>
     <param name="DE_Dataset" type="data" format="tabular" label="Select Dataset containing p-values from your history"/>
     <param name="uniqID" type="text" size="30" value="" label="Unique FeatureID" help="Name of the column in your Dataset that contains unique FeatureIDs."/>

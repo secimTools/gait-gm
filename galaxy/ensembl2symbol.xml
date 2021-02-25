@@ -14,7 +14,7 @@
     -id=$uniqId
     -e=$ensemblId
     -o=$output
-  ]]</command>
+  ]]></command>
   <inputs>
     <param name="species" type="select" label="Select the species your ENSEMBLIDs are from" >
      <option value="human">Homo sapiens</option>

@@ -30,7 +30,7 @@
     #end if
     -go=$geneOutput
     -mo=$metOutput
-  ]]</command>
+  ]]></command>
   <inputs>
     <param name="species" type="select" label="Select Species from the list" >
      <option value="hsa">Homo sapiens</option>
