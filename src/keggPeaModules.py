@@ -1529,7 +1529,8 @@ def prepareSPLSGenePanaData(args):
         var_cutoff=args.cutoff,
         fac_sel=args.facSel,
     )
-    panaOutputTable = pandas2ri.py2rpy(panaOutput[1])
+    panaOutputTable = robjects.conversion.py2rpy(panaOutput[1])
+    #panaOutputTable = pandas2ri.py2rpy(panaOutput[1])
 
     # Add Annotation
     if args.path2names:
