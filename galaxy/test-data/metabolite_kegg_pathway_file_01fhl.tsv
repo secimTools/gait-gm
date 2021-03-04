@@ -1,0 +1,871 @@
+UniqueID	Feature_Name	Feature_Type	KEGG_ID	Pathway_ID	Pathway_Name
+Met_1	SM (OH) C16:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_1	SM (OH) C16:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_1	SM (OH) C16:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_1	SM (OH) C16:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_2	SM (OH) C22:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_2	SM (OH) C22:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_2	SM (OH) C22:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_2	SM (OH) C22:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_3	SM (OH) C22:2	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_3	SM (OH) C22:2	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_3	SM (OH) C22:2	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_3	SM (OH) C22:2	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_4	SM (OH) C24:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_4	SM (OH) C24:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_4	SM (OH) C24:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_4	SM (OH) C24:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_5	SM C16:0	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_5	SM C16:0	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_5	SM C16:0	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_5	SM C16:0	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_6	SM C16:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_6	SM C16:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_6	SM C16:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_6	SM C16:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_7	SM C18:0	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_7	SM C18:0	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_7	SM C18:0	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_7	SM C18:0	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_8	SM C18:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_8	SM C18:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_8	SM C18:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_8	SM C18:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_9	SM C22:3	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_9	SM C22:3	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_9	SM C22:3	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_9	SM C22:3	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_10	SM C24:0	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_10	SM C24:0	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_10	SM C24:0	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_10	SM C24:0	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_11	SM C24:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_11	SM C24:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_11	SM C24:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_11	SM C24:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_12	SM C26:1	Metabolite	cpd:C00550	path:rno00600	Sphingolipid metabolism
+Met_12	SM C26:1	Metabolite	cpd:C00550	path:rno01100	Metabolic pathways
+Met_12	SM C26:1	Metabolite	cpd:C00550	path:rno04071	Sphingolipid signaling pathway
+Met_12	SM C26:1	Metabolite	cpd:C00550	path:rno04217	Necroptosis
+Met_13	C14:1	Metabolite	NA	NA	NA
+Met_14	C16:1	Metabolite	NA	NA	NA
+Met_15	C16:1-OH	Metabolite	NA	NA	NA
+Met_16	C18:1	Metabolite	NA	NA	NA
+Met_17	C18:2	Metabolite	NA	NA	NA
+Met_18	C2	Metabolite	cpd:C05955	path:rno00590	Arachidonic acid metabolism
+Met_18	C2	Metabolite	cpd:C05955	path:rno01100	Metabolic pathways
+Met_18	C2	Metabolite	cpd:C05955	path:rno04726	Serotonergic synapse
+Met_19	lysoPC a C16:0	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_20	lysoPC a C16:1	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_21	lysoPC a C17:0	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_22	lysoPC a C18:0	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_23	lysoPC a C18:1	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_24	lysoPC a C20:4	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_25	lysoPC a C24:0	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_26	lysoPC a C28:1	Metabolite	cpd:C04233	path:rno00564	Glycerophospholipid metabolism
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_27	PC aa C28:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_28	PC aa C30:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_29	PC aa C32:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_30	PC aa C32:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_31	PC aa C32:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_32	PC aa C32:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_33	PC aa C34:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_34	PC aa C34:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_35	PC aa C34:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_36	PC aa C34:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_37	PC aa C36:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_38	PC aa C36:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_39	PC aa C36:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_40	PC aa C36:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_41	PC aa C36:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_42	PC aa C36:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_43	PC aa C36:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_44	PC aa C38:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_45	PC aa C38:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_46	PC aa C38:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_47	PC aa C38:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_48	PC aa C38:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_49	PC aa C38:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_50	PC aa C40:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_51	PC aa C40:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_52	PC aa C40:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_53	PC aa C40:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_54	PC aa C40:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_55	PC aa C40:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_56	PC aa C42:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_57	PC aa C42:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_58	PC aa C42:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_59	PC aa C42:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_60	PC aa C42:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_61	PC ae C30:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_62	PC ae C30:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_63	PC ae C30:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_64	PC ae C32:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_65	PC ae C32:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_66	PC ae C34:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_67	PC ae C34:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_68	PC ae C34:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_69	PC ae C34:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_70	PC ae C36:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_71	PC ae C36:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_72	PC ae C36:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_73	PC ae C36:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_74	PC ae C36:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_75	PC ae C36:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_76	PC ae C38:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_77	PC ae C38:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_78	PC ae C38:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_79	PC ae C38:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_80	PC ae C38:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_81	PC ae C38:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_82	PC ae C38:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_83	PC ae C40:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_84	PC ae C40:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_85	PC ae C40:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_86	PC ae C40:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_87	PC ae C40:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_88	PC ae C40:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_89	PC ae C42:0	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_90	PC ae C42:1	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_91	PC ae C42:2	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_92	PC ae C42:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_93	PC ae C42:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_94	PC ae C44:3	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_95	PC ae C44:4	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_96	PC ae C44:5	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno00564	Glycerophospholipid metabolism
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno00590	Arachidonic acid metabolism
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno00591	Linoleic acid metabolism
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno00592	alpha-Linolenic acid metabolism
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno01100	Metabolic pathways
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno04723	Retrograde endocannabinoid signaling
+Met_97	PC ae C44:6	Metabolite	cpd:C00157	path:rno05231	Choline metabolism in cancer
+Met_98	H1	Metabolite	cpd:C11599	NA	NA
+Met_99	Ala	Metabolite	cpd:C00041	path:rno00250	Alanine, aspartate and glutamate metabolism
+Met_99	Ala	Metabolite	cpd:C00041	path:rno00270	Cysteine and methionine metabolism
+Met_99	Ala	Metabolite	cpd:C00041	path:rno00430	Taurine and hypotaurine metabolism
+Met_99	Ala	Metabolite	cpd:C00041	path:rno00450	Selenocompound metabolism
+Met_99	Ala	Metabolite	cpd:C00041	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_99	Ala	Metabolite	cpd:C00041	path:rno01100	Metabolic pathways
+Met_99	Ala	Metabolite	cpd:C00041	path:rno01200	Carbon metabolism
+Met_99	Ala	Metabolite	cpd:C00041	path:rno01230	Biosynthesis of amino acids
+Met_99	Ala	Metabolite	cpd:C00041	path:rno02010	ABC transporters
+Met_99	Ala	Metabolite	cpd:C00041	path:rno04122	Sulfur relay system
+Met_99	Ala	Metabolite	cpd:C00041	path:rno04974	Protein digestion and absorption
+Met_99	Ala	Metabolite	cpd:C00041	path:rno04978	Mineral absorption
+Met_99	Ala	Metabolite	cpd:C00041	path:rno05230	Central carbon metabolism in cancer
+Met_100	ADMA	Metabolite	cpd:C03626	NA	NA
+Met_101	Arg	Metabolite	cpd:C00062	path:rno00220	Arginine biosynthesis
+Met_101	Arg	Metabolite	cpd:C00062	path:rno00330	Arginine and proline metabolism
+Met_101	Arg	Metabolite	cpd:C00062	path:rno00472	D-Arginine and D-ornithine metabolism
+Met_101	Arg	Metabolite	cpd:C00062	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_101	Arg	Metabolite	cpd:C00062	path:rno01100	Metabolic pathways
+Met_101	Arg	Metabolite	cpd:C00062	path:rno01230	Biosynthesis of amino acids
+Met_101	Arg	Metabolite	cpd:C00062	path:rno02010	ABC transporters
+Met_101	Arg	Metabolite	cpd:C00062	path:rno04974	Protein digestion and absorption
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05014	Amyotrophic lateral sclerosis (ALS)
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05132	Salmonella infection
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05142	Chagas disease (American trypanosomiasis)
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05146	Amoebiasis
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05230	Central carbon metabolism in cancer
+Met_102	Asn	Metabolite	cpd:C00152	path:rno00250	Alanine, aspartate and glutamate metabolism
+Met_102	Asn	Metabolite	cpd:C00152	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_102	Asn	Metabolite	cpd:C00152	path:rno01100	Metabolic pathways
+Met_102	Asn	Metabolite	cpd:C00152	path:rno01230	Biosynthesis of amino acids
+Met_102	Asn	Metabolite	cpd:C00152	path:rno04974	Protein digestion and absorption
+Met_102	Asn	Metabolite	cpd:C00152	path:rno04978	Mineral absorption
+Met_102	Asn	Metabolite	cpd:C00152	path:rno05230	Central carbon metabolism in cancer
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00220	Arginine biosynthesis
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00250	Alanine, aspartate and glutamate metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00260	Glycine, serine and threonine metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00270	Cysteine and methionine metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00340	Histidine metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00410	beta-Alanine metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00760	Nicotinate and nicotinamide metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00770	Pantothenate and CoA biosynthesis
+Met_103	Asp	Metabolite	cpd:C00049	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_103	Asp	Metabolite	cpd:C00049	path:rno01100	Metabolic pathways
+Met_103	Asp	Metabolite	cpd:C00049	path:rno01200	Carbon metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_103	Asp	Metabolite	cpd:C00049	path:rno01230	Biosynthesis of amino acids
+Met_103	Asp	Metabolite	cpd:C00049	path:rno02010	ABC transporters
+Met_103	Asp	Metabolite	cpd:C00049	path:rno04080	Neuroactive ligand-receptor interaction
+Met_103	Asp	Metabolite	cpd:C00049	path:rno04974	Protein digestion and absorption
+Met_103	Asp	Metabolite	cpd:C00049	path:rno05230	Central carbon metabolism in cancer
+Met_104	Carnosine	Metabolite	cpd:C00386	path:rno00340	Histidine metabolism
+Met_104	Carnosine	Metabolite	cpd:C00386	path:rno00410	beta-Alanine metabolism
+Met_104	Carnosine	Metabolite	cpd:C00386	path:rno01100	Metabolic pathways
+Met_105	Cit	Metabolite	cpd:C15639	NA	NA
+Met_106	Creatinin	Metabolite	cpd:C00791	path:rno00330	Arginine and proline metabolism
+Met_106	Creatinin	Metabolite	cpd:C00791	path:rno01100	Metabolic pathways
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno00350	Tyrosine metabolism
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno01100	Metabolic pathways
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno04728	Dopaminergic synapse
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno04917	Prolactin signaling pathway
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno05012	Parkinson's disease
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno05030	Cocaine addiction
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno05031	Amphetamine addiction
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno05034	Alcoholism
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno00350	Tyrosine metabolism
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno01100	Metabolic pathways
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04024	cAMP signaling pathway
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04080	Neuroactive ligand-receptor interaction
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04540	Gap junction
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04721	Synaptic vesicle cycle
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04728	Dopaminergic synapse
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04917	Prolactin signaling pathway
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04976	Bile secretion
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05012	Parkinson's disease
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05030	Cocaine addiction
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05031	Amphetamine addiction
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05032	Morphine addiction
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05034	Alcoholism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00220	Arginine biosynthesis
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00230	Purine metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00240	Pyrimidine metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00250	Alanine, aspartate and glutamate metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00471	D-Glutamine and D-glutamate metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00630	Glyoxylate and dicarboxylate metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00910	Nitrogen metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno01100	Metabolic pathways
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno01230	Biosynthesis of amino acids
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno02010	ABC transporters
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04724	Glutamatergic synapse
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04727	GABAergic synapse
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04964	Proximal tubule bicarbonate reclamation
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04974	Protein digestion and absorption
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04978	Mineral absorption
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno05230	Central carbon metabolism in cancer
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00220	Arginine biosynthesis
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00250	Alanine, aspartate and glutamate metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00330	Arginine and proline metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00340	Histidine metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00430	Taurine and hypotaurine metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00471	D-Glutamine and D-glutamate metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00480	Glutathione metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00524	Neomycin, kanamycin and gentamicin biosynthesis
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00630	Glyoxylate and dicarboxylate metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00650	Butanoate metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00860	Porphyrin and chlorophyll metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00910	Nitrogen metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01100	Metabolic pathways
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01200	Carbon metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01230	Biosynthesis of amino acids
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno02010	ABC transporters
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04068	FoxO signaling pathway
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04072	Phospholipase D signaling pathway
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04080	Neuroactive ligand-receptor interaction
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04216	Ferroptosis
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04540	Gap junction
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04713	Circadian entrainment
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04720	Long-term potentiation
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04721	Synaptic vesicle cycle
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04723	Retrograde endocannabinoid signaling
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04724	Glutamatergic synapse
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04727	GABAergic synapse
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04730	Long-term depression
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04742	Taste transduction
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04964	Proximal tubule bicarbonate reclamation
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04974	Protein digestion and absorption
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05014	Amyotrophic lateral sclerosis (ALS)
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05016	Huntington's disease
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05030	Cocaine addiction
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05031	Amphetamine addiction
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05033	Nicotine addiction
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05034	Alcoholism
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05230	Central carbon metabolism in cancer
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00120	Primary bile acid biosynthesis
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00230	Purine metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00260	Glycine, serine and threonine metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00310	Lysine degradation
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00440	Phosphonate and phosphinate metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00480	Glutathione metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00630	Glyoxylate and dicarboxylate metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00730	Thiamine metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00860	Porphyrin and chlorophyll metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_111	Gly	Metabolite	cpd:C00037	path:rno01100	Metabolic pathways
+Met_111	Gly	Metabolite	cpd:C00037	path:rno01200	Carbon metabolism
+Met_111	Gly	Metabolite	cpd:C00037	path:rno01230	Biosynthesis of amino acids
+Met_111	Gly	Metabolite	cpd:C00037	path:rno02010	ABC transporters
+Met_111	Gly	Metabolite	cpd:C00037	path:rno04080	Neuroactive ligand-receptor interaction
+Met_111	Gly	Metabolite	cpd:C00037	path:rno04721	Synaptic vesicle cycle
+Met_111	Gly	Metabolite	cpd:C00037	path:rno04974	Protein digestion and absorption
+Met_111	Gly	Metabolite	cpd:C00037	path:rno04978	Mineral absorption
+Met_111	Gly	Metabolite	cpd:C00037	path:rno05230	Central carbon metabolism in cancer
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno00340	Histidine metabolism
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno00410	beta-Alanine metabolism
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno01100	Metabolic pathways
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno01230	Biosynthesis of amino acids
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno02010	ABC transporters
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno04974	Protein digestion and absorption
+Met_112	Histidine	Metabolite	cpd:C00135	path:rno05230	Central carbon metabolism in cancer
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno00340	Histidine metabolism
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno01100	Metabolic pathways
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno04080	Neuroactive ligand-receptor interaction
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno04664	Fc epsilon RI signaling pathway
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno04721	Synaptic vesicle cycle
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno04750	Inflammatory mediator regulation of TRP channels
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno04971	Gastric acid secretion
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno04974	Protein digestion and absorption
+Met_113	Histamine	Metabolite	cpd:C00388	path:rno05310	Asthma
+Met_114	Ile	Metabolite	cpd:C00407	path:rno00280	Valine, leucine and isoleucine degradation
+Met_114	Ile	Metabolite	cpd:C00407	path:rno00290	Valine, leucine and isoleucine biosynthesis
+Met_114	Ile	Metabolite	cpd:C00407	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_114	Ile	Metabolite	cpd:C00407	path:rno01100	Metabolic pathways
+Met_114	Ile	Metabolite	cpd:C00407	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_114	Ile	Metabolite	cpd:C00407	path:rno01230	Biosynthesis of amino acids
+Met_114	Ile	Metabolite	cpd:C00407	path:rno02010	ABC transporters
+Met_114	Ile	Metabolite	cpd:C00407	path:rno04974	Protein digestion and absorption
+Met_114	Ile	Metabolite	cpd:C00407	path:rno04978	Mineral absorption
+Met_114	Ile	Metabolite	cpd:C00407	path:rno05230	Central carbon metabolism in cancer
+Met_115	Kynurenine	Metabolite	cpd:C01718	NA	NA
+Met_116	Leu	Metabolite	cpd:C00123	path:rno00280	Valine, leucine and isoleucine degradation
+Met_116	Leu	Metabolite	cpd:C00123	path:rno00290	Valine, leucine and isoleucine biosynthesis
+Met_116	Leu	Metabolite	cpd:C00123	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_116	Leu	Metabolite	cpd:C00123	path:rno01100	Metabolic pathways
+Met_116	Leu	Metabolite	cpd:C00123	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_116	Leu	Metabolite	cpd:C00123	path:rno01230	Biosynthesis of amino acids
+Met_116	Leu	Metabolite	cpd:C00123	path:rno02010	ABC transporters
+Met_116	Leu	Metabolite	cpd:C00123	path:rno04150	mTOR signaling pathway
+Met_116	Leu	Metabolite	cpd:C00123	path:rno04974	Protein digestion and absorption
+Met_116	Leu	Metabolite	cpd:C00123	path:rno04978	Mineral absorption
+Met_116	Leu	Metabolite	cpd:C00123	path:rno05230	Central carbon metabolism in cancer
+Met_117	Lys	Metabolite	cpd:C00047	path:rno00300	NA
+Met_117	Lys	Metabolite	cpd:C00047	path:rno00310	Lysine degradation
+Met_117	Lys	Metabolite	cpd:C00047	path:rno00780	Biotin metabolism
+Met_117	Lys	Metabolite	cpd:C00047	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_117	Lys	Metabolite	cpd:C00047	path:rno01100	Metabolic pathways
+Met_117	Lys	Metabolite	cpd:C00047	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_117	Lys	Metabolite	cpd:C00047	path:rno01230	Biosynthesis of amino acids
+Met_117	Lys	Metabolite	cpd:C00047	path:rno02010	ABC transporters
+Met_117	Lys	Metabolite	cpd:C00047	path:rno04974	Protein digestion and absorption
+Met_118	Met	Metabolite	cpd:C00073	path:rno00270	Cysteine and methionine metabolism
+Met_118	Met	Metabolite	cpd:C00073	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_118	Met	Metabolite	cpd:C00073	path:rno01100	Metabolic pathways
+Met_118	Met	Metabolite	cpd:C00073	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_118	Met	Metabolite	cpd:C00073	path:rno01230	Biosynthesis of amino acids
+Met_118	Met	Metabolite	cpd:C00073	path:rno01523	Antifolate resistance
+Met_118	Met	Metabolite	cpd:C00073	path:rno04974	Protein digestion and absorption
+Met_118	Met	Metabolite	cpd:C00073	path:rno04978	Mineral absorption
+Met_118	Met	Metabolite	cpd:C00073	path:rno05230	Central carbon metabolism in cancer
+Met_119	NTyr	Metabolite	NA	NA	NA
+Met_120	Orn	Metabolite	cpd:C01411	NA	NA
+Met_121	Phe	Metabolite	cpd:C00079	path:rno00360	Phenylalanine metabolism
+Met_121	Phe	Metabolite	cpd:C00079	path:rno00400	Phenylalanine, tyrosine and tryptophan biosynthesis
+Met_121	Phe	Metabolite	cpd:C00079	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_121	Phe	Metabolite	cpd:C00079	path:rno01100	Metabolic pathways
+Met_121	Phe	Metabolite	cpd:C00079	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_121	Phe	Metabolite	cpd:C00079	path:rno01230	Biosynthesis of amino acids
+Met_121	Phe	Metabolite	cpd:C00079	path:rno02010	ABC transporters
+Met_121	Phe	Metabolite	cpd:C00079	path:rno04974	Protein digestion and absorption
+Met_121	Phe	Metabolite	cpd:C00079	path:rno04978	Mineral absorption
+Met_121	Phe	Metabolite	cpd:C00079	path:rno05230	Central carbon metabolism in cancer
+Met_122	Pro	Metabolite	cpd:C00148	path:rno00330	Arginine and proline metabolism
+Met_122	Pro	Metabolite	cpd:C00148	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_122	Pro	Metabolite	cpd:C00148	path:rno01100	Metabolic pathways
+Met_122	Pro	Metabolite	cpd:C00148	path:rno01230	Biosynthesis of amino acids
+Met_122	Pro	Metabolite	cpd:C00148	path:rno02010	ABC transporters
+Met_122	Pro	Metabolite	cpd:C00148	path:rno04974	Protein digestion and absorption
+Met_122	Pro	Metabolite	cpd:C00148	path:rno04978	Mineral absorption
+Met_122	Pro	Metabolite	cpd:C00148	path:rno05230	Central carbon metabolism in cancer
+Met_123	Putrescine	Metabolite	cpd:C00134	path:rno00330	Arginine and proline metabolism
+Met_123	Putrescine	Metabolite	cpd:C00134	path:rno00480	Glutathione metabolism
+Met_123	Putrescine	Metabolite	cpd:C00134	path:rno01100	Metabolic pathways
+Met_123	Putrescine	Metabolite	cpd:C00134	path:rno02010	ABC transporters
+Met_123	Putrescine	Metabolite	cpd:C00134	path:rno04974	Protein digestion and absorption
+Met_124	Ser	Metabolite	cpd:C00065	path:rno00260	Glycine, serine and threonine metabolism
+Met_124	Ser	Metabolite	cpd:C00065	path:rno00270	Cysteine and methionine metabolism
+Met_124	Ser	Metabolite	cpd:C00065	path:rno00600	Sphingolipid metabolism
+Met_124	Ser	Metabolite	cpd:C00065	path:rno00630	Glyoxylate and dicarboxylate metabolism
+Met_124	Ser	Metabolite	cpd:C00065	path:rno00920	Sulfur metabolism
+Met_124	Ser	Metabolite	cpd:C00065	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_124	Ser	Metabolite	cpd:C00065	path:rno01100	Metabolic pathways
+Met_124	Ser	Metabolite	cpd:C00065	path:rno01200	Carbon metabolism
+Met_124	Ser	Metabolite	cpd:C00065	path:rno01230	Biosynthesis of amino acids
+Met_124	Ser	Metabolite	cpd:C00065	path:rno02010	ABC transporters
+Met_124	Ser	Metabolite	cpd:C00065	path:rno04071	Sphingolipid signaling pathway
+Met_124	Ser	Metabolite	cpd:C00065	path:rno04974	Protein digestion and absorption
+Met_124	Ser	Metabolite	cpd:C00065	path:rno04978	Mineral absorption
+Met_124	Ser	Metabolite	cpd:C00065	path:rno05230	Central carbon metabolism in cancer
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno00380	Tryptophan metabolism
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno01100	Metabolic pathways
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04024	cAMP signaling pathway
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04080	Neuroactive ligand-receptor interaction
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04540	Gap junction
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04721	Synaptic vesicle cycle
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04726	Serotonergic synapse
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04742	Taste transduction
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04750	Inflammatory mediator regulation of TRP channels
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04976	Bile secretion
+Met_126	Spermidine	Metabolite	cpd:C00315	path:rno00330	Arginine and proline metabolism
+Met_126	Spermidine	Metabolite	cpd:C00315	path:rno00410	beta-Alanine metabolism
+Met_126	Spermidine	Metabolite	cpd:C00315	path:rno00480	Glutathione metabolism
+Met_126	Spermidine	Metabolite	cpd:C00315	path:rno01100	Metabolic pathways
+Met_126	Spermidine	Metabolite	cpd:C00315	path:rno02010	ABC transporters
+Met_126	Spermidine	Metabolite	cpd:C00315	path:rno04976	Bile secretion
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno00330	Arginine and proline metabolism
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno00410	beta-Alanine metabolism
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno00480	Glutathione metabolism
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno01100	Metabolic pathways
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno04976	Bile secretion
+Met_128	Taurine	Metabolite	cpd:C00245	path:rno00120	Primary bile acid biosynthesis
+Met_128	Taurine	Metabolite	cpd:C00245	path:rno00430	Taurine and hypotaurine metabolism
+Met_128	Taurine	Metabolite	cpd:C00245	path:rno00920	Sulfur metabolism
+Met_128	Taurine	Metabolite	cpd:C00245	path:rno01100	Metabolic pathways
+Met_128	Taurine	Metabolite	cpd:C00245	path:rno02010	ABC transporters
+Met_128	Taurine	Metabolite	cpd:C00245	path:rno04080	Neuroactive ligand-receptor interaction
+Met_129	Thyr	Metabolite	cpd:C08215	NA	NA
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno00130	Ubiquinone and other terpenoid-quinone biosynthesis
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno00350	Tyrosine metabolism
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno00360	Phenylalanine metabolism
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno00400	Phenylalanine, tyrosine and tryptophan biosynthesis
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno00730	Thiamine metabolism
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno01100	Metabolic pathways
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno01230	Biosynthesis of amino acids
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno04728	Dopaminergic synapse
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno04916	Melanogenesis
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno04917	Prolactin signaling pathway
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno04974	Protein digestion and absorption
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno05012	Parkinson's disease
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno05030	Cocaine addiction
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno05031	Amphetamine addiction
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno05034	Alcoholism
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno05230	Central carbon metabolism in cancer
+Met_131	Val	Metabolite	cpd:C00183	path:rno00280	Valine, leucine and isoleucine degradation
+Met_131	Val	Metabolite	cpd:C00183	path:rno00290	Valine, leucine and isoleucine biosynthesis
+Met_131	Val	Metabolite	cpd:C00183	path:rno00770	Pantothenate and CoA biosynthesis
+Met_131	Val	Metabolite	cpd:C00183	path:rno00970	Aminoacyl-tRNA biosynthesis
+Met_131	Val	Metabolite	cpd:C00183	path:rno01100	Metabolic pathways
+Met_131	Val	Metabolite	cpd:C00183	path:rno01210	2-Oxocarboxylic acid metabolism
+Met_131	Val	Metabolite	cpd:C00183	path:rno01230	Biosynthesis of amino acids
+Met_131	Val	Metabolite	cpd:C00183	path:rno02010	ABC transporters
+Met_131	Val	Metabolite	cpd:C00183	path:rno04974	Protein digestion and absorption
+Met_131	Val	Metabolite	cpd:C00183	path:rno04978	Mineral absorption
+Met_131	Val	Metabolite	cpd:C00183	path:rno05230	Central carbon metabolism in cancer
