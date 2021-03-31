@@ -181,7 +181,7 @@ def main():
                 uniqueID = str(args.prefix) + "_" + str(rowNum)
             data = ""
             for ncol in args.samples.split(","):
-                data = str(data) + "\t" + str(row.split("\t")[int(ncol) - 1]).strip()
+                data = str(data) + "\t" + str(row.strip().split("\t")[int(ncol) - 1]).strip()
             annot.write(uniqueID)
             for noSample in noSamples:
                 ncol = header.index(noSample)
