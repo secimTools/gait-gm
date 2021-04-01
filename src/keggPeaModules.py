@@ -1574,9 +1574,14 @@ def prepareSPLSGenePanaData(args):
                 panaOutputTable, "KEGG_ID", args.geneKeggAnno, args.geneKeggName
             )
     else:
-        gene_df = pandas2ri.ri2py(panaOutput[0])
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            gene_df = robjects.conversion.rpy2py(panaOutput[0])
+        #gene_df = pandas2ri.ri2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
-        R_gene_df = pandas2ri.py2rpy(gene_df)
+
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            R_gene_df = robjects.conversion.py2rpy(gene_df)
+        #R_gene_df = pandas2ri.py2rpy(gene_df)
 
     # Write PANA Output table
     panaOutputTable = panaOutputTable.astype(str)
