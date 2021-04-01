@@ -9,8 +9,8 @@ Met_11	Gene_3598	-0.897	Sphingomyelin
 Met_3	Gene_11862	-0.895	Sphingomyelin
 Met_3	Gene_3598	-0.889	Sphingomyelin
 Met_6	Gene_6567	0.889	Sphingomyelin
-Met_6	Gene_2899	0.887	Sphingomyelin
 Met_3	Gene_2899	-0.887	Sphingomyelin
+Met_6	Gene_2899	0.887	Sphingomyelin
 Met_3	Gene_10889	0.886	Sphingomyelin
 Met_11	Gene_1454	-0.885	Sphingomyelin
 Met_11	Gene_2002	-0.876	Sphingomyelin
@@ -47,8 +47,8 @@ Met_10	Gene_2899	-0.815	Sphingomyelin
 Met_12	Gene_2002	-0.812	Sphingomyelin
 Met_10	Gene_1454	-0.81	Sphingomyelin
 Met_42	Gene_3598	0.939	Phosphatidylcholine
-Met_86	Gene_10215	-0.932	Phosphatidylcholine
 Met_53	Gene_10215	-0.932	Phosphatidylcholine
+Met_86	Gene_10215	-0.932	Phosphatidylcholine
 Met_42	Gene_2899	0.931	Phosphatidylcholine
 Met_53	Gene_13146	0.931	Phosphatidylcholine
 Met_42	Gene_5406	0.929	Phosphatidylcholine
@@ -70,8 +70,8 @@ Met_57	Gene_2443	-0.9	Phosphatidylcholine
 Met_36	Gene_3598	0.9	Phosphatidylcholine
 Met_41	Gene_5406	0.9	Phosphatidylcholine
 Met_36	Gene_5406	0.9	Phosphatidylcholine
-Met_77	Gene_2443	-0.898	Phosphatidylcholine
 Met_45	Gene_2443	-0.898	Phosphatidylcholine
+Met_77	Gene_2443	-0.898	Phosphatidylcholine
 Met_27	Gene_2443	0.896	Phosphatidylcholine
 Met_41	Gene_3598	0.896	Phosphatidylcholine
 Met_35	Gene_6567	0.894	Phosphatidylcholine
@@ -105,8 +105,8 @@ Met_34	Gene_5406	0.868	Phosphatidylcholine
 Met_41	Gene_11759	0.868	Phosphatidylcholine
 Met_58	Gene_4893	-0.867	Phosphatidylcholine
 Met_30	Gene_5406	0.867	Phosphatidylcholine
-Met_42	Gene_12512	0.867	Phosphatidylcholine
 Met_92	Gene_12512	0.867	Phosphatidylcholine
+Met_42	Gene_12512	0.867	Phosphatidylcholine
 Met_36	Gene_11759	0.866	Phosphatidylcholine
 Met_42	Gene_9064	0.864	Phosphatidylcholine
 Met_86	Gene_12115	0.863	Phosphatidylcholine
@@ -172,8 +172,8 @@ Met_86	Gene_12042	0.825	Phosphatidylcholine
 Met_77	Gene_12512	-0.825	Phosphatidylcholine
 Met_34	Gene_8919	0.823	Phosphatidylcholine
 Met_59	Gene_10215	-0.823	Phosphatidylcholine
-Met_43	Gene_3598	0.822	Phosphatidylcholine
 Met_78	Gene_3598	-0.822	Phosphatidylcholine
+Met_43	Gene_3598	0.822	Phosphatidylcholine
 Met_41	Gene_9064	0.822	Phosphatidylcholine
 Met_86	Gene_2853	-0.821	Phosphatidylcholine
 Met_85	Gene_3598	-0.821	Phosphatidylcholine
@@ -256,8 +256,8 @@ Met_26	Gene_5018	-0.851	1-Lysophosphatidylcholine
 Met_22	Gene_7711	0.849	1-Lysophosphatidylcholine
 Met_20	Gene_7143	-0.843	1-Lysophosphatidylcholine
 Met_19	Gene_11082	-0.841	1-Lysophosphatidylcholine
-Met_22	Gene_11082	-0.84	1-Lysophosphatidylcholine
 Met_24	Gene_11082	-0.84	1-Lysophosphatidylcholine
+Met_22	Gene_11082	-0.84	1-Lysophosphatidylcholine
 Met_24	Gene_7711	0.836	1-Lysophosphatidylcholine
 Met_26	Gene_718	0.829	1-Lysophosphatidylcholine
 Met_23	Gene_7711	0.822	1-Lysophosphatidylcholine
