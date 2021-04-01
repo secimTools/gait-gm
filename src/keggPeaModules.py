@@ -1557,18 +1557,11 @@ def prepareSPLSGenePanaData(args):
         with localconverter(robjects.default_converter + pandas2ri.converter):
             R_gene_df = robjects.conversion.py2rpy(gene_df)
             #R_gene_df = pandas2ri.py2rpy(gene_df)
+
         # panaOutputTable
         pathNames.insert(0, "KEGG_ID")
-        #print(pathNames)
         panaOutputTable.columns = pathNames
-        #print(panaOutputTable.index)
-
-        #print(panaOutputTable.iloc[:, 0])
-        #panaOutputTable.reset_index(inplace=True)
-        #print(panaOutputTable.head())
         panaOutputTable["KEGG_ID"] = panaOutputTable.KEGG_ID.astype(str)   ## AMM and Zihao
-        #print(panaOutputTable.index)
-        #print("done")
         if args.geneKeggAnno:
             panaOutputTable = Ids2Names(
                 panaOutputTable, "KEGG_ID", args.geneKeggAnno, args.geneKeggName
