@@ -38,8 +38,9 @@ sPLS.py \
     --facSel=single \
     --geneAnno=$INPUT_DIR/gene_annotation_file_01fhl.tsv \
     --geneName=GeneName \
-    -keepX=10 \
-    -thres=0.5 \
+    -keepX=5 \
+    -thres=0.8 \
+    -cu 0.20 \
     --figure1=$OUTPUT_DIR/integration_mmc_pana_genes_sPLS_fig.pdf \
     --splsOut=$OUTPUT_DIR/integration_mmc_pana_genes_sPLS_output.tsv \
     --figure2=$OUTPUT_DIR/integration_mmc_pana_genes_MMC_heatmap.pdf \
