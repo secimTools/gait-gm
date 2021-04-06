@@ -1522,7 +1522,7 @@ def prepareSPLSGenePanaData(args):
         R_genes2pathway = robjects.conversion.py2rpy(genes2pathway)
         #R_genes2pathway = pandas2ri.py2rpy(genes2pathway)
 
-    # Run PANA script   
+    # Run PANA script
     panaOutput = PANAScript.PCA2GO(
         X=R_input_file,
         annotation=R_genes2pathway,

@@ -32,7 +32,7 @@ sPLS.py \
     --geneId=UniqueID \
     --geneOption=pana \
     --geneKeggAnno=$INPUT_DIR/gene_to_keggId_link_01fhl.tsv \
-    --geneKeggName=Gene \
+    --geneKeggName=GeneSymbol \
     --path2genes=$INPUT_DIR/geneKeggId2pathwayId_01fhl.tsv \
     --path2names=$INPUT_DIR/gene_kegg_pathway_file_01fhl.tsv \
     --facSel=single \
