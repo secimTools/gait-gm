@@ -40,7 +40,7 @@ sPLS.py \
     --geneName=GeneName \
     -keepX=5 \
     -thres=0.8 \
-    -cu 0.23 \
+    -cu 0.20 \
     --figure1=$OUTPUT_DIR/integration_mmc_pana_genes_sPLS_fig.pdf \
     --splsOut=$OUTPUT_DIR/integration_mmc_pana_genes_sPLS_output.tsv \
     --figure2=$OUTPUT_DIR/integration_mmc_pana_genes_MMC_heatmap.pdf \

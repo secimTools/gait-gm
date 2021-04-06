@@ -1,74 +1,95 @@
 Metabolite	Gene	Correlation	Subset
-Met_62: PC ae C30:1	rno00360_2: PhnyllnnMtblsm_2	0.871	Module_7
-Met_62: PC ae C30:1	rno00340_2: HstdnMtblsm_2	0.841	Module_7
-Met_62: PC ae C30:1	rno00350_2: TyrsnMtblsm_2	-0.838	Module_7
-Met_17: C18:2	rno00360_2: PhnyllnnMtblsm_2	-0.805	Module_7
-Met_85: PC ae C40:3	rno04924_2: RnnScrtn_2	0.814	Module_6
-Met_79: PC ae C38:3	rno04924_2: RnnScrtn_2	0.802	Module_6
-Met_47: PC aa C38:4	rno04911_1: InslnScrtn_1	0.93	Module_5
-Met_28: PC aa C30:0	rno04911_1: InslnScrtn_1	0.917	Module_5
-Met_47: PC aa C38:4	rno00601_1: GlycsphnglpdBsynthss_1	0.915	Module_5
-Met_28: PC aa C30:0	rno00601_1: GlycsphnglpdBsynthss_1	0.903	Module_5
-Met_47: PC aa C38:4	rno00561_1: GlycrlpdMtblsm_1	0.896	Module_5
-Met_47: PC aa C38:4	rno05100_1: BctrlNvsnFPthllClls_1	0.89	Module_5
-Met_8: SM C18:1	rno04911_1: InslnScrtn_1	0.889	Module_5
-Met_28: PC aa C30:0	rno05100_1: BctrlNvsnFPthllClls_1	0.882	Module_5
-Met_28: PC aa C30:0	rno00561_1: GlycrlpdMtblsm_1	0.881	Module_5
-Met_47: PC aa C38:4	rno00534_1: GlycsmnglycnBsynthss_1	0.879	Module_5
-Met_8: SM C18:1	rno00601_1: GlycsphnglpdBsynthss_1	0.876	Module_5
-Met_28: PC aa C30:0	rno00534_1: GlycsmnglycnBsynthss_1	0.863	Module_5
-Met_8: SM C18:1	rno05100_1: BctrlNvsnFPthllClls_1	0.859	Module_5
-Met_8: SM C18:1	rno00561_1: GlycrlpdMtblsm_1	0.852	Module_5
-Met_61: PC ae C30:0	rno04911_1: InslnScrtn_1	0.834	Module_5
-Met_8: SM C18:1	rno00534_1: GlycsmnglycnBsynthss_1	0.833	Module_5
-Met_64: PC ae C32:1	rno04911_1: InslnScrtn_1	0.824	Module_5
-Met_61: PC ae C30:0	rno00601_1: GlycsphnglpdBsynthss_1	0.819	Module_5
-Met_64: PC ae C32:1	rno00601_1: GlycsphnglpdBsynthss_1	0.813	Module_5
-Met_61: PC ae C30:0	rno00561_1: GlycrlpdMtblsm_1	0.805	Module_5
-Met_75: PC ae C36:5	rno00603_1: GlycsphnglpdBsynthss_1	0.919	Module_3
-Met_48: PC aa C38:5	rno00603_1: GlycsphnglpdBsynthss_1	0.915	Module_3
-Met_75: PC ae C36:5	rno04911_1: InslnScrtn_1	0.908	Module_3
-Met_41: PC aa C36:4	rno00603_1: GlycsphnglpdBsynthss_1	0.895	Module_3
-Met_75: PC ae C36:5	rno00534_1: GlycsmnglycnBsynthss_1	0.889	Module_3
-Met_75: PC ae C36:5	rno04340_1: HdghgSgnlngPthwy_1	0.883	Module_3
-Met_48: PC aa C38:5	rno00534_1: GlycsmnglycnBsynthss_1	0.872	Module_3
-Met_75: PC ae C36:5	rno05016_1: Hntngtn'SDss_1	0.865	Module_3
-Met_48: PC aa C38:5	rno04911_1: InslnScrtn_1	0.864	Module_3
-Met_48: PC aa C38:5	rno05016_1: Hntngtn'SDss_1	0.859	Module_3
-Met_33: PC aa C34:1	rno00603_1: GlycsphnglpdBsynthss_1	0.854	Module_3
-Met_41: PC aa C36:4	rno00534_1: GlycsmnglycnBsynthss_1	0.852	Module_3
-Met_41: PC aa C36:4	rno04911_1: InslnScrtn_1	0.841	Module_3
-Met_41: PC aa C36:4	rno05016_1: Hntngtn'SDss_1	0.84	Module_3
-Met_6: SM C16:1	rno04911_1: InslnScrtn_1	0.832	Module_3
-Met_48: PC aa C38:5	rno04340_1: HdghgSgnlngPthwy_1	0.824	Module_3
-Met_6: SM C16:1	rno04340_1: HdghgSgnlngPthwy_1	0.824	Module_3
-Met_6: SM C16:1	rno00603_1: GlycsphnglpdBsynthss_1	0.806	Module_3
-Met_24: lysoPC a C20:4	rno00562_1: InstlPhsphtMtblsm_1	0.938	Module_2
-Met_24: lysoPC a C20:4	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.924	Module_2
-Met_19: lysoPC a C16:0	rno00562_1: InstlPhsphtMtblsm_1	0.923	Module_2
-Met_24: lysoPC a C20:4	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.92	Module_2
-Met_22: lysoPC a C18:0	rno00562_1: InstlPhsphtMtblsm_1	0.919	Module_2
-Met_24: lysoPC a C20:4	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.919	Module_2
-Met_98: H1	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.912	Module_2
-Met_98: H1	rno00562_1: InstlPhsphtMtblsm_1	0.909	Module_2
-Met_19: lysoPC a C16:0	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.906	Module_2
-Met_19: lysoPC a C16:0	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.906	Module_2
+Met_66: PC ae C34:0	rno04919_2: ThyrdHrmnSgnlngPthwy_2	0.823	Module_7
+Met_66: PC ae C34:0	rno00562_2: InstlPhsphtMtblsm_2	0.82	Module_7
+Met_51: PC aa C40:2	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.891	Module_6
+Met_85: PC ae C40:3	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.886	Module_6
+Met_78: PC ae C38:2	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.863	Module_6
+Met_79: PC ae C38:3	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.855	Module_6
+Met_11: SM C24:1	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.855	Module_6
+Met_84: PC ae C40:2	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.853	Module_6
+Met_3: SM (OH) C22:2	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.853	Module_6
+Met_51: PC aa C40:2	rno04924_2: RnnScrtn_2	0.839	Module_6
+Met_85: PC ae C40:3	rno04924_2: RnnScrtn_2	0.835	Module_6
+Met_77: PC ae C38:1	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.834	Module_6
+Met_3: SM (OH) C22:2	rno04924_2: RnnScrtn_2	0.831	Module_6
+Met_11: SM C24:1	rno04924_2: RnnScrtn_2	0.812	Module_6
+Met_79: PC ae C38:3	rno04924_2: RnnScrtn_2	0.808	Module_6
+Met_78: PC ae C38:2	rno04924_2: RnnScrtn_2	0.806	Module_6
+Met_47: PC aa C38:4	rno04911_1: InslnScrtn_1	0.931	Module_5
+Met_28: PC aa C30:0	rno04911_1: InslnScrtn_1	0.919	Module_5
+Met_47: PC aa C38:4	rno00601_1: GlycsphnglpdBsynthss_1	0.913	Module_5
+Met_28: PC aa C30:0	rno00601_1: GlycsphnglpdBsynthss_1	0.901	Module_5
+Met_47: PC aa C38:4	rno00561_1: GlycrlpdMtblsm_1	0.894	Module_5
+Met_8: SM C18:1	rno04911_1: InslnScrtn_1	0.892	Module_5
+Met_47: PC aa C38:4	rno05100_1: BctrlNvsnFPthllClls_1	0.892	Module_5
+Met_28: PC aa C30:0	rno05100_1: BctrlNvsnFPthllClls_1	0.886	Module_5
+Met_47: PC aa C38:4	rno00534_1: GlycsmnglycnBsynthss_1	0.88	Module_5
+Met_28: PC aa C30:0	rno00561_1: GlycrlpdMtblsm_1	0.878	Module_5
+Met_8: SM C18:1	rno00601_1: GlycsphnglpdBsynthss_1	0.874	Module_5
+Met_28: PC aa C30:0	rno00534_1: GlycsmnglycnBsynthss_1	0.864	Module_5
+Met_8: SM C18:1	rno05100_1: BctrlNvsnFPthllClls_1	0.863	Module_5
+Met_8: SM C18:1	rno00561_1: GlycrlpdMtblsm_1	0.849	Module_5
+Met_61: PC ae C30:0	rno04911_1: InslnScrtn_1	0.835	Module_5
+Met_8: SM C18:1	rno00534_1: GlycsmnglycnBsynthss_1	0.834	Module_5
+Met_64: PC ae C32:1	rno04911_1: InslnScrtn_1	0.826	Module_5
+Met_61: PC ae C30:0	rno00601_1: GlycsphnglpdBsynthss_1	0.818	Module_5
+Met_64: PC ae C32:1	rno00601_1: GlycsphnglpdBsynthss_1	0.809	Module_5
+Met_61: PC ae C30:0	rno00561_1: GlycrlpdMtblsm_1	0.804	Module_5
+Met_64: PC ae C32:1	rno05100_1: BctrlNvsnFPthllClls_1	0.804	Module_5
+Met_42: PC aa C36:5	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	-0.849	Module_4
+Met_92: PC ae C42:3	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	-0.844	Module_4
+Met_12: SM C26:1	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.841	Module_4
+Met_42: PC aa C36:5	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.807	Module_4
+Met_12: SM C26:1	rno04064_1: Nf-KppBSgnlngPthwy_1	0.801	Module_4
+Met_75: PC ae C36:5	rno00603_1: GlycsphnglpdBsynthss_1	0.924	Module_3
+Met_48: PC aa C38:5	rno00603_1: GlycsphnglpdBsynthss_1	0.909	Module_3
+Met_75: PC ae C36:5	rno00534_1: GlycsmnglycnBsynthss_1	0.899	Module_3
+Met_75: PC ae C36:5	rno04911_1: InslnScrtn_1	0.898	Module_3
+Met_41: PC aa C36:4	rno00603_1: GlycsphnglpdBsynthss_1	0.89	Module_3
+Met_48: PC aa C38:5	rno00534_1: GlycsmnglycnBsynthss_1	0.88	Module_3
+Met_48: PC aa C38:5	rno04911_1: InslnScrtn_1	0.877	Module_3
+Met_75: PC ae C36:5	rno04340_1: HdghgSgnlngPthwy_1	0.869	Module_3
+Met_41: PC aa C36:4	rno00534_1: GlycsmnglycnBsynthss_1	0.858	Module_3
+Met_75: PC ae C36:5	rno05016_1: Hntngtn'SDss_1	0.854	Module_3
+Met_33: PC aa C34:1	rno00603_1: GlycsphnglpdBsynthss_1	0.852	Module_3
+Met_41: PC aa C36:4	rno04911_1: InslnScrtn_1	0.852	Module_3
+Met_48: PC aa C38:5	rno04340_1: HdghgSgnlngPthwy_1	0.846	Module_3
+Met_48: PC aa C38:5	rno05016_1: Hntngtn'SDss_1	0.842	Module_3
+Met_41: PC aa C36:4	rno05016_1: Hntngtn'SDss_1	0.827	Module_3
+Met_6: SM C16:1	rno04911_1: InslnScrtn_1	0.823	Module_3
+Met_41: PC aa C36:4	rno04340_1: HdghgSgnlngPthwy_1	0.819	Module_3
+Met_33: PC aa C34:1	rno05016_1: Hntngtn'SDss_1	0.815	Module_3
+Met_6: SM C16:1	rno04340_1: HdghgSgnlngPthwy_1	0.812	Module_3
+Met_6: SM C16:1	rno00603_1: GlycsphnglpdBsynthss_1	0.811	Module_3
+Met_6: SM C16:1	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	-0.811	Module_3
+Met_6: SM C16:1	rno00534_1: GlycsmnglycnBsynthss_1	0.809	Module_3
+Met_24: lysoPC a C20:4	rno00562_1: InstlPhsphtMtblsm_1	0.939	Module_2
+Met_19: lysoPC a C16:0	rno00562_1: InstlPhsphtMtblsm_1	0.925	Module_2
+Met_24: lysoPC a C20:4	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.923	Module_2
+Met_22: lysoPC a C18:0	rno00562_1: InstlPhsphtMtblsm_1	0.922	Module_2
+Met_24: lysoPC a C20:4	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.92	Module_2
+Met_24: lysoPC a C20:4	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.919	Module_2
+Met_98: H1	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.918	Module_2
+Met_98: H1	rno00562_1: InstlPhsphtMtblsm_1	0.913	Module_2
+Met_19: lysoPC a C16:0	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.908	Module_2
+Met_22: lysoPC a C18:0	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.908	Module_2
+Met_19: lysoPC a C16:0	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.907	Module_2
 Met_19: lysoPC a C16:0	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.906	Module_2
-Met_22: lysoPC a C18:0	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.905	Module_2
-Met_98: H1	rno04066_1: Hif-1SgnlngPthwy_1	0.904	Module_2
-Met_22: lysoPC a C18:0	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.903	Module_2
-Met_98: H1	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.902	Module_2
-Met_22: lysoPC a C18:0	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.897	Module_2
+Met_98: H1	rno04066_1: Hif-1SgnlngPthwy_1	0.905	Module_2
+Met_22: lysoPC a C18:0	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.904	Module_2
+Met_98: H1	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.904	Module_2
+Met_22: lysoPC a C18:0	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.899	Module_2
 Met_24: lysoPC a C20:4	rno04066_1: Hif-1SgnlngPthwy_1	0.893	Module_2
-Met_22: lysoPC a C18:0	rno04066_1: Hif-1SgnlngPthwy_1	0.883	Module_2
+Met_22: lysoPC a C18:0	rno04066_1: Hif-1SgnlngPthwy_1	0.884	Module_2
 Met_19: lysoPC a C16:0	rno04066_1: Hif-1SgnlngPthwy_1	0.882	Module_2
-Met_23: lysoPC a C18:1	rno00562_1: InstlPhsphtMtblsm_1	0.877	Module_2
-Met_23: lysoPC a C18:1	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.869	Module_2
-Met_23: lysoPC a C18:1	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.859	Module_2
-Met_98: H1	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.856	Module_2
-Met_23: lysoPC a C18:1	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.856	Module_2
-Met_23: lysoPC a C18:1	rno04066_1: Hif-1SgnlngPthwy_1	0.829	Module_2
+Met_23: lysoPC a C18:1	rno00562_1: InstlPhsphtMtblsm_1	0.88	Module_2
+Met_23: lysoPC a C18:1	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.871	Module_2
+Met_98: H1	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.861	Module_2
+Met_23: lysoPC a C18:1	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.86	Module_2
+Met_23: lysoPC a C18:1	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.859	Module_2
+Met_23: lysoPC a C18:1	rno04066_1: Hif-1SgnlngPthwy_1	0.831	Module_2
 Met_20: lysoPC a C16:1	rno00562_1: InstlPhsphtMtblsm_1	0.828	Module_2
 Met_20: lysoPC a C16:1	rno04064_1: Nf-KppBSgnlngPthwy_1	-0.818	Module_2
-Met_20: lysoPC a C16:1	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.811	Module_2
-Met_20: lysoPC a C16:1	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.809	Module_2
+Met_20: lysoPC a C16:1	rno04650_1: NtrlKllrCllMdtdCyttxcty_1	0.81	Module_2
+Met_20: lysoPC a C16:1	rno04919_1: ThyrdHrmnSgnlngPthwy_1	0.81	Module_2
+Met_57: PC aa C42:2	rno04750_2: InflmmtryMdtrRgltnFTrpChnnls_2	0.808	Module_1
