@@ -5,27 +5,34 @@
 #
 # Distributed under terms of the MIT license.
 #
+echo "bash source  [${BASH_SOURCE[0]}]"
 
-mkdir -p test-output
-rm -f test-output/correlation_*
+SCRIPT=$(basename "${BASH_SOURCE[0]}");
+echo "script $SCRIPT"
 
-time all_by_all_correlation.py \
-    -g=test-data/gene_wide_dataset_01fhl.tsv \
+TEST="${SCRIPT%.*}"
+
+TESTDIR="testout/${TEST}"
+INPUT_DIR="galaxy/test-data"
+OUTPUT_DIR=$TESTDIR
+rm -rf "${TESTDIR}"
+mkdir -p "${TESTDIR}"
+echo "### Starting test: ${TEST}"
+
+all_by_all_correlation.py \
+    -g=$INPUT_DIR/gene_wide_dataset_01fhl.tsv \
     -gid=UniqueID \
-    -ga=test-data/gene_annotation_file_01fhl.tsv \
+    -ga=$INPUT_DIR//gene_annotation_file_01fhl.tsv \
     -gn=GeneName \
-    -m=test-data/metabolite_wide_dataset_01fhl.tsv \
+    -m=$INPUT_DIR//metabolite_wide_dataset_01fhl.tsv \
     -mid=UniqueID \
-    -ma=test-data/metabolite_annotation_file_01fhl.tsv \
+    -ma=$INPUT_DIR//metabolite_annotation_file_01fhl.tsv \
     -mn=MetName \
     -me=pearson \
     -t=0.05 \
-    -o=test-output/correlation_file_01fhl.tsv \
-    -c=test-output/correlation_matrix_01fhl.tsv \
-    -f=test-output/correlation_figure_01fhl.pdf
+    -o=$OUTPUT_DIR/correlation_file_01fhl.tsv \
+    -c=$OUTPUT_DIR/correlation_matrix_01fhl.tsv \
+    -f=$OUTPUT_DIR/correlation_figure_01fhl.pdf
 
-if [[ -s test-output/correlation_file_01fhl.tsv ]] && [[ -s test-output/correlation_matrix_01fhl.tsv ]] && [[ -s test-output/correlation_figure_01fhl.pdf ]]; then
-    echo "all_by_all_correlation.py Test SUCCESS"
-else
-    echo "all_by_all_correlation.py Test FAIL"
-fi
+echo "### Finished test: ${TEST} on $(date)"
+
