@@ -5,20 +5,27 @@
 #
 # Distributed under terms of the MIT license.
 #
+echo "bash source  [${BASH_SOURCE[0]}]"
 
-mkdir -p test-output
-rm -f test-output/ensembl2symbol_*.tsv
+SCRIPT=$(basename "${BASH_SOURCE[0]}");
+echo "script $SCRIPT"
 
-time  ensembl2symbol.py \
+TEST="${SCRIPT%.*}"
+
+TESTDIR="testout/${TEST}"
+INPUT_DIR="galaxy/test-data"
+OUTPUT_DIR=$TESTDIR
+rm -rf "${TESTDIR}"
+mkdir -p "${TESTDIR}"
+echo "### Starting test: ${TEST}"
+
+ensembl2symbol.py \
     -s=rat \
-    -ga=test-data/gene_annotation_file_01fhl.tsv \
+    -ga=$INPUT_DIR/gene_annotation_file_01fhl.tsv \
     -id=UniqueID \
     -e=GeneName \
-    -o=test-output/ensembl2symbol_annotation_file_01fhl.tsv
+    -o=$OUTPUT_DIR/ensembl2symbol_annotation_file_01fhl.tsv
 
-if [[ -s test-output/ensembl2symbol_annotation_file_01fhl.tsv ]]; then
-    echo "ensembl2symbol.py Test SUCCESS"
-else
-    echo "ensembl2symbol.py Test FAIL"
-fi
+echo "### Finished test: ${TEST} on $(date)"
+
 
