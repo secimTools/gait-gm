@@ -1,4 +1,4 @@
-<tool id="allByAllCorr" name="Metabolite - Gene Correlation" version="0.2.0">
+<tool id="allByAllCorr" name="Metabolite - Gene Correlation" version="@WRAPPER_VERSION@">
   <description></description>
   <macros>
     <import>macros.xml</import>

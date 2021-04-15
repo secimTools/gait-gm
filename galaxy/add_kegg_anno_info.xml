@@ -1,4 +1,4 @@
-<tool id="secimtools_add_kegg_anno_info" name="Link Name to KEGGID" version="0.1.0">
+<tool id="secimtools_add_kegg_anno_info" name="Link Name to KEGGID" version="@WRAPPER_VERSION@">
   <description></description>
   <macros>
       <import>macros.xml</import>

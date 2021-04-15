@@ -232,8 +232,9 @@ def main():
             geneTable, args.geneId, args.geneAnnot, args.geneName
         )
     else:
+        
         geneTable = geneTable.set_index(args.geneId)
-        R_gene_df = pandas2ri.py2ri(geneTable)
+        R_gene_df = pandas2ri.py2rpy(geneTable)
 
     # Prepare Metabolomics Data
     metTable = pd.read_table(args.metDataset, sep="\t", header=0)
@@ -241,7 +242,7 @@ def main():
         R_met_df = modules.Ids2Names(metTable, args.metId, args.metAnnot, args.metName)
     else:
         metTable = metTable.set_index(args.metId)
-        R_met_df = pandas2ri.py2ri(metTable)
+        R_met_df = pandas2ri.py2rpy(metTable)
 
     allByAllCorrScript.corr_main_func(
         x=R_gene_df,

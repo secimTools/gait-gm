@@ -1,4 +1,4 @@
-<tool id="secimtools_split_input_wide_dataset" name="Create: Design, Wide, and Annotation datasets" version="0.1.0">
+<tool id="secimtools_split_input_wide_dataset" name="Create: Design, Wide, and Annotation datasets" version="@WRAPPER_VERSION@">
   <description>from an Input wide dataset</description>
   <macros>
     <import>macros.xml</import>

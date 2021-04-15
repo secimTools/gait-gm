@@ -1,4 +1,4 @@
-<tool id="secimtools_add_pval_flags" name="Add Binary (0/1) -value Flags" version="0.1.0">
+<tool id="secimtools_add_pval_flags" name="Add Binary (0/1) -value Flags" version="@WRAPPER_VERSION@">
   <description>using custom thresholds</description>
   <macros>
       <import>macros.xml</import>
@@ -6,12 +6,12 @@
   <expand macro="requirements" />
   <command detect_errors="exit_code"><![CDATA[
     add_pval_flags.py
-      -de=$DE_Dataset
-      -id=$uniqID
-      -p=$pvalue
-      -t=$thresholds
-      -o=$output
-      -fl=$flags
+    -de=$DE_Dataset
+    -id=$uniqID
+    -p=$pvalue
+    -t=$thresholds
+    -o=$output
+    -fl=$flags
   ]]></command>
   <inputs>
     <param name="DE_Dataset" type="data" format="tabular" label="Select Dataset containing p-values from your history"/>

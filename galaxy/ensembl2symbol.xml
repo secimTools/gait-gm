@@ -1,4 +1,4 @@
-<tool id="secimtools_ensembl2symbol" name="Map ENSEMBLIDs to Gene Symbols." version="0.1.0">
+<tool id="secimtools_ensembl2symbol" name="Map ENSEMBLIDs to Gene Symbols." version="@WRAPPER_VERSION@">
   <description></description>
   <macros>
       <import>macros.xml</import>
