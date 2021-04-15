@@ -145,7 +145,7 @@ def getOptions():
         action="store",
         required=False,
         help="Variability cut-off value\
-                      Default: 0.23. (Only required in pana option).",
+                      Default: 0.2 (Only required in pana option).",
     )
     genes.add_argument(
         "-f",

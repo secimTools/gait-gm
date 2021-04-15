@@ -122,7 +122,7 @@
               <option value="abs.val">abs.val -- Absolute value of the variabily for a given principle component.</option>
               <option value="rel.abs">rel.abs -- Fold variability of tot.var/rank(X).</option>
             </param>
-            <param name="cutoff" type="float" value="0.23" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.23"/>
+            <param name="cutoff" type="float" value="0.20" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.20"/>
             <conditional name="PANAAnno">
             	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can chose to input a file containing annotations for the KEGG pathwayIDs.">
             		<option value="no">No</option>

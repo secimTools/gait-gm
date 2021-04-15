@@ -1522,21 +1522,23 @@ def prepareSPLSGenePanaData(args):
         R_genes2pathway = robjects.conversion.py2rpy(genes2pathway)
         #R_genes2pathway = pandas2ri.py2rpy(genes2pathway)
 
-    # Run PANA script   
+    # Run PANA script
     panaOutput = PANAScript.PCA2GO(
         X=R_input_file,
         annotation=R_genes2pathway,
         var_cutoff=args.cutoff,
         fac_sel=args.facSel,
     )
-    panaOutputTable = robjects.conversion.py2rpy(panaOutput[1])
+    with localconverter(robjects.default_converter + pandas2ri.converter):
+        panaOutputTable = robjects.conversion.rpy2py(panaOutput[1])
+    #panaOutputTable = robjects.conversion.py2rpy(panaOutput[1])
     #panaOutputTable = pandas2ri.py2rpy(panaOutput[1])
 
     # Add Annotation
     if args.path2names:
         ## AMM monkeying
-        with localconverter(ro.default_converter + pandas2ri.converter):
-            gene_df = ro.conversion.rpy2py(panaOutput[0])
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            gene_df = robjects.conversion.rpy2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
         path2name = pd.read_table(
             args.path2names, sep="\t", names=["pathId", "pathName"]
@@ -1553,20 +1555,26 @@ def prepareSPLSGenePanaData(args):
         gene_df = gene_df.set_index("pathNames")
         # convert to R dataframe
         with localconverter(robjects.default_converter + pandas2ri.converter):
-            R_gene_subdf = robjects.conversion.py2rpy(gene_df)
+            R_gene_df = robjects.conversion.py2rpy(gene_df)
             #R_gene_df = pandas2ri.py2rpy(gene_df)
+
         # panaOutputTable
         pathNames.insert(0, "KEGG_ID")
         panaOutputTable.columns = pathNames
-        panaOutputTable["KEGG_ID"] = panaOutputTable.KEGG_ID.astype(str)
+        panaOutputTable["KEGG_ID"] = panaOutputTable.KEGG_ID.astype(str)   ## AMM and Zihao
         if args.geneKeggAnno:
             panaOutputTable = Ids2Names(
                 panaOutputTable, "KEGG_ID", args.geneKeggAnno, args.geneKeggName
             )
     else:
-        gene_df = pandas2ri.ri2py(panaOutput[0])
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            gene_df = robjects.conversion.rpy2py(panaOutput[0])
+        #gene_df = pandas2ri.ri2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
-        R_gene_df = pandas2ri.py2rpy(gene_df)
+
+        with localconverter(robjects.default_converter + pandas2ri.converter):
+            R_gene_df = robjects.conversion.py2rpy(gene_df)
+        #R_gene_df = pandas2ri.py2rpy(gene_df)
 
     # Write PANA Output table
     panaOutputTable = panaOutputTable.astype(str)
