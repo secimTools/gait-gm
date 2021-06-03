@@ -1,6 +1,4 @@
-#
-
-Modeling Metabolites as a function of gene expression
+# Modeling Metabolites as a function of gene expression
 
 ## Getting Started
 
@@ -24,11 +22,11 @@ tests/galaxy has acceptance tests. Note that some tests can take over 3 hours to
 
 ## Contributing
 
-This project is in a process of being published as an article. Forks and contributions are welcome.
+Forks and contributions are welcome.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [CalVer](https://calver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/secimTools/gait-gm/tags). 
 
 ## Authors
 
