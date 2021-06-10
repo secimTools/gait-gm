@@ -6,13 +6,9 @@
 # Distributed under terms of the MIT license.
 #
 
-echo "bash source  [${BASH_SOURCE[0]}]"
-
 SCRIPT=$(basename "${BASH_SOURCE[0]}");
 echo "script $SCRIPT"
-
 TEST="${SCRIPT%.*}"
-
 TESTDIR="testout/${TEST}"
 INPUT_DIR="galaxy/test-data"
 OUTPUT_DIR=$TESTDIR

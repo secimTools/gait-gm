@@ -8,7 +8,6 @@
 
 SCRIPT=$(basename "${BASH_SOURCE[0]}");
 TEST="${SCRIPT%.*}"
-
 TESTDIR="testout/${TEST}"
 INPUT_DIR="galaxy/test-data"
 OUTPUT_DIR=$TESTDIR
