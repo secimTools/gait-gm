@@ -1,7 +1,7 @@
 {% set name = "gait-gm" %}
-{% set version = "21.6.3" %}
+{% set version = "21.6.10" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "TODO" %}
+{% set hash_value = "7584bf841d8ca07f1cbb4f55c8eba897c2ffddbb9f784e6b3aa7243034874024" %}
 
 package:
   name: '{{ name|lower }}'
