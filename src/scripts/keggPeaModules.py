@@ -8,7 +8,6 @@
 # VERSION: 1.0
 #######################################################################################
 import re
-import os
 import sys
 import csv
 import requests
@@ -20,9 +19,8 @@ import pandas as pd
 import seaborn as sns
 import scipy.stats as st
 from rpy2 import robjects as robjects
-from rpy2.robjects.packages import importr
-from rpy2.robjects import r, pandas2ri
 from rpy2.robjects.conversion import localconverter
+from rpy2.robjects import pandas2ri
 from matplotlib.backends.backend_pdf import PdfPages
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
 from secimtools.dataManager import logger as sl
@@ -30,6 +28,7 @@ from secimtools.dataManager.interface import wideToDesign
 from secimtools.visualManager.manager_color import colorHandler
 from secimtools.visualManager.manager_figure import figureHandler
 from secimtools.visualManager.module_mmc import expansion, get_clustering
+from importlib import resources as ires
 
 
 def checkForDuplicates(dataset, uniqID):
@@ -868,7 +867,6 @@ def natural_keys(text):
     http://nedbatchelder.com/blog/200712/human_sorting.html
     (See Toothy's implementation in the comments)
     """
-
     return [atoi(c) for c in re.split("(\d+)", text)]
 
 
@@ -1063,23 +1061,30 @@ def prepareSPLSData(args):
     if args.metOption == "generic":
         metSubsetDict = prepareSPLSMetGenericData(args)
         if all(len(metList) < 3 for metList in metSubsetDict.values()):
-            sys.stderr.write(
-                "There is no group of Metabolites with more than 3 identical KEGG ID.\nTry changing the Metabolite subsetting option to 'By MMC Pattern'."
-            )
+            err_msg = """
+                      There is no group of Metabolites with more than 3 identical KEGG ID.
+                      Try changing the Metabolite subsetting option to 'By MMC Pattern'."
+                      """
+            sys.stderr.write(err_msg)
             sys.exit(2)
     elif args.metOption == "mmc":
         metSubsetDict = prepareSPLSMetMMCData(args)
         if all(len(metList) < 3 for metList in metSubsetDict.values()):
-            sys.stderr.write(
-                "There is no block with more than 3 Metabolites.\nTry changing the Metabolite subsetting option to 'By Metabolite Class'."
-            )
+            err_msg = """
+                      There is no block with more than 3 Metabolites.
+                      Try changing the Metabolite subsetting option to 'By Metabolite Class'.
+                      """
+            sys.stderr.write(err_msg)
             sys.exit(2)
     elif args.metOption == "both":
         metSubsetDict = prepareSPLSMetBothData(args)
         if all(len(metList) < 3 for metList in metSubsetDict.values()):
-            sys.stderr.write(
-                "There is no block with more than 3 Metabolites inside Metabolite Classes.\nTry changing the Metabolite subsetting option to 'By MMC Pattern' or 'By Metabolite Class'."
-            )
+            err_msg = """
+                      Tere is no block with more than 3 Metabolites inside Metabolite Classes. Try
+                      changing the Metabolite subsetting option to 'By MMC Pattern' or 'By
+                      Metabolite Class'.
+                       """
+            sys.stderr.write(err_msg)
             sys.exit(2)
 
     metData = []
@@ -1116,7 +1121,6 @@ def prepareSPLSData(args):
             # convert to R dataframe
             with localconverter(robjects.default_converter + pandas2ri.converter):
                 R_met_subdf = robjects.conversion.py2rpy(metSubTable)
-                #R_met_subdf = pandas2ri.py2rpy(metSubTable)
             # Subset Gene Dataset
             if args.geneOption == "path":
                 R_gene_df = prepareSPLSGenePathData(args, uniqueIDs)
@@ -1338,8 +1342,6 @@ def prepareSPLSGeneAllData(args):
     # convert to R dataframe
     with localconverter(robjects.default_converter + pandas2ri.converter):
         R_gene_df = robjects.conversion.py2rpy(geneTable)
-        #R_gene_df = pandas2ri.py2rpy(geneTable)
-
     return R_gene_df
 
 
@@ -1383,7 +1385,6 @@ def prepareSPLSGeneListData(args):
     # convert to R dataframe
     with localconverter(robjects.default_converter + pandas2ri.converter):
         R_gene_df = robjects.conversion.py2rpy(geneTable_subset)
-        #R_gene_df = pandas2ri.py2rpy(geneTable_subset)
 
     return R_gene_df
 
@@ -1449,7 +1450,6 @@ def prepareSPLSGenePathData(args, uniqueIDs):
         # convert to R dataframe
         with localconverter(robjects.default_converter + pandas2ri.converter):
             R_gene_df = robjects.conversion.py2rpy(geneTable_subset)
-            #R_gene_df = pandas2ri.py2rpy(geneTable_subset)
 
     return R_gene_df
 
@@ -1481,18 +1481,11 @@ def prepareSPLSGenePanaData(args):
         :return R_gene_df: Wide dataset (annotated or not) in R format.
         :rtype R_gene_df: R object
     """
-
-    # Establish path for PANA script
-    myPath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-    my_r_script_path = os.path.join(myPath, "PCA2GO.2.R")
-    # Activate pandas2ri
     pandas2ri.activate()
 
-    # Load the R function containing PANA
-    with open(my_r_script_path, "r") as f:
+    with ires.path("gait-gm.data", "PCA2GO.2.R") as my_r_script_path:
+        f = open(my_r_script_path, "r")
         rFile = f.read()
-
-    # name of PANA function is PCA2GO
     PANAScript = STAP(rFile, "PCA2GO")
 
     # Prepare input_file
@@ -1510,7 +1503,6 @@ def prepareSPLSGenePanaData(args):
     # convert to R dataframe
     with localconverter(robjects.default_converter + pandas2ri.converter):
         R_input_file = robjects.conversion.py2rpy(input_file)
-        #R_input_file = pandas2ri.py2rpy(input_file)
 
     # Prepare genes2pathway
     pathway2genes = pd.read_table(
@@ -1520,7 +1512,6 @@ def prepareSPLSGenePanaData(args):
     # convert to R dataframe
     with localconverter(robjects.default_converter + pandas2ri.converter):
         R_genes2pathway = robjects.conversion.py2rpy(genes2pathway)
-        #R_genes2pathway = pandas2ri.py2rpy(genes2pathway)
 
     # Run PANA script
     panaOutput = PANAScript.PCA2GO(
@@ -1531,12 +1522,9 @@ def prepareSPLSGenePanaData(args):
     )
     with localconverter(robjects.default_converter + pandas2ri.converter):
         panaOutputTable = robjects.conversion.rpy2py(panaOutput[1])
-    #panaOutputTable = robjects.conversion.py2rpy(panaOutput[1])
-    #panaOutputTable = pandas2ri.py2rpy(panaOutput[1])
 
     # Add Annotation
     if args.path2names:
-        ## AMM monkeying
         with localconverter(robjects.default_converter + pandas2ri.converter):
             gene_df = robjects.conversion.rpy2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
@@ -1556,12 +1544,11 @@ def prepareSPLSGenePanaData(args):
         # convert to R dataframe
         with localconverter(robjects.default_converter + pandas2ri.converter):
             R_gene_df = robjects.conversion.py2rpy(gene_df)
-            #R_gene_df = pandas2ri.py2rpy(gene_df)
 
         # panaOutputTable
         pathNames.insert(0, "KEGG_ID")
         panaOutputTable.columns = pathNames
-        panaOutputTable["KEGG_ID"] = panaOutputTable.KEGG_ID.astype(str)   ## AMM and Zihao
+        panaOutputTable["KEGG_ID"] = panaOutputTable.KEGG_ID.astype(str)   # AMM and Zihao
         if args.geneKeggAnno:
             panaOutputTable = Ids2Names(
                 panaOutputTable, "KEGG_ID", args.geneKeggAnno, args.geneKeggName
@@ -1569,18 +1556,17 @@ def prepareSPLSGenePanaData(args):
     else:
         with localconverter(robjects.default_converter + pandas2ri.converter):
             gene_df = robjects.conversion.rpy2py(panaOutput[0])
-        #gene_df = pandas2ri.ri2py(panaOutput[0])
         gene_df.set_index("metagene_name", inplace=True)
 
         with localconverter(robjects.default_converter + pandas2ri.converter):
             R_gene_df = robjects.conversion.py2rpy(gene_df)
-        #R_gene_df = pandas2ri.py2rpy(gene_df)
 
     # Write PANA Output table
     panaOutputTable = panaOutputTable.astype(str)
     panaOutputTable.to_csv(args.panaOut, sep="\t", header=True, index=True)
 
     return R_gene_df
+
 
 def reduce_path_name(pathway, path2nameDict):
     """
@@ -1614,7 +1600,7 @@ def reduce_path_name(pathway, path2nameDict):
 
     # Capitalize, Remove vowels and spaces
     vowels = ["a", "e", "i", "o", "u"]
-    newPathName = "".join([l for l in newPathName if l not in vowels])
+    newPathName = "".join([i for i in newPathName if i not in vowels])
     newPathName = newPathName.title()
     newPathName = newPathName.replace(" ", "")
     newPathName = pathway.split(":")[1] + ": " + newPathName + "_" + panaIndex

@@ -2,11 +2,9 @@
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
-#
 # DESCRIPTION: Perform a correlation analysis of two datasets.
-#
-# VERSION: 1.0
 #######################################################################################
+
 import os
 import logging
 import warnings
@@ -19,6 +17,7 @@ from rpy2.rinterface import RRuntimeWarning
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
 import keggPeaModules as modules
 from secimtools.dataManager import logger as sl
+from importlib import resources as ires
 matplotlib.use("Agg")
 
 
@@ -219,10 +218,8 @@ def main():
     modules.checkForDuplicates(args.geneDataset, args.geneId)
     modules.checkForDuplicates(args.metDataset, args.metId)
     pandas2ri.activate()
-    myPath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-    my_r_script_path = os.path.join(myPath, "all_by_all_correlation.R")
-    logger.info(my_r_script_path)
-    with open(my_r_script_path, "r") as f:
+    with ires.path("gait-gm.data", "all_by_all_correlation.R") as my_r_script_path:
+        f = open(my_r_script_path, "r")
         rFile = f.read()
     allByAllCorrScript = STAP(rFile, "corr_main_func")
     # Prepare Gene Expression Data
@@ -232,7 +229,7 @@ def main():
             geneTable, args.geneId, args.geneAnnot, args.geneName
         )
     else:
-        
+
         geneTable = geneTable.set_index(args.geneId)
         R_gene_df = pandas2ri.py2rpy(geneTable)
 

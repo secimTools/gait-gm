@@ -121,21 +121,20 @@ def main():
         as_dataframe=True,
         df_index=False,
     )
-    print(genesTransformed)
     genesTransformedTable = genesTransformed["out"]
     if genesTransformedTable.shape[0] != genesTransformed["missing"].shape[0]:
         genesTransformedTable.drop(labels=["_id"], axis=1, inplace=True)
         genesTransformedTable = genesTransformedTable[["query", "symbol", "_score"]]
         genesTransformedTable.columns = [args.ensemblId, "GeneSymbol", "Score"]
-        
+
         # Merge Both datasets
         newGenesTable = pd.merge(genesTable, genesTransformedTable, on=args.ensemblId)
-        
+
         # In case of duplicated, select the first one (High score)
         newGenesTable["Selected"] = "Yes"
         isDup = newGenesTable.duplicated(subset=args.ensemblId, keep="first")
         newGenesTable["Selected"][isDup] = "No"
-        
+
         # Write table
         newGenesTable.to_csv(args.output, sep="\t", index=False)
     else:

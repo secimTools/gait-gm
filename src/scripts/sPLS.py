@@ -18,8 +18,9 @@ from rpy2.robjects import pandas2ri
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
 import keggPeaModules as modules
 from secimtools.dataManager import logger as sl
-
+from importlib import resources as ires
 matplotlib.use("Agg")
+
 
 def getOptions():
     parser = argparse.ArgumentParser(
@@ -450,10 +451,8 @@ def main():
         )
     )
     pandas2ri.activate()
-    myPath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-    my_r_script_path = os.path.join(myPath, "sPLS.R")
-    logger.info(my_r_script_path)
-    with open(my_r_script_path, "r") as f:
+    with ires.path("gait-gm.data", "sPLS.R") as my_r_script_path:
+        f = open(my_r_script_path, "r")
         rFile = f.read()
     sPLSScript = STAP(rFile, "sPLS")
     rGeneData, rMetData, multipleNames, multipleNamesId = modules.prepareSPLSData(args)
