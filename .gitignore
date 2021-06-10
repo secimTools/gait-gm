@@ -104,3 +104,6 @@ ENV/
 # Test output runs
 tests/galaxy/test-output
 testout
+metKeggAnnot
+rno_geneKeggAnnot
+rno_pathways
