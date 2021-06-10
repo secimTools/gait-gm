@@ -2,12 +2,10 @@
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
-#
 # DESCRIPTION: Take a column with the gene and/or metabolites names and return an annotation file
 # with KEGG information (Name in KEGG, KEGG ID, ...)
-#
-# VERSION: 1.0
 #######################################################################################
+
 import os
 import logging
 import argparse
@@ -16,7 +14,7 @@ import matplotlib
 from rpy2 import robjects
 from rpy2.robjects import pandas2ri
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
-import keggPeaModules as modules
+import gaitGM.keggPeaModules as modules
 from secimtools.dataManager import logger as sl
 from importlib import resources as ires
 matplotlib.use("Agg")
@@ -451,7 +449,7 @@ def main():
         )
     )
     pandas2ri.activate()
-    with ires.path("gait-gm.data", "sPLS.R") as my_r_script_path:
+    with ires.path("gaitGM.data", "sPLS.R") as my_r_script_path:
         f = open(my_r_script_path, "r")
         rFile = f.read()
     sPLSScript = STAP(rFile, "sPLS")

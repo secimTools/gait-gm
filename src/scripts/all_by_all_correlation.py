@@ -15,7 +15,7 @@ import pandas as pd
 from rpy2.robjects import pandas2ri
 from rpy2.rinterface import RRuntimeWarning
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
-import keggPeaModules as modules
+import gaitGM.keggPeaModules as modules
 from secimtools.dataManager import logger as sl
 from importlib import resources as ires
 matplotlib.use("Agg")
@@ -218,7 +218,7 @@ def main():
     modules.checkForDuplicates(args.geneDataset, args.geneId)
     modules.checkForDuplicates(args.metDataset, args.metId)
     pandas2ri.activate()
-    with ires.path("gait-gm.data", "all_by_all_correlation.R") as my_r_script_path:
+    with ires.path("gaitGM.data", "all_by_all_correlation.R") as my_r_script_path:
         f = open(my_r_script_path, "r")
         rFile = f.read()
     allByAllCorrScript = STAP(rFile, "corr_main_func")

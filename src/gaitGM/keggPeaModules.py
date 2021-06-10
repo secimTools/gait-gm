@@ -2,11 +2,9 @@
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
-#
-# DESCRIPTION: Extra functions for KEGG PEA Tools
-#
-# VERSION: 1.0
+# DESCRIPTION: gaitGM module with functions for KEGG PEA Tools
 #######################################################################################
+
 import re
 import sys
 import csv

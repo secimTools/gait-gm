@@ -2,19 +2,17 @@
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
-#
 # DESCRIPTION: Take a Gene Expression Annotation File with ENSEMBL IDs and return an Annotation
 # File with Gene Symbols
-#
-# VERSION: 1.0
 #######################################################################################
+
 import os
 import logging
 import argparse
 from argparse import RawDescriptionHelpFormatter
 import mygene
 import pandas as pd
-import keggPeaModules as modules
+import gaitGM.keggPeaModules as modules
 from secimtools.dataManager import logger as sl
 
 

@@ -2,12 +2,10 @@
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
-#
 # DESCRIPTION: Add flags to a Differential Expression Analysis Dataset.
 # Output shows whether the feature belongs (1) or not (0) to a certain flag.
-#
-# VERSION: 1.0
 #######################################################################################
+
 import os
 import logging
 import argparse
@@ -15,8 +13,8 @@ import linecache
 from argparse import RawDescriptionHelpFormatter
 import numpy as np
 from numpy import genfromtxt
-import keggPeaModules as modules
 from secimtools.dataManager import logger as sl
+import gaitGM.keggPeaModules as modules
 
 
 def getOptions():

@@ -2,16 +2,14 @@
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
-#
 # DESCRIPTION: Take a wide dataset and append a unique identifier to it.
-#
-# VERSION: 1.0
 #######################################################################################
+
 import os
 import logging
 import argparse
 from argparse import RawDescriptionHelpFormatter
-import keggPeaModules as modules
+import gaitGM.keggPeaModules as modules
 from secimtools.dataManager import logger as sl
 
 

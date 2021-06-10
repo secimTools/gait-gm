@@ -12,7 +12,7 @@ import os
 import argparse
 from argparse import RawDescriptionHelpFormatter
 import pandas as pd
-import keggPeaModules as modules
+import gaitGM.keggPeaModules as modules
 
 
 def getOptions():

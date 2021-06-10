@@ -11,7 +11,7 @@
 import os
 import argparse
 from argparse import RawDescriptionHelpFormatter
-import keggPeaModules as modules
+import gaitGM.keggPeaModules as modules
 
 
 def getOptions():
