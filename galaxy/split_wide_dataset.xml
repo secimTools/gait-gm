@@ -60,15 +60,15 @@
       <param name="samples" value="2,3,4,5,6,7,8,9,10,11"/>
       <output name="wide" file="gene_wide_dataset_01fhl.tsv"/>
       <output name="design" file="gene_design_file_01fhl.tsv"/>
-      <output name="annot" file="gene_annot_file_01fhl.tsv"/>
+      <output name="annot" file="gene_annotation_file_01fhl.tsv"/>
     </test>
     <test>
       <param name="input" value="metabolite_input_dataset_01fhl.tsv"/>
       <param name="prefix" value="Met"/>
       <param name="samples" value="2,3,4,5,6,7,8,9,10,11"/>
       <output name="wide" file="metabolite_wide_dataset_01fhl.tsv"/>
-      <output name="design" file="met_design_file_01fhl.tsv"/>
-      <output name="annot" file="met_annot_file_01fhl.tsv"/>
+      <output name="design" file="metabolite_design_file_01fhl.tsv"/>
+      <output name="annot" file="metabolite_annotation_file_01fhl.tsv"/>
     </test>
   </tests>
   <help><![CDATA[

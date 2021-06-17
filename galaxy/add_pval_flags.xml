@@ -42,8 +42,6 @@
     </test>
   </tests>
   <help><![CDATA[
-
-
 **Tool Description**
 
   This tool generates an indicator variable (0 or 1) to identify p-values below a user-specified threshold.  A “1” is used to indicate (flag)
@@ -117,8 +115,7 @@
   | ...       | ...      | ...       | ... |
   +-----------+----------+-----------+-----+
 
-  ]]>
-  </help>
+]]></help>
   <citations>
     <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
     author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},

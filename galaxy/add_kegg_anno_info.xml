@@ -85,8 +85,8 @@
       <param name="metAnnot" value="metabolite_annotation_file_01fhl.tsv"/>
       <param name="metUniqId" value="UniqueID"/>
       <param name="metName" value="MetName"/>
-      <param name="geneOutput" value="gene_link_kegg_annotation_file_01fhl.tsv"/>
-      <param name="metOutput" value="metabolite_link_kegg_annotation_file_01fhl.tsv"/>
+      <param name="geneOutput" value="gene_to_keggId_link_01fhl.tsv"/>
+      <param name="metOutput" value="metabolite_to_keggId_link_01fhl.tsv"/>
     </test>
   </tests>
   <help><![CDATA[
