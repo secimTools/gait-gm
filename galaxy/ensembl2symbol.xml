@@ -32,17 +32,17 @@
   <tests>
     <test>
       <param name="species" value="rat"/>
-      <param name="geneAnnot" value="gene_annotation_file_01fhl.tsv"/>
+      <param name="geneAnnot" value="gene_annotation_file.tsv"/>
       <param name="uniqId" value="UniqueID"/>
       <param name="ensemblId" value="GeneName"/>
-      <param name="Output" value="ensembl2symbol_annotation_file_01fhl.tsv"/>
+      <param name="Output" value="ensembl2symbol_annotation_file.tsv"/>
     </test>
   </tests>
   <help><![CDATA[
 
 **Tool Description**
 
-  This tool takes a dataset containing unique FeatureIDs and ENSEMBLIDs and provides gene symbols. The link from the ENSEMBLIDs to gene symbols is made using Biomart. The tool adds the following columns to the input dataset:  GeneSymbol, Score, Selected,  and Tie. The GeneSymbol column contains the short identifiers (typically 3 letter abbreviations) of the gene name. The Score column contains a value that represents how well the ENSEMBLID matched the returned GeneSymbol using the PyPi package Gene 3.0.0 (https://www.ncbi.nlm.nih.gov/pubmed/23175613). The Selected column = 'Yes' when an ENSEMBLID uniquely matches a GeneSymbol or when that row has the highest Score value.  The Selected column = 'No' in the absence of a unique match for rows lower than the maximum score. If there is a tie in the Score the alphabetically first value is selected and the Tie column has a value of Yes. We note that FeatureID may not be unique in the resulting output dataset.
+  This tool takes a dataset containing unique FeatureIDs and ENSEMBLIDs and provides gene symbols. The link from the ENSEMBLIDs to gene symbols is made using Biomart. The tool adds the following columns to the input dataset:  GeneSymbol, Score, Selected,  and Tie. The GeneSymbol column contains the short identifiers (typically 3 letter abbreviations) of the gene name. The Score column contains a value that represents how well the ENSEMBLID matched the returned GeneSymbol using the PyPi package Gene 3.0.0 (https://www.ncbi.nlm.nih.gov/pubmed/23175613). The Selected column = 'Yes' when an ENSEMBLID uniquely matches a GeneSymbol or when that row has the highest Score value.  The Selected column = 'No' in the absence of a unique match for rows lower than the maximum score. If there is a tie in the Score the alphabetically first value is selected, and the Tie column has a value of Yes. We note that the FeatureID may not be unique in the resulting output dataset.
 
 --------------------------------------------------------------------------------
 
@@ -76,23 +76,24 @@
 
 **OUTPUT**
 
-  The user will get a single output file.
+  The user will get a single output file containing the linked gene symbols.
 
 **Output Table**
 
-  +------------+------------+--------------+-------------+-----------+----------+
-  | FeatureID   | ENSEMBLID | ...          | GeneSymbol  | Score     | Selected |
-  +============+============+==============+=============+===========+==========+
-  | FeatureID_1 | ENS...    | ...          | one*        | 13.550056 | Yes      |
-  +------------+------------+--------------+-------------+-----------+----------+
-  | FeatureID_2 | ENS...    | ...          | two*        | 12.984067 | Yes      |
-  +------------+------------+--------------+-------------+-----------+----------+
-  | FeatureID_2 | ENS...    | ...          | three*      | 11.995048 | No       |
-  +------------+------------+--------------+-------------+-----------+----------+
-  | FeatureID_3 | ENS...    | ...          | four*       | 12.549084 | Yes      |
-  +------------+------------+--------------+-------------+-----------+----------+
-  | ...        | ...        | ...          | ...         | ...       | ...      |
-  +------------+------------+--------------+-------------+-----------+----------+
+  +-------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID   | ENSEMBLID  | ...          | GeneSymbol  | Score     | Selected |
+  +=============+============+==============+=============+===========+==========+
+  | FeatureID_1 | ENS...     | ...          | one*        | 13.550056 | Yes      |
+  +-------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID_2 | ENS...     | ...          | two*        | 12.984067 | Yes      |
+  +-------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID_2 | ENS...     | ...          | three*      | 11.995048 | No       |
+  +-------------+------------+--------------+-------------+-----------+----------+
+  | FeatureID_3 | ENS...     | ...          | four*       | 12.549084 | Yes      |
+  +-------------+------------+--------------+-------------+-----------+----------+
+  | ...         | ...        | ...          | ...         | ...       | ...      |
+  +-------------+------------+--------------+-------------+-----------+----------+
+*=refers to the matched gene
 
   ]]>
   </help>
