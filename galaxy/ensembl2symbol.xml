@@ -21,6 +21,10 @@
      <option value="mouse">Mus musculus</option>
      <option value="rat">Rattus norvegicus</option>
      <option value="fruitfly">Drosophila melanogaster</option>
+     <option value="thale-cress">Arabidopsis thaliana</option>
+     <option value="yeast">Saccharomyces cerevisiae</option>
+     <option value="e.coli">Escherichia coli</option>
+     <option value="nematode">Caenorhabditis elegans</option>
     </param>
     <param name="geneAnnot" type="data" format="tabular" label="Select the Dataset from your History containing the ENSEMBLIDs"/>
     <param name="uniqId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the column in your dataset containing unique FeatureIDs."/> 

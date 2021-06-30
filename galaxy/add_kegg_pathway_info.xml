@@ -48,6 +48,7 @@
      <option value="ath">Arabidopsis thaliana</option>
      <option value="sce">Saccharomyces cerevisiae</option>
      <option value="eco">Escherichia coli</option>
+     <option value="cel">Caenorhabditis elegans</option>
     </param>
     <conditional name="dataSets">
       <param name="whichDataSet" type="select" display="radio" label="Select the Datasets you want to add KEGG pathway information to.  Note: datasets must contain KEGGIDs.">
