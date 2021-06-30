@@ -81,7 +81,7 @@
     <conditional name="metsOption">
       <param name="allMets" type="select" display="radio" label="Select which option to use for subsetting the Metabolite Wide Dataset" help="Select one of the options above.">
         <option value="generic">By metabolite class -- Uses the 'Name_in_KEGG' column generated from the 'Link Name to KEGGID' tool to subset.</option>
-        <option value="mmc">By MMC pattern -- Runs the SECIMTools MMC tool and uses the tool-generated pattern blocks for subseting.</option>
+        <option value="mmc">By MMC pattern -- Runs the SECIMTools MMC tool and uses the tool-generated pattern blocks for subsetting.</option>
         <option value="both">By both metabolite class AND by MMC pattern.</option>
       </param>
       <when value="generic">
@@ -274,8 +274,8 @@
       <param name="allGenes" value="all"/>
       <param name="keepX" value="10"/>
       <param name="threshold" value="0.8"/>
-      <output name="splsOut" file="spls_correlation_file_01fhl.tsv"/>
-      <output name="figure1" file="spls_figure_01fhl.pdf"/>
+      <output name="splsOut" file="spls_correlation_file.tsv"/>
+      <output name="figure1" file="spls_figure.pdf"/>
     </test>
   </tests>
   <help><![CDATA[
@@ -415,14 +415,14 @@
   (3) A MMC PDF Figure containing unsorted, sorted and sorted-smoothed heatmaps of the variance-covariance matrixes
   (4) A MMC Output TSV file containing algorithm summaries in the following columns:
   
-    (1) Unique metabolite featureID
-    (2) Module:  Contains the module number for each feature calculated by the MMC tool.
-    (3) Entry Index:  Contains the original order of the names of the rows of the input Metabolite Wide Dataset.
-    (4) Degree:  Average of the absolute values of correlations for the given element in a block to other elements within that block.
-    (5) Average Degree:  Average values of the degrees computed above across all elements within the given block.
+       - Unique metabolite featureID
+       - Module:  Contains the module number for each feature calculated by the MMC tool.
+       - Entry Index:  Contains the original order of the names of the rows of the input Metabolite Wide Dataset.
+       - Degree:  Average of the absolute values of correlations for the given element in a block to other elements within that block.
+       - Average Degree:  Average values of the degrees computed above across all elements within the given block.
 
 **For subsetting genes by generating metagenes using PANA the following files will be output in addition to files (1) and (2) above**
-  (5) A PANA Output TSV table containing associations between gene symbols and KEGG pathays.
+  (5) A PANA Output TSV table containing associations between gene symbols and KEGG pathways.
 
   ]]>
   </help>
