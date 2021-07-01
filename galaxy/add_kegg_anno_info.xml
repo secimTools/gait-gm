@@ -94,9 +94,10 @@
 
 **Tool Description**
 
-  This tool takes an annotation dataset containing metabolite compound names or gene symbols and links them to identifiers in KEGG (KEGGIDs) 
-  creating either: 
-(a) a Gene to KEGGID Link or (b) a Metabolite to KEGGID Link dataset.
+This tool takes an annotation dataset containing metabolite compound names or gene symbols and links them to identifiers in KEGG (KEGGIDs) 
+creating either: 
+(a) a Gene to KEGGID Link or 
+(b) a Metabolite to KEGGID Link dataset.
 
  For gene expression data, the tool is designed to 
   take the output from the 'Map ENSEMBLIDs to Gene Symbols' tool as input. If your input dataset contains a Selected column, the tool will 
