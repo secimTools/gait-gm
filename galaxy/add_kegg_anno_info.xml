@@ -40,6 +40,7 @@
      <option value="ath">Arabidopsis thaliana</option>
      <option value="sce">Saccharomyces cerevisiae</option>
      <option value="eco">Escherichia coli</option>
+     <option value="cel">Caenorhabditis elegans</option>
     </param>
     <conditional name="dataSets">
       <param name="whichDataSet" type="select" display="radio" label="Select Annotation Dataset(s)">
@@ -79,30 +80,38 @@
   <tests>
     <test>
       <param name="species" value="rno"/>
-      <param name="geneAnnot" value="ensembl2symbol_annotation_file_01fhl.tsv"/>
+      <param name="geneAnnot" value="ensembl2symbol_annotation_file.tsv"/>
       <param name="geneUniqId" value="UniqueID"/>
-      <param name="geneName" value="GeneSymbol"/>
-      <param name="metAnnot" value="metabolite_annotation_file_01fhl.tsv"/>
+      <param name="geneName" value="GeneName"/>
+      <param name="metAnnot" value="metabolite_annotation_file.tsv"/>
       <param name="metUniqId" value="UniqueID"/>
       <param name="metName" value="MetName"/>
-      <param name="geneOutput" value="gene_link_kegg_annotation_file_01fhl.tsv"/>
-      <param name="metOutput" value="metabolite_link_kegg_annotation_file_01fhl.tsv"/>
+      <param name="geneOutput" value="gene_to_keggId_link.tsv"/>
+      <param name="metOutput" value="metabolite_to_keggId_link.tsv"/>
     </test>
   </tests>
   <help><![CDATA[
 
 **Tool Description**
 
-  This tool takes an annotation dataset containing metabolite compound names or gene symbols and links them to identifiers in KEGG (KEGGIDs) 
-  creating either a (a) Gene to KEGGID Link or  a (b) Metabolite to KEGGID Link dataset. For gene expression data, the tool is designed to 
+This tool takes an annotation dataset containing metabolite compound names or gene symbols and links them to identifiers in KEGG (KEGGIDs) 
+creating either: 
+(a) a Gene to KEGGID Link or 
+(b) a Metabolite to KEGGID Link dataset.
+
+ For gene expression data, the tool is designed to 
   take the output from the 'Map ENSEMBLIDs to Gene Symbols' tool as input. If your input dataset contains a Selected column, the tool will 
   link GeneSymbols to KEGGIDs where Selected = 'Yes'. Input Files without a Selected column must have a column containing unique FeatureIDs. 
   This tool takes an annotation dataset containing unique FeatureIDs, ENSEMBLIDs (for gene expression data) and GeneSymbol/MetaboliteName 
-  and adds the following columns:  1) Name_in_KEGG, the name found in KEGG, 2) Matched, a column indicating whether a match was found in KEGG, 
-  3) KEGGID, the KEGG identifier for the Match, 4) Score, a similarity score representing match similarity (caluclated using the python internal 
-  function SequenceMatcher from difflib (check) and 5) a Tie column to indicate if a gene symbol or metabolite name matched more than one KEGGID.
+  and adds the following columns:
 
-  User-specified metabolite names are linked to KEGGIDs by identifying the best match using the following procedure.  Common metabolite prefixes 
+  1) Name_in_KEGG, the name found in KEGG
+  2) Matched, a column indicating whether a match was found in KEGG, 
+  3) KEGGID, the KEGG identifier for the Match
+  4) Score, a similarity score representing match similarity (calculated using the python internal function SequenceMatcher from difflib (check) 
+  5) a Tie column to indicate if a gene symbol or metabolite name matched more than one KEGGID.
+
+  User-specified metabolite names are linked to KEGGIDs by identifying the best match using the following procedure:  Common metabolite prefixes 
   are removed (cis-, trans-, d- , l- , (s)-, alpha-, beta-, alpha, beta, alpha-d-, beta-d-, alpha-l-, beta-l-, l-beta-, l-alpha-, d-beta-, d-alpha-).  
   If the metabolite name given is an acid, then the name is modified to the conjugate base by replacing  “ic acid”, “icacid” or “ic_acid” with  “ate”.  
   If amino acids are given in 1-letter or 3-letter abbreviations, names are modified to the full amino acid name.  The following commonly used lipid 
@@ -112,7 +121,7 @@
   more synonyms. The user-specified metabolite names are retained in the output dataset for comparisons with the KEGG database.
  
   Each parsed metabolite name is compared to metabolite names in KEGG. The best match in KEGG based on similarity score is returned.  The similarity 
-  score (Score column) is based on the longest contiguous matching subsequence that does not contain 'junk' elements where 'junk' elements are defined 
+  score (Score column) is based on the longest contiguous matching subsequence that does not contain 'junk' elements, where 'junk' elements are defined 
   as duplicates making up more than 1% of a sequence with minimum length of 200 (python SequenceMatcher class from difflib)
 
   Selected = Yes for the match with the highest similarity score.  

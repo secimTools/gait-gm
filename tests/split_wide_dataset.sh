@@ -22,23 +22,23 @@ rm -f test-output/gene_* test-output/metabolite_wide_dataset_01fhl.tsv test-outp
 
 # Test 1 - gene 
 split_wide_dataset.py \
-    -i=$INPUT_DIR/gene_input_dataset_01fhl.tsv \
+    -i=$INPUT_DIR/gene_input_dataset.tsv \
     -p=gene \
     -s=2,3,4,5,6,7,8,9,10,11 \
-    -w=$OUTPUT_DIR/gene_wide_dataset_01fhl.tsv \
-    -d=$OUTPUT_DIR/gene_design_file_01fhl.tsv \
-    -a=$OUTPUT_DIR/gene_annot_file_01fhl.tsv
+    -w=$OUTPUT_DIR/gene_wide_dataset.tsv \
+    -d=$OUTPUT_DIR/gene_design_file.tsv \
+    -a=$OUTPUT_DIR/gene_annotation_file.tsv
 
 echo "### Finished gene test: ${TEST} on $(date)"
 
 # Test 2 - metabolite
 split_wide_dataset.py \
-    -i=$INPUT_DIR/metabolite_input_dataset_01fhl.tsv \
+    -i=$INPUT_DIR/metabolite_input_dataset.tsv \
     -p=met \
     -s=2,3,4,5,6,7,8,9,10,11 \
-    -w=$OUTPUT_DIR/metabolite_wide_dataset_01fhl.tsv \
-    -d=$OUTPUT_DIR/met_design_file_01fhl.tsv \
-    -a=$OUTPUT_DIR/met_annot_file_01fhl.tsv
+    -w=$OUTPUT_DIR/metabolite_wide_dataset.tsv \
+    -d=$OUTPUT_DIR/metabolite_design_file.tsv \
+    -a=$OUTPUT_DIR/metabolite_annotation_file.tsv
 
 
 echo "### Finished metabolite test: ${TEST} on $(date)"

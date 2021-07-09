@@ -28,7 +28,7 @@
     <param name="geneDataset" type="data" format="tabular" label="Gene Expression Wide Dataset" help="Select the Gene Expression Wide Dataset from your history"/>
     <param name="geneId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the Column in your Gene Expression Wide Dataset that contains unique identifiers."/>
     <conditional name="geneAnnotation">
-      <param name="useGeneAnnot" type="select" label="Use Annotation File?" help="You can chose to input a file containing gene annotation information (e.g. gene names, identifiers, etc.) for labeling output files.">
+      <param name="useGeneAnnot" type="select" label="Use Annotation File?" help="You can choose to input a file containing gene annotation information (e.g. gene names, identifiers, etc.) for labeling output files.">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
       </param>
@@ -40,7 +40,7 @@
     <param name="metDataset" type="data" format="tabular" label="Metabolite Wide Dataset" help="Select the Metabolite Wide Dataset from your history"/>
     <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/>
     <conditional name="metAnnotation">
-      <param name="useMetAnnot" type="select" label="Use Annotation File?" help="You can chose to input a file containing metabolite annotation information (e.g. metabolite names, identifiers, etc.) for labeling output files.">
+      <param name="useMetAnnot" type="select" label="Use Annotation File?" help="You can choose to input a file containing metabolite annotation information (e.g. metabolite names, identifiers, etc.) for labeling output files.">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
       </param>
@@ -63,17 +63,17 @@
   </outputs>
   <tests>
     <test>
-      <param name="geneDataset" value="gene_wide_dataset_01fhl.tsv"/>
+      <param name="geneDataset" value="test-data/gene_wide_dataset.tsv"/>
       <param name="geneId" value="UniqueID"/>
-      <param name="geneAnnot" value="gene_annotation_file_01fhl.tsv"/>
+      <param name="geneAnnot" value="test-data/gene_annotation_file.tsv"/>
       <param name="geneName" value="GeneName"/>
-      <param name="metDataset" value="metabolite_wide_dataset_01fhl.tsv"/>
+      <param name="metDataset" value="test-data/metabolite_wide_dataset.tsv"/>
       <param name="metId" value="UniqueID"/>
-      <param name="metAnnot" value="metabolite_annotation_file_01fhl.tsv"/>
+      <param name="metAnnot" value="test-data/metabolite_annotation_file.tsv"/>
       <param name="metName" value="MetName"/>
-      <output name="output" file="correlation_file_01fhl.tsv"/>
-      <output name="corMat" file="correlation_matrix_01fhl.tsv"/>
-      <output name="figure" file="correlation_figure_01fhl.pdf"/>
+      <output name="output" file="testout/all_by_all_correlation/correlation_file.tsv"/>
+      <output name="corMat" file="testout/all_by_all_correlation/correlation_matrix.tsv"/>
+      <output name="figure" file="testout/all_by_all_correlation/correlation_figure.pdf"/>
     </test>
   </tests>
   <help><![CDATA[
@@ -128,19 +128,19 @@
 
   (5) **Annotation Files**  The user can provide (optional) Annotation Files for the Gene Expression and/or Metabolite Datasets to label the results for easier readability. The user must provide the name of the column with the desired feature name (e.g. Gene Symbol).
 
-    +-----------+------------+-------------+-----+
-    | UniqueID  | ENSEMBL_ID | Gene_Symbol | ... |
-    +===========+============+=============+=====+
-    | gene_1    | ENS...     | one         | ... |
-    +-----------+------------+-------------+-----+
-    | gene_2    | ENS...     | two         | ... |
-    +-----------+------------+-------------+-----+
-    | gene_3    | ENS...     | three       | ... |
-    +-----------+------------+-------------+-----+
-    | gene_4    | ENS...     | four        | ... |
-    +-----------+------------+-------------+-----+
-    | ...       | ...        | ...         | ... |
-    +-----------+------------+-------------+-----+
+    +-----------+--------------+-------------+-----+
+    | UniqueID  | ENSEMBL_ID   | Gene_Symbol | ... |
+    +===========+==============+=============+=====+
+    | gene_1    | ENS...       | one         | ... |
+    +-----------+--------------+-------------+-----+
+    | gene_2    | ENS...       | two         | ... |
+    +-----------+--------------+-------------+-----+
+    | gene_3    | ENS...       | three       | ... |
+    +-----------+--------------+-------------+-----+
+    | gene_4    | ENS...       | four        | ... |
+    +-----------+--------------+-------------+-----+
+    | ...       | ...          | ...         | ... |
+    +-----------+--------------+-------------+-----+
 
   (6) **Correlation method**  Select the correlation coefficient to be computed from the list. Pearson, kendall, or spearman are available.
 
@@ -152,7 +152,7 @@
 
   The user will obtain three outputs from the Gene - Metabolite Correlation Tool:
 
-  (1) **Correlation File.** A file sorted by the absolute values of the correlation coeficient and including the P-value. The file contains only the correlation coefficients where the associated P-values is less than a user-specified value (default = 0.05).
+  (1) **Correlation File.** A file sorted by the absolute values of the correlation coefficient and including the P-value. The file contains only the correlation coefficients where the associated P-values is less than a user-specified value (default = 0.05).
 
     +--------+------------+-------------+-----------+
     | Gene   | Metabolite | Correlation | (p-value) |
@@ -184,7 +184,7 @@
     | ...    | ...   | ...   | ...   | ...   | ... |
     +--------+-------+-------+-------+-------+-----+
 
-  (3) **Correlation Figure.** Network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coeficients. Maximum number of correlations in the netork is 500.
+  (3) **Correlation Figure.** Network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coefficients. Maximum number of correlations in the network is 500.
 
   ]]>
   </help>

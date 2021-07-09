@@ -27,7 +27,7 @@ def getOptions():
         dest="species",
         action="store",
         required=True,
-        help="Species to download. One of rat, human, mouse or fruitfly",
+        help="Species to download. One of rat, human, mouse, fruitfly, thale cress, yeast, E. coli, or nematode",
     )
     tool.add_argument(
         "-ga",

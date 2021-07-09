@@ -1,0 +1,277 @@
+Metabolite	Gene	Correlation	Subset
+met_6: SM C16:1	gene_11759	0.952	Sphingomyelin
+met_6: SM C16:1	gene_6035	-0.919	Sphingomyelin
+met_11: SM C24:1	gene_2899	-0.906	Sphingomyelin
+met_6: SM C16:1	gene_7684	0.906	Sphingomyelin
+met_11: SM C24:1	gene_11862	-0.903	Sphingomyelin
+met_11: SM C24:1	gene_10889	0.899	Sphingomyelin
+met_11: SM C24:1	gene_3598	-0.897	Sphingomyelin
+met_3: SM (OH) C22:2	gene_11862	-0.895	Sphingomyelin
+met_3: SM (OH) C22:2	gene_3598	-0.889	Sphingomyelin
+met_6: SM C16:1	gene_6567	0.889	Sphingomyelin
+met_6: SM C16:1	gene_2899	0.887	Sphingomyelin
+met_3: SM (OH) C22:2	gene_2899	-0.887	Sphingomyelin
+met_3: SM (OH) C22:2	gene_10889	0.886	Sphingomyelin
+met_11: SM C24:1	gene_1454	-0.885	Sphingomyelin
+met_11: SM C24:1	gene_2002	-0.876	Sphingomyelin
+met_3: SM (OH) C22:2	gene_1454	-0.873	Sphingomyelin
+met_11: SM C24:1	gene_6567	-0.873	Sphingomyelin
+met_8: SM C18:1	gene_11759	0.868	Sphingomyelin
+met_7: SM C18:0	gene_8778	0.865	Sphingomyelin
+met_6: SM C16:1	gene_2002	0.859	Sphingomyelin
+met_3: SM (OH) C22:2	gene_2002	-0.857	Sphingomyelin
+met_6: SM C16:1	gene_10889	-0.854	Sphingomyelin
+met_12: SM C26:1	gene_11862	-0.854	Sphingomyelin
+met_12: SM C26:1	gene_3598	-0.848	Sphingomyelin
+met_3: SM (OH) C22:2	gene_6567	-0.848	Sphingomyelin
+met_2: SM (OH) C22:1	gene_2702	0.844	Sphingomyelin
+met_12: SM C26:1	gene_10889	0.842	Sphingomyelin
+met_11: SM C24:1	gene_11759	-0.841	Sphingomyelin
+met_12: SM C26:1	gene_2899	-0.84	Sphingomyelin
+met_10: SM C24:0	gene_11862	-0.837	Sphingomyelin
+met_6: SM C16:1	gene_1454	0.836	Sphingomyelin
+met_7: SM C18:0	gene_11113	-0.835	Sphingomyelin
+met_8: SM C18:1	gene_6035	-0.832	Sphingomyelin
+met_10: SM C24:0	gene_3598	-0.831	Sphingomyelin
+met_11: SM C24:1	gene_6035	0.831	Sphingomyelin
+met_12: SM C26:1	gene_1454	-0.83	Sphingomyelin
+met_6: SM C16:1	gene_11862	0.83	Sphingomyelin
+met_11: SM C24:1	gene_7684	-0.829	Sphingomyelin
+met_7: SM C18:0	gene_10746	-0.829	Sphingomyelin
+met_6: SM C16:1	gene_3598	0.825	Sphingomyelin
+met_7: SM C18:0	gene_5474	0.825	Sphingomyelin
+met_2: SM (OH) C22:1	gene_4174	-0.823	Sphingomyelin
+met_10: SM C24:0	gene_10889	0.821	Sphingomyelin
+met_8: SM C18:1	gene_7684	0.818	Sphingomyelin
+met_10: SM C24:0	gene_2899	-0.815	Sphingomyelin
+met_12: SM C26:1	gene_2002	-0.812	Sphingomyelin
+met_10: SM C24:0	gene_1454	-0.81	Sphingomyelin
+met_92: PC ae C42:3	gene_2443	0.952	Phosphatidylcholine
+met_76: PC ae C38:0	gene_2443	0.933	Phosphatidylcholine
+met_92: PC ae C42:3	gene_3598	0.919	Phosphatidylcholine
+met_92: PC ae C42:3	gene_12512	0.916	Phosphatidylcholine
+met_92: PC ae C42:3	gene_5406	0.913	Phosphatidylcholine
+met_92: PC ae C42:3	gene_2008	0.911	Phosphatidylcholine
+met_76: PC ae C38:0	gene_2008	0.906	Phosphatidylcholine
+met_92: PC ae C42:3	gene_4369	-0.905	Phosphatidylcholine
+met_64: PC ae C32:1	gene_9776	-0.904	Phosphatidylcholine
+met_66: PC ae C34:0	gene_905	0.892	Phosphatidylcholine
+met_76: PC ae C38:0	gene_12512	0.891	Phosphatidylcholine
+met_92: PC ae C42:3	gene_58	-0.89	Phosphatidylcholine
+met_92: PC ae C42:3	gene_1546	0.888	Phosphatidylcholine
+met_76: PC ae C38:0	gene_58	-0.881	Phosphatidylcholine
+met_84: PC ae C40:2	gene_2443	-0.881	Phosphatidylcholine
+met_64: PC ae C32:1	gene_2924	0.88	Phosphatidylcholine
+met_76: PC ae C38:0	gene_4369	-0.878	Phosphatidylcholine
+met_64: PC ae C32:1	gene_13212	0.878	Phosphatidylcholine
+met_76: PC ae C38:0	gene_3598	0.876	Phosphatidylcholine
+met_64: PC ae C32:1	gene_9169	0.873	Phosphatidylcholine
+met_76: PC ae C38:0	gene_5406	0.872	Phosphatidylcholine
+met_87: PC ae C40:5	gene_9776	-0.872	Phosphatidylcholine
+met_92: PC ae C42:3	gene_10724	-0.87	Phosphatidylcholine
+met_64: PC ae C32:1	gene_7010	-0.866	Phosphatidylcholine
+met_76: PC ae C38:0	gene_1546	0.863	Phosphatidylcholine
+met_64: PC ae C32:1	gene_9392	0.863	Phosphatidylcholine
+met_64: PC ae C32:1	gene_3511	0.861	Phosphatidylcholine
+met_76: PC ae C38:0	gene_10724	-0.86	Phosphatidylcholine
+met_92: PC ae C42:3	gene_2631	-0.859	Phosphatidylcholine
+met_64: PC ae C32:1	gene_5479	-0.859	Phosphatidylcholine
+met_66: PC ae C34:0	gene_5479	-0.854	Phosphatidylcholine
+met_64: PC ae C32:1	gene_6063	0.854	Phosphatidylcholine
+met_87: PC ae C40:5	gene_13212	0.854	Phosphatidylcholine
+met_66: PC ae C34:0	gene_13212	0.854	Phosphatidylcholine
+met_87: PC ae C40:5	gene_2924	0.849	Phosphatidylcholine
+met_84: PC ae C40:2	gene_2008	-0.848	Phosphatidylcholine
+met_77: PC ae C38:1	gene_2443	-0.846	Phosphatidylcholine
+met_84: PC ae C40:2	gene_12512	-0.845	Phosphatidylcholine
+met_84: PC ae C40:2	gene_3598	-0.842	Phosphatidylcholine
+met_66: PC ae C34:0	gene_9776	-0.841	Phosphatidylcholine
+met_76: PC ae C38:0	gene_2631	-0.84	Phosphatidylcholine
+met_87: PC ae C40:5	gene_5479	-0.84	Phosphatidylcholine
+met_87: PC ae C40:5	gene_9392	0.839	Phosphatidylcholine
+met_66: PC ae C34:0	gene_9392	0.838	Phosphatidylcholine
+met_84: PC ae C40:2	gene_5406	-0.837	Phosphatidylcholine
+met_84: PC ae C40:2	gene_4369	0.834	Phosphatidylcholine
+met_64: PC ae C32:1	gene_905	0.832	Phosphatidylcholine
+met_87: PC ae C40:5	gene_9169	0.829	Phosphatidylcholine
+met_87: PC ae C40:5	gene_6063	0.828	Phosphatidylcholine
+met_84: PC ae C40:2	gene_58	0.827	Phosphatidylcholine
+met_87: PC ae C40:5	gene_905	0.826	Phosphatidylcholine
+met_87: PC ae C40:5	gene_3511	0.825	Phosphatidylcholine
+met_87: PC ae C40:5	gene_7010	-0.823	Phosphatidylcholine
+met_66: PC ae C34:0	gene_2924	0.82	Phosphatidylcholine
+met_84: PC ae C40:2	gene_1546	-0.819	Phosphatidylcholine
+met_66: PC ae C34:0	gene_6063	0.819	Phosphatidylcholine
+met_86: PC ae C40:4	gene_905	0.816	Phosphatidylcholine
+met_85: PC ae C40:3	gene_2443	-0.816	Phosphatidylcholine
+met_77: PC ae C38:1	gene_2008	-0.813	Phosphatidylcholine
+met_85: PC ae C40:3	gene_3598	-0.812	Phosphatidylcholine
+met_77: PC ae C38:1	gene_12512	-0.811	Phosphatidylcholine
+met_77: PC ae C38:1	gene_3598	-0.809	Phosphatidylcholine
+met_84: PC ae C40:2	gene_10724	0.808	Phosphatidylcholine
+met_91: PC ae C42:2	gene_2008	-0.807	Phosphatidylcholine
+met_78: PC ae C38:2	gene_3598	-0.807	Phosphatidylcholine
+met_75: PC ae C36:5	gene_3598	0.807	Phosphatidylcholine
+met_78: PC ae C38:2	gene_2443	-0.804	Phosphatidylcholine
+met_91: PC ae C42:2	gene_2443	-0.804	Phosphatidylcholine
+met_85: PC ae C40:3	gene_5406	-0.804	Phosphatidylcholine
+met_77: PC ae C38:1	gene_5406	-0.804	Phosphatidylcholine
+met_77: PC ae C38:1	gene_4369	0.801	Phosphatidylcholine
+met_42: PC aa C36:5	gene_2899	0.947	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_13146	0.934	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_2899	0.933	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_2899	0.933	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_10215	-0.933	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_6567	0.932	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_2899	0.931	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_3598	0.93	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_5406	0.924	Palmitoylphosphatidylcholine
+met_51: PC aa C40:2	gene_2443	-0.917	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_2443	0.916	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_2899	0.912	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_2899	0.908	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_6567	0.908	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_6567	0.908	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_5406	0.906	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_8919	0.906	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_5406	0.905	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_5406	0.904	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_6567	0.903	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_3598	0.902	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_3598	0.901	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_11759	0.901	Palmitoylphosphatidylcholine
+met_50: PC aa C40:1	gene_2443	-0.898	Palmitoylphosphatidylcholine
+met_45: PC aa C38:1	gene_2443	-0.894	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_3598	0.893	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_7422	-0.892	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_8919	0.891	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_8919	0.891	Palmitoylphosphatidylcholine
+met_57: PC aa C42:2	gene_2443	-0.89	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_4893	-0.89	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_8919	0.889	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_7089	-0.886	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_11759	0.884	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_11759	0.883	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_11759	0.883	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_5406	0.882	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_6567	0.88	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_9064	0.88	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_5406	0.879	Palmitoylphosphatidylcholine
+met_27: PC aa C28:1	gene_2443	0.878	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_6567	0.877	Palmitoylphosphatidylcholine
+met_54: PC aa C40:5	gene_4893	-0.875	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_8919	0.87	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_3598	0.869	Palmitoylphosphatidylcholine
+met_56: PC aa C42:1	gene_2443	-0.867	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_10215	-0.867	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_3598	0.866	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_4893	-0.866	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_8919	0.866	Palmitoylphosphatidylcholine
+met_43: PC aa C36:6	gene_2899	0.865	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_13146	0.863	Palmitoylphosphatidylcholine
+met_34: PC aa C34:2	gene_2899	0.862	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_11759	0.861	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_11759	0.858	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_6887	-0.856	Palmitoylphosphatidylcholine
+met_54: PC aa C40:5	gene_12115	0.855	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_9064	0.854	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_9064	0.853	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_2443	0.852	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_12115	0.852	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_9064	0.845	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_2443	0.844	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_9564	0.844	Palmitoylphosphatidylcholine
+met_34: PC aa C34:2	gene_6567	0.843	Palmitoylphosphatidylcholine
+met_54: PC aa C40:5	gene_9043	0.84	Palmitoylphosphatidylcholine
+met_34: PC aa C34:2	gene_5406	0.838	Palmitoylphosphatidylcholine
+met_34: PC aa C34:2	gene_3598	0.837	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_9043	0.837	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_12115	0.837	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_1771	-0.836	Palmitoylphosphatidylcholine
+met_43: PC aa C36:6	gene_5406	0.835	Palmitoylphosphatidylcholine
+met_54: PC aa C40:5	gene_10215	-0.835	Palmitoylphosphatidylcholine
+met_59: PC aa C42:5	gene_13146	0.835	Palmitoylphosphatidylcholine
+met_51: PC aa C40:2	gene_3598	-0.833	Palmitoylphosphatidylcholine
+met_27: PC aa C28:1	gene_3598	0.833	Palmitoylphosphatidylcholine
+met_43: PC aa C36:6	gene_6567	0.83	Palmitoylphosphatidylcholine
+met_27: PC aa C28:1	gene_2899	0.829	Palmitoylphosphatidylcholine
+met_27: PC aa C28:1	gene_6567	0.829	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_7422	-0.828	Palmitoylphosphatidylcholine
+met_59: PC aa C42:5	gene_10215	-0.828	Palmitoylphosphatidylcholine
+met_38: PC aa C36:1	gene_13146	0.828	Palmitoylphosphatidylcholine
+met_54: PC aa C40:5	gene_13146	0.826	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_1771	-0.825	Palmitoylphosphatidylcholine
+met_51: PC aa C40:2	gene_6567	-0.825	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_6887	-0.824	Palmitoylphosphatidylcholine
+met_43: PC aa C36:6	gene_8919	0.824	Palmitoylphosphatidylcholine
+met_49: PC aa C38:6	gene_2443	0.823	Palmitoylphosphatidylcholine
+met_34: PC aa C34:2	gene_8919	0.823	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_9043	0.823	Palmitoylphosphatidylcholine
+met_36: PC aa C34:4	gene_6887	-0.822	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_9064	0.822	Palmitoylphosphatidylcholine
+met_48: PC aa C38:5	gene_1771	-0.821	Palmitoylphosphatidylcholine
+met_35: PC aa C34:3	gene_1771	-0.82	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_9064	0.82	Palmitoylphosphatidylcholine
+met_38: PC aa C36:1	gene_10215	-0.82	Palmitoylphosphatidylcholine
+met_53: PC aa C40:4	gene_12042	0.82	Palmitoylphosphatidylcholine
+met_42: PC aa C36:5	gene_1771	-0.819	Palmitoylphosphatidylcholine
+met_34: PC aa C34:2	gene_11759	0.818	Palmitoylphosphatidylcholine
+met_51: PC aa C40:2	gene_2899	-0.816	Palmitoylphosphatidylcholine
+met_43: PC aa C36:6	gene_3598	0.816	Palmitoylphosphatidylcholine
+met_30: PC aa C32:1	gene_1771	-0.815	Palmitoylphosphatidylcholine
+met_43: PC aa C36:6	gene_11759	0.815	Palmitoylphosphatidylcholine
+met_58: PC aa C42:4	gene_7089	-0.814	Palmitoylphosphatidylcholine
+met_27: PC aa C28:1	gene_5406	0.813	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_2443	0.811	Palmitoylphosphatidylcholine
+met_41: PC aa C36:4	gene_6887	-0.811	Palmitoylphosphatidylcholine
+met_45: PC aa C38:1	gene_3598	-0.806	Palmitoylphosphatidylcholine
+met_51: PC aa C40:2	gene_5406	-0.804	Palmitoylphosphatidylcholine
+met_52: PC aa C40:3	gene_2443	-0.803	Palmitoylphosphatidylcholine
+met_19: lysoPC a C16:0	gene_12725	-0.958	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_3076	-0.953	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_12725	-0.953	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_3076	-0.948	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_12725	-0.944	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_3076	-0.94	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_3076	-0.939	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_12725	-0.939	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_2185	-0.931	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_2185	-0.923	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_7143	-0.915	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_2185	-0.907	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_7143	-0.907	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_4804	0.893	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_7143	-0.888	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_2185	-0.887	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_4804	0.887	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_12191	0.885	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_12191	0.879	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_12649	-0.879	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_12649	-0.877	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_12649	-0.875	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_4804	0.874	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_12649	-0.871	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_12191	0.868	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_12512	0.868	1-Lysophosphatidylcholine
+met_20: lysoPC a C16:1	gene_12725	-0.868	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_12512	0.865	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_7143	-0.864	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_12512	0.864	1-Lysophosphatidylcholine
+met_20: lysoPC a C16:1	gene_3076	-0.861	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_4804	0.861	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_12512	0.86	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_12191	0.858	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_11082	-0.856	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_7711	0.855	1-Lysophosphatidylcholine
+met_20: lysoPC a C16:1	gene_2185	-0.854	1-Lysophosphatidylcholine
+met_26: lysoPC a C28:1	gene_5018	-0.851	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_7711	0.849	1-Lysophosphatidylcholine
+met_20: lysoPC a C16:1	gene_7143	-0.843	1-Lysophosphatidylcholine
+met_19: lysoPC a C16:0	gene_11082	-0.841	1-Lysophosphatidylcholine
+met_22: lysoPC a C18:0	gene_11082	-0.84	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_11082	-0.84	1-Lysophosphatidylcholine
+met_24: lysoPC a C20:4	gene_7711	0.836	1-Lysophosphatidylcholine
+met_26: lysoPC a C28:1	gene_718	0.829	1-Lysophosphatidylcholine
+met_23: lysoPC a C18:1	gene_7711	0.822	1-Lysophosphatidylcholine
+met_20: lysoPC a C16:1	gene_4804	0.815	1-Lysophosphatidylcholine
+met_20: lysoPC a C16:1	gene_12191	0.805	1-Lysophosphatidylcholine

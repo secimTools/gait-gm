@@ -1,5 +1,5 @@
 <tool id="secimtools_split_input_wide_dataset" name="Create: Design, Wide, and Annotation datasets" version="@WRAPPER_VERSION@">
-  <description>from an Input wide dataset</description>
+  <description>from an input wide dataset</description>
   <macros>
     <import>macros.xml</import>
   </macros>
@@ -55,31 +55,36 @@
   </outputs>
   <tests>
     <test>
-      <param name="input" value="gene_input_dataset_01fhl.tsv"/>
+      <param name="input" value="gene_input_dataset.tsv"/>
       <param name="prefix" value="Gene"/>
       <param name="samples" value="2,3,4,5,6,7,8,9,10,11"/>
-      <output name="wide" file="gene_wide_dataset_01fhl.tsv"/>
-      <output name="design" file="gene_design_file_01fhl.tsv"/>
-      <output name="annot" file="gene_annot_file_01fhl.tsv"/>
+      <output name="wide" file="gene_wide_dataset.tsv"/>
+      <output name="design" file="gene_design_file.tsv"/>
+      <output name="annot" file="gene_annotation_file.tsv"/>
     </test>
     <test>
-      <param name="input" value="metabolite_input_dataset_01fhl.tsv"/>
+      <param name="input" value="metabolite_input_dataset.tsv"/>
       <param name="prefix" value="Met"/>
       <param name="samples" value="2,3,4,5,6,7,8,9,10,11"/>
-      <output name="wide" file="metabolite_wide_dataset_01fhl.tsv"/>
-      <output name="design" file="met_design_file_01fhl.tsv"/>
-      <output name="annot" file="met_annot_file_01fhl.tsv"/>
+      <output name="wide" file="metabolite_wide_dataset.tsv"/>
+      <output name="design" file="metabolite_design_file.tsv"/>
+      <output name="annot" file="metabolite_annotation_file.tsv"/>
     </test>
   </tests>
   <help><![CDATA[
 
 **Tool Description**
 
-  This tool can be used to perform two tasks 1) convert a single file that contains 
-  data and annotation in wide format to two files in wide format, one with data and 
-  one with annotation 2) create a design file template that will be compatible with 
-  the wide data and annotation files. The tool will automatically check for a column 
-  containing unique feature identifiers (FeatureIDs). If no unique FeatureID is located 
+  This tool can be used to perform two tasks: 
+
+  1) convert a single file that contains 
+  data and annotation in wide format to two files in wide format--one with data and 
+  one with annotations 
+
+  2) create a design file template that will be compatible with 
+  the wide data and annotation files. 
+
+  The tool will automatically check for a column containing unique feature identifiers     (FeatureIDs). If a unique FeatureID is not located, 
   the tool will generate one. The user can specify a prefix for the unique FeatureID 
   (e.g. 'met' for metabolite data). The Design Dataset is a template with an exact 
   match to the columns with a single column called 'SampleID' that contains the names 

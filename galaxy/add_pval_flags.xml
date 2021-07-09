@@ -1,4 +1,4 @@
-<tool id="secimtools_add_pval_flags" name="Add Binary (0/1) -value Flags" version="@WRAPPER_VERSION@">
+<tool id="secimtools_add_pval_flags" name="Add Binary (0/1) P-value Flags" version="@WRAPPER_VERSION@">
   <description>using custom thresholds</description>
   <macros>
       <import>macros.xml</import>
@@ -17,7 +17,7 @@
     <param name="DE_Dataset" type="data" format="tabular" label="Select Dataset containing p-values from your history"/>
     <param name="uniqID" type="text" size="30" value="" label="Unique FeatureID" help="Name of the column in your Dataset that contains unique FeatureIDs."/>
     <param name="pvalue" type="text" size="30" value="" label="P-Value" help="Name of the column containing your p-values."/>
-    <param name="thresholds" type="text" size="30" value="0.1,0.05,0.01" label="P-Value Thresholds" help="Enter the threshold(s). P-values less than the given threshold(s) will be flagged with a 1. Separate more than 1 threshold value with a comma, no spaces allowed."/>
+    <param name="thresholds" type="text" size="30" value="0.1,0.05,0.01" label="P-Value Thresholds" help="Enter the threshold(s). P-values less than the given threshold(s) will be flagged with a 1. Separate more than 1 threshold value with a comma; no spaces allowed. Default values are 0.1,0.05,0.01"/>
   </inputs>
   <outputs>
     <data format="tabular" name="output" label="${tool.name} on ${on_string}: Output File"/>
@@ -42,8 +42,6 @@
     </test>
   </tests>
   <help><![CDATA[
-
-
 **Tool Description**
 
   This tool generates an indicator variable (0 or 1) to identify p-values below a user-specified threshold.  A “1” is used to indicate (flag)
@@ -85,7 +83,7 @@
 
   Two output files are generated from the Add Binary (0/1) P-value Flags tool:
 
-**Output File.** A TSV file containing the same columns as the Input Dataset plus an additional column(s) containing 0/1 binary indicators for whether the P-value was less that the user-specified threshold.  The indicator columns are named by appending the user-specified threshold to 'Flag_' prefix (e.g. Flag_user-specified threshold, Flag_0.10).
+**Output File.** A TSV file containing the same columns as the Input Dataset plus an additional column(s) containing 0/1 binary indicators for whether the P-value was less that the user-specified threshold.  The indicator columns are named by appending the user-specified threshold to "Flag" prefix (e.g. Flag_user-specified threshold, Flag_0.10).
 
   +-----------+---------+---------+--------+-------------+-----+
   | FeatureID | p-value | FDR     | Flag_0.2 | Flag_0.05 | ... |
@@ -117,8 +115,7 @@
   | ...       | ...      | ...       | ... |
   +-----------+----------+-----------+-----+
 
-  ]]>
-  </help>
+]]></help>
   <citations>
     <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
     author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},

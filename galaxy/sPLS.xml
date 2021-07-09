@@ -69,7 +69,7 @@
     <param name="metDataset" type="data" format="tabular" label="Metabolite Wide Dataset for Integration" help="Select the Metabolite Wide Dataset from your history"/>
     <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/> 
     <conditional name="useMetAnnoCond">
-      <param name="useMetAnno" type="select" label="Use Metabolite Annotation File?" help="You can chose to input a file containing metabolite annotation information (e.g. metabolite names, identifiers, etc.) to use for labeling the output files.">
+      <param name="useMetAnno" type="select" label="Use Metabolite Annotation File?" help="You can choose to input a file containing metabolite annotation information (e.g. metabolite names, identifiers, etc.) to use for labeling the output files.">
         <option value="n">No</option>
         <option value="y">Yes</option>
       </param>
@@ -81,7 +81,7 @@
     <conditional name="metsOption">
       <param name="allMets" type="select" display="radio" label="Select which option to use for subsetting the Metabolite Wide Dataset" help="Select one of the options above.">
         <option value="generic">By metabolite class -- Uses the 'Name_in_KEGG' column generated from the 'Link Name to KEGGID' tool to subset.</option>
-        <option value="mmc">By MMC pattern -- Runs the SECIMTools MMC tool and uses the tool-generated pattern blocks for subseting.</option>
+        <option value="mmc">By MMC pattern -- Runs the SECIMTools MMC tool and uses the tool-generated pattern blocks for subsetting.</option>
         <option value="both">By both metabolite class AND by MMC pattern.</option>
       </param>
       <when value="generic">
@@ -89,7 +89,7 @@
         <param name="geneDataset" type="data" format="tabular" label="Gene Expression Wide Dataset for Integration" help="Select the Gene Expression Wide Dataset from your history"/>
         <param name="geneId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the column in your Gene Expression Wide Dataset that contains unique identifiers."/>
         <conditional name="useGeneAnnoCond">
-          <param name="useGeneAnno" type="select" label="Use a Gene Annotation File?" help="You can chose to input a file containing gene annotation information (e.g. gene names, identifiers, etc.) for labeling the output files.">
+          <param name="useGeneAnno" type="select" label="Use a Gene Annotation File?" help="You can choose to input a file containing gene annotation information (e.g. gene names, identifiers, etc.) for labeling the output files.">
             <option value="n">No</option>
             <option value="y">Yes</option>
           </param>
@@ -124,7 +124,7 @@
             </param>
             <param name="cutoff" type="float" value="0.20" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.20"/>
             <conditional name="PANAAnno">
-            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can chose to input a file containing annotations for the KEGG pathwayIDs.">
+            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathwayIDs.">
             		<option value="no">No</option>
             		<option value="yes">Yes</option>
           		</param>
@@ -149,7 +149,7 @@
         <param name="geneDataset" type="data" format="tabular" label="Gene Expression Wide Dataset for Integration" help="Select the Gene Expression Wide Dataset from your history."/>
         <param name="geneId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the column in your Gene Expression Annotation File that contains unique identifiers."/>
         <conditional name="useGeneAnnoCond">
-          <param name="useGeneAnno" type="select" label="Use Gene Annotation File?" help="You can chose to input a file containing gene annotations (e.g. gene names, identifiers, etc.) for labeling output files.">
+          <param name="useGeneAnno" type="select" label="Use Gene Annotation File?" help="You can choose to input a file containing gene annotations (e.g. gene names, identifiers, etc.) for labeling output files.">
             <option value="n">No</option>
             <option value="y">Yes</option>
           </param>
@@ -174,12 +174,12 @@
             <param name="facSel" type="select" display="radio" label="Criterion to select components" help="Choose the criterion to select components. Default: single%.">
               <option value="single">single% -- Percent of variability for a given principle component.</option>
               <option value="accum">%accum -- Percent of accumulated variability.</option>
-              <option value="abs.val">abs.val -- Absolute value of the variabily for a given principle component.</option>
+              <option value="abs.val">abs.val -- Absolute value of the variability for a given principle component.</option>
               <option value="rel.abs">rel.abs -- Fold variability of tot.var/rank(X).</option>
             </param>
             <param name="cutoff" type="float" value="0.23" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.23"/>
             <conditional name="PANAAnno">
-            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can chose to input a file containing annotations for the KEGG pathway IDs.">
+            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathway IDs.">
             		<option value="no">No</option>
             		<option value="yes">Yes</option>
           		</param>
@@ -204,7 +204,7 @@
         <param name="geneDataset" type="data" format="tabular" label="Gene Expression Wide Dataset for Integration" help="Select Gene Expression Wide Dataset from your history"/>
         <param name="geneId" type="text" size="30" value="" label="Unique Gene FeatureID" help="Name of the column in your Gene Expression Annotation File that contains unique identifiers."/>
         <conditional name="useGeneAnnoCond">
-          <param name="useGeneAnno" type="select" label="Use a Gene Annotation File?" help="You can chose to input a file containing gene annotations (e.g. gene names, identifiers, etc.) to use for labeling output files.">
+          <param name="useGeneAnno" type="select" label="Use a Gene Annotation File?" help="You can choose to input a file containing gene annotations (e.g. gene names, identifiers, etc.) to use for labeling output files.">
             <option value="n">No</option>
             <option value="y">Yes</option>
           </param>
@@ -229,12 +229,12 @@
             <param name="facSel" type="select" display="radio" label="Criterion to select components" help="Choose the criterion to select components. Default: single%.">
               <option value="single">single% -- Percent of variability for a given principle component.</option>
               <option value="accum">%accum -- Percent of accumulated variability.</option>
-              <option value="abs.val">abs.val -- Absolute value of the variabily for a given principle componenet.</option>
+              <option value="abs.val">abs.val -- Absolute value of the variability for a given principle componenet.</option>
               <option value="rel.abs">rel.abs -- Fold variability of tot.var/rank(X).</option>
             </param>
             <param name="cutoff" type="float" value="0.23" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.23"/>
             <conditional name="PANAAnno">
-            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can chose to input a file containing annotations for the KEGG pathwayIDs.">
+            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathwayIDs.">
             		<option value="no">No</option>
             		<option value="yes">Yes</option>
           		</param>
@@ -247,7 +247,7 @@
       </when>
     </conditional>
     <param name="keepX" type="integer" size="30" value="10" label="Number of Genes to Keep in the Model" help="Enter the number of genes to keep for each component in the sPLS analysis."/>
-    <param name="threshold" type="float" size="30" value="0.8" label="Threshold" help="Correlations under this threshold will NOT be included in the ouput file."/>
+    <param name="threshold" type="float" size="30" value="0.8" label="Threshold" help="Correlations under this threshold will NOT be included in the output file."/>
   </inputs>
   <outputs>
     <data format="pdf" name="figure1" label="${tool.name} on ${on_string}: sPLS Figure"/>
@@ -264,18 +264,18 @@
   </outputs>
   <tests>
     <test>
-      <param name="metDataset" value="metabolite_wide_dataset_01fhl.tsv"/>
+      <param name="metDataset" value="test-data/metabolite_wide_dataset.tsv"/>
       <param name="metId" value="UniqueID"/>
       <param name="allMets" value="generic"/>
-      <param name="metKeggAnno" value="metabolite_to_keggId_link_01fhl.tsv"/>
+      <param name="metKeggAnno" value="test-data/metabolite_to_keggId_link.tsv"/>
       <param name="metName" value="MetName"/>
-      <param name="geneDataset" value="gene_wide_dataset_01fhl.tsv"/>
+      <param name="geneDataset" value="test-data/gene_wide_dataset.tsv"/>
       <param name="geneId" value="UniqueID"/>
       <param name="allGenes" value="all"/>
       <param name="keepX" value="10"/>
       <param name="threshold" value="0.8"/>
-      <output name="splsOut" file="spls_correlation_file_01fhl.tsv"/>
-      <output name="figure1" file="spls_figure_01fhl.pdf"/>
+      <output name="splsOut" file="testout/sPLS_met_generic_gene_all/spls_correlation_generic_all.tsv"/>
+      <output name="figure1" file="testout/sPLS_met_generic_gene_all/spls_figure_generic_all.pdf"/>
     </test>
   </tests>
   <help><![CDATA[
@@ -284,7 +284,7 @@
 
   NOTE: The parameters you select are data dependent.  
   
-  This tool carries out the integrated analysis of metabolite and gene expression data. Here, metabolite data are considered the dependent (Y) variable 
+  This tool carries out the integrated analysis of metabolite and gene expression data. Here, metabolite data are considered the dependent variable 
   and genes the explanatory variable. The tool allows for several combinations of metabolite and gene models. A note of caution: a complete metabolite 
   and gene expression dataset with no filtering will be challenging to interpret using this tool.  
 
@@ -337,13 +337,13 @@
   Name of the column in your Metabolite Wide Dataset that contains unique identifiers.
 
 **Optional - Metabolite Annotation File**
-  A wide format dataset containing metabolite descriptor information (e.g. metabolite names, m/z ratios). The user can chose a column in the Annotation File for labeling output files.
+  A wide format dataset containing metabolite descriptor information (e.g. metabolite names, m/z ratios). The user can choose a column in the Annotation File for labeling output files.
 
 **Optional - Metabolite Names**
   Column name in the Metabolite Annotation File to use for labeling output files.
   
 **Data reduction (subsetting) of Metabolite Data**
-  1) By metablite class - uses a predefined grouping of metabolites based on the 'Name_in_KEGG' column in the Metabolite to KEGGID Link File. 
+  1) By metabolite class - uses a pre-defined grouping of metabolites based on the 'Name_in_KEGG' column in the Metabolite to KEGGID Link File. 
   2) By MMC pattern - runs the SECIMTools MMC tool and uses the tool-generated pattern blocks for subsetting.  Please see Stone and Ayroles (2009) for MMC options.
   3) By both metabolite class AND MMC pattern
 
@@ -371,7 +371,7 @@
   Name of the column in your Gene Expression Wide Dataset that contains unique gene identifiers.
 
 **Optional - Gene Annotation File**
-  A wide format dataset containing gene annotation information (e.g. gene names). The user can chose a column in the Annotation File for labeling output files.
+  A wide format dataset containing gene annotation information (e.g. gene names). The user can choose a column in the Annotation File for labeling output files.
 
 **Optional - Gene Names**
   Column name in the Gene Annotation File to use for labeling output files.
@@ -398,10 +398,10 @@
   Contains KEGG links between gene KEGGIDs and KEGG PathwayIDs. Can be generated from the 'Add KEGG Pathway Information' tool
       
 **Number of Genes to Keep in Model**
-  default: 10.  This is the number of genes to keep for each principle component in the sPLS analysis.
+  Default: 10.  This is the number of genes to keep for each principle component in the sPLS analysis.
 
 **Threshold**
-  default: 0.8.  Correlations less than this value will NOT be included in the output files.
+  Default: 0.8.  Correlations less than this value will NOT be included in the output files.
 
 --------------------------------------------------------------------------------
 
@@ -412,17 +412,17 @@
   (2) A sPLS Correlation TSV file containing the correlations for each metabolite-gene pair and what subset (metabolite class) the pair locate to.
 
 **For metabolite reduction by MMC the following files will be output in addition to files (1) and (2) above**
-  (3) A MMC PDF Figure containing unsorted, sorted and sorted-smoothed heatmaps of the variance-covariance matrixes
+  (3) A MMC PDF Figure containing unsorted, sorted and sorted-smoothed heatmaps of the variance-covariance matrices
   (4) A MMC Output TSV file containing algorithm summaries in the following columns:
   
-    (1) Unique metabolite featureID
-    (2) Module:  Contains the module number for each feature calculated by the MMC tool.
-    (3) Entry Index:  Contains the original order of the names of the rows of the input Metabolite Wide Dataset.
-    (4) Degree:  Average of the absolute values of correlations for the given element in a block to other elements within that block.
-    (5) Average Degree:  Average values of the degrees computed above across all elements within the given block.
+       - Unique metabolite featureID
+       - Module:  Contains the module number for each feature calculated by the MMC tool.
+       - Entry Index:  Contains the original order of the names of the rows of the input Metabolite Wide Dataset.
+       - Degree:  Average of the absolute values of correlations for the given element in a block to other elements within that block.
+       - Average Degree:  Average values of the degrees computed above across all elements within the given block.
 
 **For subsetting genes by generating metagenes using PANA the following files will be output in addition to files (1) and (2) above**
-  (5) A PANA Output TSV table containing associations between gene symbols and KEGG pathays.
+  (5) A PANA Output TSV table containing associations between gene symbols and KEGG pathways.
 
   ]]>
   </help>
