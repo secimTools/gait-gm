@@ -108,9 +108,9 @@
       <param name="metUniqId" value="UniqueID"/>
       <param name="metName" value="MetName"/>
       <param name="metKeggId" value="KEGG_ID"/>
-      <output name="kgen2pathway" file="kegg_pathway_gene_output.tsv"/>
-      <output name="kmet2pathway" file="kegg_pathway_metabolite_output.tsv"/>
-      <output name="pathways" file="PATHWAYS"/>
+      <output name="kgen2pathway" file="gene_kegg_pathway_file_01fhl.tsv"/>
+      <output name="kmet2pathway" file="metabolite_kegg_pathway_file_01fhl.tsv"/>
+      <output name="pathways" file="pathwayId2pathwayNames_01fhl.tsv"/>
       <output name="output" file="kegg_downloader_table"/>
     </test>
   </tests>

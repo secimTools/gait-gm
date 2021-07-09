@@ -25,20 +25,20 @@
   </outputs>
   <tests>
     <test>
-      <param name="DE_Dataset" value="limma_voom_gene_file_01fhl.tsv"/>
+      <param name="DE_Dataset" value="limma_voom_gene_file.tsv"/>
       <param name="uniqID" value="UniqueID"/>
       <param name="pvalue" value="P.Value"/>
       <param name="thresholds" value="0.1,0.05,0.01"/>
-      <output name="output" file="add_flags_gene_output_file_01fhl.tsv"/>
-      <output name="flags" file="add_flags_gene_flags_file_01fhl.tsv"/>
+      <output name="output" file="add_flags_gene_output_file.tsv"/>
+      <output name="flags" file="add_flags_gene_flags_file.tsv"/>
     </test>
     <test>
-      <param name="DE_Dataset" value="limma_voom_metabolite_file_01fhl.tsv"/>
+      <param name="DE_Dataset" value="limma_voom_metabolite_file.tsv"/>
       <param name="uniqID" value="UniqueID"/>
       <param name="pvalue" value="P.Value"/>
       <param name="thresholds" value="0.1,0.05,0.01"/>
-      <output name="output" file="add_flags_metabolite_output_file_01fhl.tsv"/>
-      <output name="flags" file="add_flags_metabolite_flags_file_01fhl.tsv"/>
+      <output name="output" file="add_flags_metabolite_output_file.tsv"/>
+      <output name="flags" file="add_flags_metabolite_flags_file.tsv"/>
     </test>
   </tests>
   <help><![CDATA[

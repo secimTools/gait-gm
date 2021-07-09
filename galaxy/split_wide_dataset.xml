@@ -46,7 +46,7 @@
         <param name="prefix" type="text" size="30" value="" label="Prefix to use during generation of unique IDs" help="Unique IDs are required. You can input a prefix for the tool to use when creating a unique identifier (Optional). If you chose not to use a prefix, the tool-created uniqueID will be an underbar followed by a number."/>
       </when>
     </conditional>
-    <param name="samples" label="Sample Columns" type="text" help="Enter the numbers (1-based) of the columns in your Wide Dataset that contain sample data. E.g. if your sample data is in columns 2-4 then enter '2,3,4' (no spaces). Columns that are not selected are treated as descriptor annotation columns. NOTE: annotation columns are expected to ALL be left of the data columns. "/>
+    <param name="samples" label="Sample Columns" type="text" help="Enter the numbers (1-based) of the columns in your Wide Dataset that contain sample data. E.g. if your sample data is in columns 2-4 then enter '2,3,4' (no spaces). Columns that are not selected are treated as descriptor annotation columns. NOTE: annotation columns are expected to ALL be to the left of the data columns. "/>
   </inputs>
   <outputs>
     <data format="tabular" name="wide" label="${tool.name} on ${on_string}: Wide Dataset"/>

@@ -264,18 +264,32 @@
   </outputs>
   <tests>
     <test>
-      <param name="metDataset" value="test-data/metabolite_wide_dataset.tsv"/>
+      <param name="metDataset" value="metabolite_wide_dataset.tsv"/>
       <param name="metId" value="UniqueID"/>
       <param name="allMets" value="generic"/>
-      <param name="metKeggAnno" value="test-data/metabolite_to_keggId_link.tsv"/>
+      <param name="metKeggAnno" value="metabolite_to_keggId_link.tsv"/>
       <param name="metName" value="MetName"/>
-      <param name="geneDataset" value="test-data/gene_wide_dataset.tsv"/>
+      <param name="geneDataset" value="gene_wide_dataset.tsv"/>
       <param name="geneId" value="UniqueID"/>
       <param name="allGenes" value="all"/>
       <param name="keepX" value="10"/>
       <param name="threshold" value="0.8"/>
-      <output name="splsOut" file="testout/sPLS_met_generic_gene_all/spls_correlation_generic_all.tsv"/>
-      <output name="figure1" file="testout/sPLS_met_generic_gene_all/spls_figure_generic_all.pdf"/>
+      <output name="splsOut" file="spls_correlation_generic_all.tsv"/>
+      <output name="figure1" file="spls_figure_generic_all.pdf"/>
+    </test>
+    <test>
+      <param name="metDataset" value="metabolite_wide_dataset.tsv"/>
+      <param name="metId" value="UniqueID"/>
+      <param name="allMets" value="generic"/>
+      <param name="metKeggAnno" value="metabolite_to_keggId_link.tsv"/>
+      <param name="metName" value="MetName"/>
+      <param name="geneDataset" value="gene_wide_dataset.tsv"/>
+      <param name="geneId" value="UniqueID"/>
+      <param name="allGenes" value="pana"/>
+      <param name="keepX" value="10"/>
+      <param name="threshold" value="0.8"/>
+      <output name="panaOut" file="integration_mmc_pana_genes_PANA_output.tsv"/>
+      <output name="figure1" file="integration_mmc_pana_genes_sPLS_fig.pdf"/>
     </test>
   </tests>
   <help><![CDATA[
@@ -305,7 +319,7 @@
   (http://mixomics.org/methods/spls/) with the number of components included in the model set to 2. In addition, the user selects the number of variables (genes) for 
   each component to use in model construction. 
 
-  This tool needs at least 1 subset with a minimum number of 3 metabolites to run properly. If the user selects subset metabolites by class and no metabolite groups are 
+  This tool needs at least 1 subset with a minimum number of 3 metabolites to run properly. If the user selects subset metabolites by class, and no metabolite groups are 
   identified or small metabolite groups with less than 3 members are found, the tool will stop and a warning message will be generated to try the MMC option instead. 
   Similarly, if the user selects subset metabolites using MMC clusters and there are no clusters with at least 3 metabolites, the tool will stop and a warning message 
   will be generated to try the 'by class’ option instead. 
