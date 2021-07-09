@@ -13,7 +13,7 @@ echo "script $SCRIPT"
 TEST="${SCRIPT%.*}"
 
 TESTDIR="testout/${TEST}"
-INPUT_DIR="galaxy/test-data"
+INPUT_DIR="../galaxy/test-data"
 OUTPUT_DIR=$TESTDIR
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
@@ -27,8 +27,8 @@ add_pval_flags.py \
     -id=UniqueID \
     -p=P.Value \
     -t=0.1,0.05,0.01 \
-    -o=$OUTPUT_DIR/add_flags_gene_output_file_01fhl.tsv \
-    -fl=$OUTPUT_DIR/add_flags_gene_flags_file_01fhl.tsv
+    -o=$OUTPUT_DIR/add_flags_gene_output_file.tsv \
+    -fl=$OUTPUT_DIR/add_flags_gene_flags_file.tsv
 
 echo "### Finished test1: ${TEST} on $(date)"
 

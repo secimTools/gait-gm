@@ -13,7 +13,7 @@ echo "script $SCRIPT"
 TEST="${SCRIPT%.*}"
 
 TESTDIR="testout/${TEST}"
-INPUT_DIR="galaxy/test-data"
+INPUT_DIR="../galaxy/test-data"
 OUTPUT_DIR=$TESTDIR
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
@@ -21,7 +21,7 @@ echo "### Starting test: ${TEST}"
 
 
 mkdir -p test-output
-rm -f test-output/gene_* test-output/metabolite_wide_dataset_01fhl.tsv test-output/met_*tsv
+rm -f test-output/gene_* test-output/metabolite_wide_dataset.tsv test-output/met_*tsv
 
 # Test 1 - gene 
 split_wide_dataset.py \

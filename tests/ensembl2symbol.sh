@@ -13,7 +13,7 @@ echo "script $SCRIPT"
 TEST="${SCRIPT%.*}"
 
 TESTDIR="testout/${TEST}"
-INPUT_DIR="galaxy/test-data"
+INPUT_DIR="../galaxy/test-data"
 OUTPUT_DIR=$TESTDIR
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
@@ -21,10 +21,10 @@ echo "### Starting test: ${TEST}"
 
 ensembl2symbol.py \
     -s=rat \
-    -ga=$INPUT_DIR/gene_annotation_file_01fhl.tsv \
+    -ga=$INPUT_DIR/gene_annotation_file.tsv \
     -id=UniqueID \
     -e=GeneName \
-    -o=$OUTPUT_DIR/ensembl2symbol_annotation_file_01fhl.tsv
+    -o=$OUTPUT_DIR/ensembl2symbol_annotation_file.tsv
 
 echo "### Finished test: ${TEST} on $(date)"
 

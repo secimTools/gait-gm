@@ -14,7 +14,7 @@ echo "script $SCRIPT"
 TEST="${SCRIPT%.*}"
 
 TESTDIR="testout/${TEST}"
-INPUT_DIR="galaxy/test-data"
+INPUT_DIR="../galaxy/test-data"
 OUTPUT_DIR=$TESTDIR
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
@@ -23,12 +23,12 @@ echo "### Starting test: ${TEST}"
 
 add_kegg_pathway_info.py \
     -sp=rno \
-    -gka=$INPUT_DIR/gene_to_keggId_link_01fhl.tsv \
+    -gka=$INPUT_DIR/gene_to_keggId_link.tsv \
     -gid=UniqueID \
     -gn=GeneSymbol \
     -gkid=KEGG_ID \
     -kg2p=KGEN2PATHWAY \
-    -mka=$INPUT_DIR/metabolite_to_keggId_link_01fhl.tsv \
+    -mka=$INPUT_DIR/metabolite_to_keggId_link.tsv \
     -mid=UniqueID \
     -mn=MetName \
     -mkid=KEGG_ID \

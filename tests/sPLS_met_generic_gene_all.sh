@@ -14,19 +14,19 @@ echo "script $SCRIPT"
 TEST="${SCRIPT%.*}"
 
 TESTDIR="testout/${TEST}"
-INPUT_DIR="galaxy/test-data"
+INPUT_DIR="../galaxy/test-data"
 OUTPUT_DIR=$TESTDIR
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
 echo "### Starting test: ${TEST}"
 
 sPLS.py \
-    -m=$INPUT_DIR/metabolite_wide_dataset_01fhl.tsv \
+    -m=$INPUT_DIR/metabolite_wide_dataset.tsv \
     -mid=UniqueID \
     -mo=generic \
-    -mka=$INPUT_DIR/metabolite_to_keggId_link_01fhl.tsv \
+    -mka=$INPUT_DIR/metabolite_to_keggId_link.tsv \
     -mn=MetName \
-    -g=$INPUT_DIR/gene_wide_dataset_01fhl.tsv \
+    -g=$INPUT_DIR/gene_wide_dataset.tsv \
     -gid=UniqueID \
     -go=all \
     -k=10 \
