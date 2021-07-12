@@ -14,12 +14,14 @@ echo "script $SCRIPT"
 TEST="${SCRIPT%.*}"
 
 TESTDIR="testout/${TEST}"
-INPUT_DIR="../galaxy/test-data"
-OUTPUT_DIR=$TESTDIR
+INPUT_DIR="../../../galaxy/test-data"
+
+OUTPUT_DIR="$TESTDIR"
+echo "outdir is ${OUTPUT_DIR} and inputdir is ${INPUT_DIR}"
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
 echo "### Starting test: ${TEST}"
-
+cd ${OUTPUT_DIR}
 
 add_kegg_pathway_info.py \
     -sp=rno \
@@ -34,9 +36,8 @@ add_kegg_pathway_info.py \
     -mkid=KEGG_ID \
     -km2p=KMET2PATHWAY \
     -p=PATHWAYS \
-    -go=$OUTPUT_DIR/kegg_pathway_gene_output.tsv \
-    -mo=$OUTPUT_DIR/kegg_pathway_metabolite_output.tsv
-
+    -go=kegg_pathway_gene_output.tsv \
+    -mo=kegg_pathway_metabolite_output.tsv
 
 echo "### Finished test: ${TEST} on $(date)"
 
