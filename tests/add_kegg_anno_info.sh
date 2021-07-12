@@ -12,11 +12,9 @@ SCRIPT=$(basename "${BASH_SOURCE[0]}");
 echo "script $SCRIPT"
 
 TEST="${SCRIPT%.*}"
-echo "Test is $TEST"
 
 TESTDIR="testout/${TEST}"
 INPUT_DIR="../galaxy/test-data"
-echo "Input is $INPUT_DIR"
 OUTPUT_DIR=$TESTDIR
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"

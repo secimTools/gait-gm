@@ -17,7 +17,6 @@ TESTDIR="testout/${TEST}"
 INPUT_DIR="../../../galaxy/test-data"
 
 OUTPUT_DIR="$TESTDIR"
-echo "outdir is ${OUTPUT_DIR} and inputdir is ${INPUT_DIR}"
 rm -rf "${TESTDIR}"
 mkdir -p "${TESTDIR}"
 echo "### Starting test: ${TEST}"
