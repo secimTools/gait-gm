@@ -157,7 +157,7 @@
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
             <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/> 
           </when>
-        </conditional>   
+        </conditional>
         <conditional name="genesOption">
           <param name="allGenes" type="select" display="radio" label="Select which option to use for subsetting the Gene Dataset" help="Select one of the options above.">
             <option value="all">Include all genes in the Gene Expression Wide Dataset -- no subsetting.</option>
@@ -263,20 +263,71 @@
     </data>
   </outputs>
   <tests>
+      <!-- sPLS_lzh  -->
     <test>
-      <param name="metDataset" value="test-data/metabolite_wide_dataset.tsv"/>
+      <param name="metDataset" value="metabolite_wide_dataset.tsv"/>
       <param name="metId" value="UniqueID"/>
       <param name="allMets" value="generic"/>
-      <param name="metKeggAnno" value="test-data/metabolite_to_keggId_link.tsv"/>
+      <param name="metKeggAnno" value="metabolite_to_keggId_link.tsv"/>
       <param name="metName" value="MetName"/>
-      <param name="geneDataset" value="test-data/gene_wide_dataset.tsv"/>
+      <param name="geneDataset" value="gene_wide_dataset.tsv"/>
+      <param name="geneId" value="UniqueID"/>
+      <param name="allGenes" value="pana"/>
+      <param name="keepX" value="10"/>
+      <param name="threshold" value="0.8"/>
+      <param name="cutoff" value="0.20" />
+      <param name="facSel" value="single" />
+      <output name="splsOut" file="spls_correlation.tsv"/>
+      <output name="figure1" file="spls_figure.pdf"/>
+      <output name="panaOut" file="spla_pana_outputTable.tsv"/>
+    </test>
+      <!-- sPLS_met_generic_gene_all -->
+    <test>
+      <param name="metDataset" value="metabolite_wide_dataset.tsv"/>
+      <param name="metId" value="UniqueID"/>
+      <param name="allMets" value="generic"/>
+      <param name="metKeggAnno" value="metabolite_to_keggId_link.tsv"/>
+      <param name="metName" value="MetName"/>
+      <param name="geneDataset" value="gene_wide_dataset.tsv"/>
       <param name="geneId" value="UniqueID"/>
       <param name="allGenes" value="all"/>
       <param name="keepX" value="10"/>
       <param name="threshold" value="0.8"/>
-      <output name="splsOut" file="testout/sPLS_met_generic_gene_all/spls_correlation_generic_all.tsv"/>
-      <output name="figure1" file="testout/sPLS_met_generic_gene_all/spls_figure_generic_all.pdf"/>
+      <param name="cutoff" value="0.20" />
+      <param name="facSel" value="single" />
+      <output name="splsOut" file="spls_correlation_generic_all.tsv"/>
+      <output name="figure1" file="spls_figure_generic_all.pdf"/>
     </test>
+      <!-- sPLS_met_mmc_gene_pana -->
+    <test>
+      <param name="metDataset" value="metabolite_wide_dataset.tsv"/>
+      <param name="metId" value="UniqueID"/>
+      <param name="allMets" value="mmc"/>
+      <param name="metAnno" value="metabolite_annotation.tsv"/>
+      <param name="metKeggAnno" value="metabolite_to_keggId_link.tsv"/>
+      <param name="metName" value="MetName"/>
+      <param name="design" value="gene_design.tsv"/>
+      <param name="corr" value="pearson"/>
+      <param name="sigmaLow" value="0.05"/>
+      <param name="sigmaHigh" value="0.50"/>
+      <param name="sigmaNum" value="451"/>
+      <param name="geneDataset" value="gene_wide_dataset.tsv"/>
+      <param name="geneId" value="UniqueID"/>
+      <param name="allGenes" value="pana"/>
+      <param name="geneKeggAnno" value="gene_to_keggId_link.tsv"/>
+      <param name="geneKeggName" value="GeneSymbol"/>
+      <param name="path2genes" value="geneKeggId2pathwayId.tsv"/>
+      <param name="path2names" value="gene_kegg_pathway.tsv"/>
+      <param name="keepX" value="5"/>
+      <param name="threshold" value="0.8"/>
+      <param name="cutoff" value="0.20" />
+      <output name="splsOut" file="integration_mmc_pana_genes_sPLS_output.tsv"/>
+      <output name="figure1" file="integration_mmc_pana_genes_sPLS_fig.pdf"/>
+      <output name="figure2" file="integration_mmc_pana_genes_MMC_heatmap.pdf"/>
+      <output name="mmcOut" file="integration_mmc_pana_genes_MMC_output.tsv"/>
+      <output name="panaOut" file="integration_mmc_pana_genes_PANA_output.tsv"/>
+    </test>
+
   </tests>
   <help><![CDATA[
 
