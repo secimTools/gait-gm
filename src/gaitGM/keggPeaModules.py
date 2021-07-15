@@ -596,32 +596,24 @@ def downloadKeggInfo(args):
         geneKeggAnnot = requests.get(
             "http://rest.kegg.jp/link/" + args.species + "/pathway"
         )
-        geneKeggAnnot_file = args.species + "_geneKeggAnnot"
-        with open(geneKeggAnnot_file, 'w') as fh:
+        with open(args.kgen2pathways, 'w') as fh:
             fh.write(geneKeggAnnot.content.decode("utf-8"))
-        args.kgen2pathways = geneKeggAnnot_file
 
     # MetaboliteKeggID2PathwayID
     if args.metKeggAnnot:
         metKeggAnnot = requests.get(
             "http://rest.kegg.jp/link/compound/pathway"
         )
-        metKeggAnnot_file = "metKeggAnnot"
-        with open(metKeggAnnot_file, 'w') as fh:
+        with open(args.kmet2pathways, 'w') as fh:
             fh.write(metKeggAnnot.content.decode("utf-8"))
-        args.kmet2pathways = metKeggAnnot_file
 
     # PathwayID2PathwayNames
     if args.pathways:
         pathways_data = requests.get(
             "http://rest.kegg.jp/list/pathway/" + args.species
         )
-        pathways_file = args.species + "_pathways"
-        with open(pathways_file, 'w') as fh:
+        with open(args.pathways, 'w') as fh:
             fh.write(pathways_data.content.decode("utf-8"))
-        args.pathways = pathways_file
-
-    return args
 
 
 def keggAnnot2list(keggAnnotFile, UniqueID, featureName, featureKeggId, featureType):

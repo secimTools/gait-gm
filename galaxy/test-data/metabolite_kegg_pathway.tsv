@@ -582,10 +582,11 @@ Met_101	Arg	Metabolite	cpd:C00062	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_101	Arg	Metabolite	cpd:C00062	path:rno01100	Metabolic pathways
 Met_101	Arg	Metabolite	cpd:C00062	path:rno01230	Biosynthesis of amino acids
 Met_101	Arg	Metabolite	cpd:C00062	path:rno02010	ABC transporters
+Met_101	Arg	Metabolite	cpd:C00062	path:rno04150	mTOR signaling pathway
 Met_101	Arg	Metabolite	cpd:C00062	path:rno04974	Protein digestion and absorption
-Met_101	Arg	Metabolite	cpd:C00062	path:rno05014	Amyotrophic lateral sclerosis (ALS)
-Met_101	Arg	Metabolite	cpd:C00062	path:rno05132	Salmonella infection
-Met_101	Arg	Metabolite	cpd:C00062	path:rno05142	Chagas disease (American trypanosomiasis)
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05014	Amyotrophic lateral sclerosis
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05022	Pathways of neurodegeneration
+Met_101	Arg	Metabolite	cpd:C00062	path:rno05142	Chagas disease
 Met_101	Arg	Metabolite	cpd:C00062	path:rno05146	Amoebiasis
 Met_101	Arg	Metabolite	cpd:C00062	path:rno05230	Central carbon metabolism in cancer
 Met_102	Asn	Metabolite	cpd:C00152	path:rno00250	Alanine, aspartate and glutamate metabolism
@@ -608,6 +609,7 @@ Met_103	Asp	Metabolite	cpd:C00049	path:rno01100	Metabolic pathways
 Met_103	Asp	Metabolite	cpd:C00049	path:rno01200	Carbon metabolism
 Met_103	Asp	Metabolite	cpd:C00049	path:rno01210	2-Oxocarboxylic acid metabolism
 Met_103	Asp	Metabolite	cpd:C00049	path:rno01230	Biosynthesis of amino acids
+Met_103	Asp	Metabolite	cpd:C00049	path:rno01240	Biosynthesis of cofactors
 Met_103	Asp	Metabolite	cpd:C00049	path:rno02010	ABC transporters
 Met_103	Asp	Metabolite	cpd:C00049	path:rno04080	Neuroactive ligand-receptor interaction
 Met_103	Asp	Metabolite	cpd:C00049	path:rno04974	Protein digestion and absorption
@@ -622,7 +624,7 @@ Met_107	DOPA	Metabolite	cpd:C00355	path:rno00350	Tyrosine metabolism
 Met_107	DOPA	Metabolite	cpd:C00355	path:rno01100	Metabolic pathways
 Met_107	DOPA	Metabolite	cpd:C00355	path:rno04728	Dopaminergic synapse
 Met_107	DOPA	Metabolite	cpd:C00355	path:rno04917	Prolactin signaling pathway
-Met_107	DOPA	Metabolite	cpd:C00355	path:rno05012	Parkinson's disease
+Met_107	DOPA	Metabolite	cpd:C00355	path:rno05012	Parkinson disease
 Met_107	DOPA	Metabolite	cpd:C00355	path:rno05030	Cocaine addiction
 Met_107	DOPA	Metabolite	cpd:C00355	path:rno05031	Amphetamine addiction
 Met_107	DOPA	Metabolite	cpd:C00355	path:rno05034	Alcoholism
@@ -635,7 +637,7 @@ Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04721	Synaptic vesicle cycle
 Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04728	Dopaminergic synapse
 Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04917	Prolactin signaling pathway
 Met_108	Dopamine	Metabolite	cpd:C03758	path:rno04976	Bile secretion
-Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05012	Parkinson's disease
+Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05012	Parkinson disease
 Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05030	Cocaine addiction
 Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05031	Amphetamine addiction
 Met_108	Dopamine	Metabolite	cpd:C03758	path:rno05032	Morphine addiction
@@ -646,10 +648,12 @@ Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00240	Pyrimidine metabolism
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00250	Alanine, aspartate and glutamate metabolism
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00471	D-Glutamine and D-glutamate metabolism
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00630	Glyoxylate and dicarboxylate metabolism
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00750	Vitamin B6 metabolism
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00910	Nitrogen metabolism
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno01100	Metabolic pathways
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno01230	Biosynthesis of amino acids
+Met_109	Glutamine	Metabolite	cpd:C00064	path:rno01240	Biosynthesis of cofactors
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno02010	ABC transporters
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04724	Glutamatergic synapse
 Met_109	Glutamine	Metabolite	cpd:C00064	path:rno04727	GABAergic synapse
@@ -674,6 +678,7 @@ Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01100	Metabolic pathways
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01200	Carbon metabolism
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01210	2-Oxocarboxylic acid metabolism
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01230	Biosynthesis of amino acids
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno01240	Biosynthesis of cofactors
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno02010	ABC transporters
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04068	FoxO signaling pathway
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04072	Phospholipase D signaling pathway
@@ -690,8 +695,10 @@ Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04730	Long-term depression
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04742	Taste transduction
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04964	Proximal tubule bicarbonate reclamation
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno04974	Protein digestion and absorption
-Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05014	Amyotrophic lateral sclerosis (ALS)
-Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05016	Huntington's disease
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05014	Amyotrophic lateral sclerosis
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05016	Huntington disease
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05017	Spinocerebellar ataxia
+Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05022	Pathways of neurodegeneration
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05030	Cocaine addiction
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05031	Amphetamine addiction
 Met_110	Glutamate	Metabolite	cpd:C00025	path:rno05033	Nicotine addiction
@@ -710,6 +717,7 @@ Met_111	Gly	Metabolite	cpd:C00037	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_111	Gly	Metabolite	cpd:C00037	path:rno01100	Metabolic pathways
 Met_111	Gly	Metabolite	cpd:C00037	path:rno01200	Carbon metabolism
 Met_111	Gly	Metabolite	cpd:C00037	path:rno01230	Biosynthesis of amino acids
+Met_111	Gly	Metabolite	cpd:C00037	path:rno01240	Biosynthesis of cofactors
 Met_111	Gly	Metabolite	cpd:C00037	path:rno02010	ABC transporters
 Met_111	Gly	Metabolite	cpd:C00037	path:rno04080	Neuroactive ligand-receptor interaction
 Met_111	Gly	Metabolite	cpd:C00037	path:rno04721	Synaptic vesicle cycle
@@ -769,6 +777,7 @@ Met_118	Met	Metabolite	cpd:C00073	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_118	Met	Metabolite	cpd:C00073	path:rno01100	Metabolic pathways
 Met_118	Met	Metabolite	cpd:C00073	path:rno01210	2-Oxocarboxylic acid metabolism
 Met_118	Met	Metabolite	cpd:C00073	path:rno01230	Biosynthesis of amino acids
+Met_118	Met	Metabolite	cpd:C00073	path:rno01240	Biosynthesis of cofactors
 Met_118	Met	Metabolite	cpd:C00073	path:rno01523	Antifolate resistance
 Met_118	Met	Metabolite	cpd:C00073	path:rno04974	Protein digestion and absorption
 Met_118	Met	Metabolite	cpd:C00073	path:rno04978	Mineral absorption
@@ -794,6 +803,7 @@ Met_122	Pro	Metabolite	cpd:C00148	path:rno04974	Protein digestion and absorption
 Met_122	Pro	Metabolite	cpd:C00148	path:rno04978	Mineral absorption
 Met_122	Pro	Metabolite	cpd:C00148	path:rno05230	Central carbon metabolism in cancer
 Met_123	Putrescine	Metabolite	cpd:C00134	path:rno00330	Arginine and proline metabolism
+Met_123	Putrescine	Metabolite	cpd:C00134	path:rno00472	D-Arginine and D-ornithine metabolism
 Met_123	Putrescine	Metabolite	cpd:C00134	path:rno00480	Glutathione metabolism
 Met_123	Putrescine	Metabolite	cpd:C00134	path:rno01100	Metabolic pathways
 Met_123	Putrescine	Metabolite	cpd:C00134	path:rno02010	ABC transporters
@@ -807,6 +817,7 @@ Met_124	Ser	Metabolite	cpd:C00065	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_124	Ser	Metabolite	cpd:C00065	path:rno01100	Metabolic pathways
 Met_124	Ser	Metabolite	cpd:C00065	path:rno01200	Carbon metabolism
 Met_124	Ser	Metabolite	cpd:C00065	path:rno01230	Biosynthesis of amino acids
+Met_124	Ser	Metabolite	cpd:C00065	path:rno01240	Biosynthesis of cofactors
 Met_124	Ser	Metabolite	cpd:C00065	path:rno02010	ABC transporters
 Met_124	Ser	Metabolite	cpd:C00065	path:rno04071	Sphingolipid signaling pathway
 Met_124	Ser	Metabolite	cpd:C00065	path:rno04974	Protein digestion and absorption
@@ -822,6 +833,7 @@ Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04726	Serotonergic synapse
 Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04742	Taste transduction
 Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04750	Inflammatory mediator regulation of TRP channels
 Met_125	Serotonin	Metabolite	cpd:C00780	path:rno04976	Bile secretion
+Met_125	Serotonin	Metabolite	cpd:C00780	path:rno05207	Chemical carcinogenesis
 Met_126	Spermidine	Metabolite	cpd:C00315	path:rno00330	Arginine and proline metabolism
 Met_126	Spermidine	Metabolite	cpd:C00315	path:rno00410	beta-Alanine metabolism
 Met_126	Spermidine	Metabolite	cpd:C00315	path:rno00480	Glutathione metabolism
@@ -831,7 +843,9 @@ Met_126	Spermidine	Metabolite	cpd:C00315	path:rno04976	Bile secretion
 Met_127	Spermine	Metabolite	cpd:C00750	path:rno00330	Arginine and proline metabolism
 Met_127	Spermine	Metabolite	cpd:C00750	path:rno00410	beta-Alanine metabolism
 Met_127	Spermine	Metabolite	cpd:C00750	path:rno00480	Glutathione metabolism
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno00770	Pantothenate and CoA biosynthesis
 Met_127	Spermine	Metabolite	cpd:C00750	path:rno01100	Metabolic pathways
+Met_127	Spermine	Metabolite	cpd:C00750	path:rno01240	Biosynthesis of cofactors
 Met_127	Spermine	Metabolite	cpd:C00750	path:rno04976	Bile secretion
 Met_128	Taurine	Metabolite	cpd:C00245	path:rno00120	Primary bile acid biosynthesis
 Met_128	Taurine	Metabolite	cpd:C00245	path:rno00430	Taurine and hypotaurine metabolism
@@ -849,11 +863,12 @@ Met_130	Tyr	Metabolite	cpd:C00082	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno01100	Metabolic pathways
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno01210	2-Oxocarboxylic acid metabolism
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno01230	Biosynthesis of amino acids
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno01240	Biosynthesis of cofactors
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno04728	Dopaminergic synapse
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno04916	Melanogenesis
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno04917	Prolactin signaling pathway
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno04974	Protein digestion and absorption
-Met_130	Tyr	Metabolite	cpd:C00082	path:rno05012	Parkinson's disease
+Met_130	Tyr	Metabolite	cpd:C00082	path:rno05012	Parkinson disease
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno05030	Cocaine addiction
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno05031	Amphetamine addiction
 Met_130	Tyr	Metabolite	cpd:C00082	path:rno05034	Alcoholism
@@ -865,6 +880,7 @@ Met_131	Val	Metabolite	cpd:C00183	path:rno00970	Aminoacyl-tRNA biosynthesis
 Met_131	Val	Metabolite	cpd:C00183	path:rno01100	Metabolic pathways
 Met_131	Val	Metabolite	cpd:C00183	path:rno01210	2-Oxocarboxylic acid metabolism
 Met_131	Val	Metabolite	cpd:C00183	path:rno01230	Biosynthesis of amino acids
+Met_131	Val	Metabolite	cpd:C00183	path:rno01240	Biosynthesis of cofactors
 Met_131	Val	Metabolite	cpd:C00183	path:rno02010	ABC transporters
 Met_131	Val	Metabolite	cpd:C00183	path:rno04974	Protein digestion and absorption
 Met_131	Val	Metabolite	cpd:C00183	path:rno04978	Mineral absorption
