@@ -23,8 +23,8 @@ split_wide_dataset.py \
     -p=Gene \
     -s=2,3,4,5,6,7,8,9,10,11 \
     -w=$OUTPUT_DIR/gene_wide_dataset.tsv \
-    -d=$OUTPUT_DIR/gene_design_file.tsv \
-    -a=$OUTPUT_DIR/gene_annotation_file.tsv
+    -d=$OUTPUT_DIR/gene_design.tsv \
+    -a=$OUTPUT_DIR/gene_annotation.tsv
 
 echo "### Finished gene test: ${TEST} on $(date)"
 
@@ -34,8 +34,8 @@ split_wide_dataset.py \
     -p=met \
     -s=2,3,4,5,6,7,8,9,10,11 \
     -w=$OUTPUT_DIR/metabolite_wide_dataset.tsv \
-    -d=$OUTPUT_DIR/metabolite_design_file.tsv \
-    -a=$OUTPUT_DIR/metabolite_annotation_file.tsv
+    -d=$OUTPUT_DIR/metabolite_design.tsv \
+    -a=$OUTPUT_DIR/metabolite_annotation.tsv
 
 
 echo "### Finished metabolite test: ${TEST} on $(date)"
