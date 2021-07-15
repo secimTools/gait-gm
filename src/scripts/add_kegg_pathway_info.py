@@ -188,7 +188,7 @@ def main():
         :rtypes pathways: file
     """
     args = getOptions()
-    args = modules.downloadKeggInfo(args)
+    modules.downloadKeggInfo(args)
     # Add KEGG Pathway Info for genes
     if args.geneKeggAnnot:
         geneDict, geneList = modules.keggAnnot2list(
