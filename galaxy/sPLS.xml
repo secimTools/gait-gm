@@ -427,38 +427,39 @@
   ]]>
   </help>
   <citations>
-  	<citation type="bibtex">@article{ponzoni2014pathway,
-	title={Pathway network inference from gene expression data},
-	author={Ponzoni, Ignacio and Nueda, Mar{\'\i}a Jos{\'e} and Tarazona, Sonia and G{\"o}tz, Stefan and Montaner, David and Dussaut, Julieta Sol and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
-	journal={BMC systems biology},
-	volume={8},
-	number={2},
-	pages={S7},
-	year={2014},
-	publisher={BioMed Central}
-	}</citation>
-    <citation type="bibtex">@article{dejean2013mixomics,
-    title={mixOmics: Omics data integration project},
-    author={Dejean, Sebastien and Gonzalez, Ignacio and L{\^e} Cao, Kim-Anh and Monget, Pierre and Coquery, J and Yao, F and Liquet, B and Rohart, F},
+    <citation type="bibtex">@article{stone2009mmc,
+    title={Modulated Modularity Clustering as an Exploratory Tool for Functional Genomic Inference},
+    author={Stone, EA and Ayroles, JF},
+    journal={PLOS Genetics},
+    year={2009},
+    }</citation>
+    <citation type="bibtex">@article{ponzoni2014pathway,
+    title={Pathway network inference from gene expression data},
+    author={Ponzoni, Ignacio and Nueda, Mar{\'\i}a Jos{\'e} and Tarazona, Sonia and G{\"o}tz, Stefan and Montaner, David and Dussaut, Julieta Sol and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
+    journal={BMC Systems Biology},
+    volume={8},
+    number={2},
+    pages={S7},
+    year={2014},
+    publisher={BioMed Central}
+    }</citation>
+    <citation type="bibtex">@article{rohart2017mixomics,
+    title={mixOmics: an R package for Omics feature selection and multiple data integration},
+    author={Rohart, F and Gautier, B and singh, A and L{\^e} Cao, K-A.},
     journal={R package},
-    year={2013}
+    year={2017}
     }</citation>
     <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
     author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
     title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
     journal = {BMC Bioinformatics},
-    year = {in press}
+    year = {2018}
     }</citation>
-    <citation type="bibtex">
-    @article{garcia2010paintomics,
-    title={Paintomics: a web based tool for the joint visualization of transcriptomics and metabolomics data},
-    author={Garc{\'\i}a-Alcalde, Fernando and Garc{\'\i}a-L{\'o}pez, Federico and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
-    journal={Bioinformatics},
-    volume={27},
-    number={1},
-    pages={137--139},
-    year={2010},
-    publisher={Oxford University Press}
+    <citation type="bibtex">@article{Mor2021GaitGM,
+    title={GAIT-GM integrative cross-omics analyses reveal cholinergic defects in a C. elegans model of Parkinson's disease},
+    author={Mor, DE and Huertas, F and Morse, AM and Kaletsky, R and Murphy, CT and Kalia, V and Miller, GW and Moskalenko, O and Conesa, A and McIntyre, LM},
+    journal={BMC Genomics},
+    year={submitted},
     }</citation>
   </citations>
 </tool>

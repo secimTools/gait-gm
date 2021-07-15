@@ -102,30 +102,23 @@ The GeneSymbol column contains the short-form abbreviation for the gene. The Sco
   ]]>
   </help>
   <citations>
-    <citation type="bibtex">@article{wu2014mygene,
-    title={MyGene. info: gene annotation query as a service},
-    author={Wu, Chunlei and Mark, Adam and Su, Andrew I},
-    journal={bioRxiv},
-    pages={009332},
-    year={2014},
-    publisher={Cold Spring Harbor Laboratory}
-    }</citation>
     <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
     author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
     title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
     journal = {BMC Bioinformatics},
-    year = {in press}
+    year = {2018}
     }</citation>
-    <citation type="bibtex">
-    @article{garcia2010paintomics,
-    title={Paintomics: a web based tool for the joint visualization of transcriptomics and metabolomics data},
-    author={Garc{\'\i}a-Alcalde, Fernando and Garc{\'\i}a-L{\'o}pez, Federico and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
-    journal={Bioinformatics},
-    volume={27},
-    number={1},
-    pages={137--139},
-    year={2010},
-    publisher={Oxford University Press}
+    <citation type="bibtex">@article{Mor2021GaitGM,
+    title={GAIT-GM integrative cross-omics analyses reveal cholinergic defects in a C. elegans model of Parkinson's disease},
+    author={Mor, DE and Huertas, F and Morse, AM and Kaletsky, R and Murphy, CT and Kalia, V and Miller, GW and Moskalenko, O and Conesa, A and McIntyre, LM},
+    journal={BMC Genomics},
+    year={submitted},
+    }</citation>
+    <citation type="bibtex">@article{xim2016mygene,
+    title={High-performance web services for querying gene and variant annotation},
+    author={Xin, J and Mark, A and Afrashiabi, C and Tsueng, G and Juchler, M and Gopal, N and Stupp, GS and Putman, TE and Ainscough, BJ and Griffith, OL and Torkamani, A and Whetzel, PL and Mungall, CJ and Mooney, SD and Su, AI and Wu, C},
+    journal={Genome Biology},
+    year={2016},
     }</citation>
   </citations>
 </tool>

@@ -122,17 +122,13 @@
     author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
     title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
     journal = {BMC Bioinformatics},
-    year = {in press}
+    year = {2018}
     }</citation>
-    <citation type="bibtex">@article{garcia2010paintomics,
-    title={Paintomics: a web based tool for the joint visualization of transcriptomics and metabolomics data},
-    author={Garc{\'\i}a-Alcalde, Fernando and Garc{\'\i}a-L{\'o}pez, Federico and Dopazo, Joaqu{\'\i}n and Conesa, Ana},
-    journal={Bioinformatics},
-    volume={27},
-    number={1},
-    pages={137--139},
-    year={2010},
-    publisher={Oxford University Press}
+    <citation type="bibtex">@article{Mor2021GaitGM,
+    title={GAIT-GM integrative cross-omics analyses reveal cholinergic defects in a C. elegans model of Parkinson's disease},
+    author={Mor, DE and Huertas, F and Morse, AM and Kaletsky, R and Murphy, CT and Kalia, V and Miller, GW and Moskalenko, O and Conesa, A and McIntyre, LM},
+    journal={BMC Genomics},
+    year={submitted},
     }</citation>
   </citations>
 </tool>
