@@ -1,12 +1,7 @@
-#!/bin/sh
-#
+#! /bin/bash
 # ensembl2symbol.py test
-# Copyright (C) 2018 Oleksandr Moskalenko <om@rc.ufl.edu>
-#
+# Copyright (C) 2018-2021 Oleksandr Moskalenko <om@rc.ufl.edu>
 # Distributed under terms of the MIT license.
-#
-echo "bash source  [${BASH_SOURCE[0]}]"
-
 SCRIPT=$(basename "${BASH_SOURCE[0]}");
 echo "script $SCRIPT"
 
@@ -21,11 +16,10 @@ echo "### Starting test: ${TEST}"
 
 ensembl2symbol.py \
     -s=rat \
-    -ga=$INPUT_DIR/gene_annotation_file_01fhl.tsv \
+    -ga=$INPUT_DIR/gene_annotation.tsv \
     -id=UniqueID \
     -e=GeneName \
-    -o=$OUTPUT_DIR/ensembl2symbol_annotation_file_01fhl.tsv
+    -o=$OUTPUT_DIR/ensembl2symbol_annotation.tsv
 
 echo "### Finished test: ${TEST} on $(date)"
-
 

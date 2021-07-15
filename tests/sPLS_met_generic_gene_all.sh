@@ -1,10 +1,7 @@
 #!/bin/bash
-#
 # sPLS.py test
-# Copyright (C) 2018 Oleksandr Moskalenko <om@rc.ufl.edu>
-#
+# Copyright (C) 2018-2021 Oleksandr Moskalenko <om@rc.ufl.edu>
 # Distributed under terms of the MIT license.
-#
 
 SCRIPT=$(basename "${BASH_SOURCE[0]}");
 echo "script $SCRIPT"
@@ -17,12 +14,12 @@ mkdir -p "${TESTDIR}"
 echo "### Starting test: ${TEST}"
 
 sPLS.py \
-    -m=$INPUT_DIR/metabolite_wide_dataset_01fhl.tsv \
+    -m=$INPUT_DIR/metabolite_wide_dataset.tsv \
     -mid=UniqueID \
     -mo=generic \
-    -mka=$INPUT_DIR/metabolite_to_keggId_link_01fhl.tsv \
+    -mka=$INPUT_DIR/metabolite_to_keggId_link.tsv \
     -mn=MetName \
-    -g=$INPUT_DIR/gene_wide_dataset_01fhl.tsv \
+    -g=$INPUT_DIR/gene_wide_dataset.tsv \
     -gid=UniqueID \
     -go=all \
     -k=10 \

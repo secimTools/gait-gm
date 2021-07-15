@@ -80,10 +80,10 @@
   <tests>
     <test>
       <param name="species" value="rno"/>
-      <param name="geneAnnot" value="ensembl2symbol_annotation_file.tsv"/>
+      <param name="geneAnnot" value="ensembl2symbol_annotation.tsv"/>
       <param name="geneUniqId" value="UniqueID"/>
       <param name="geneName" value="GeneName"/>
-      <param name="metAnnot" value="metabolite_annotation_file.tsv"/>
+      <param name="metAnnot" value="metabolite_annotation.tsv"/>
       <param name="metUniqId" value="UniqueID"/>
       <param name="metName" value="MetName"/>
       <param name="geneOutput" value="gene_to_keggId_link.tsv"/>

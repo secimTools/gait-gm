@@ -1,10 +1,7 @@
 #!/bin/bash
-#
 # sPLS.py test
-# Copyright (C) 2018 Oleksandr Moskalenko <om@rc.ufl.edu>
-#
+# Copyright (C) 2018-2021 Oleksandr Moskalenko <om@rc.ufl.edu>
 # Distributed under terms of the MIT license.
-#
 
 SCRIPT=$(basename "${BASH_SOURCE[0]}");
 TEST="${SCRIPT%.*}"
@@ -16,26 +13,26 @@ mkdir -p "${TESTDIR}"
 echo "### Starting test: ${TEST}"
 
 sPLS.py \
-    --metDataset=$INPUT_DIR/metabolite_wide_dataset_01fhl.tsv \
+    --metDataset=$INPUT_DIR/metabolite_wide_dataset.tsv \
     --metId=UniqueID \
     --metOption=mmc \
-    --metAnno=$INPUT_DIR/metabolite_annotation_file_01fhl.tsv \
+    --metAnno=$INPUT_DIR/metabolite_annotation.tsv \
     --metName=MetName \
-    --metKeggAnno=$INPUT_DIR/metabolite_to_keggId_link_01fhl.tsv \
-    --design=$INPUT_DIR/gene_design_file_01fhl.tsv \
+    --metKeggAnno=$INPUT_DIR/metabolite_to_keggId_link.tsv \
+    --design=$INPUT_DIR/gene_design.tsv \
     --correlation=pearson \
     --sigmaLow=0.05 \
     --sigmaHigh=0.50 \
     --sigmaNum=451 \
-    --geneDataset=$INPUT_DIR/gene_wide_dataset_01fhl.tsv \
+    --geneDataset=$INPUT_DIR/gene_wide_dataset.tsv \
     --geneId=UniqueID \
     --geneOption=pana \
-    --geneKeggAnno=$INPUT_DIR/gene_to_keggId_link_01fhl.tsv \
+    --geneKeggAnno=$INPUT_DIR/gene_to_keggId_link.tsv \
     --geneKeggName=GeneSymbol \
-    --path2genes=$INPUT_DIR/geneKeggId2pathwayId_01fhl.tsv \
-    --path2names=$INPUT_DIR/gene_kegg_pathway_file_01fhl.tsv \
+    --path2genes=$INPUT_DIR/geneKeggId2pathwayId.tsv \
+    --path2names=$INPUT_DIR/gene_kegg_pathway.tsv \
     --facSel=single \
-    --geneAnno=$INPUT_DIR/gene_annotation_file_01fhl.tsv \
+    --geneAnno=$INPUT_DIR/gene_annotation.tsv \
     --geneName=GeneName \
     -keepX=5 \
     -thres=0.8 \

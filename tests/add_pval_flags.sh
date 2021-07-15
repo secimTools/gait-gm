@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 #
 # add_pval_flags.py test
 # Copyright (C) 2018 Oleksandr Moskalenko <om@rc.ufl.edu>
@@ -23,24 +23,24 @@ echo "### Starting test: ${TEST}"
 
 # Test 1
 add_pval_flags.py \
-    -de=$INPUT_DIR/limma_voom_gene_file_01fhl.tsv \
+    -de=$INPUT_DIR/limma_voom_gene.tsv \
     -id=UniqueID \
     -p=P.Value \
     -t=0.1,0.05,0.01 \
-    -o=$OUTPUT_DIR/add_flags_gene_output_file_01fhl.tsv \
-    -fl=$OUTPUT_DIR/add_flags_gene_flags_file_01fhl.tsv
+    -o=$OUTPUT_DIR/add_flags_gene_output.tsv \
+    -fl=$OUTPUT_DIR/add_flags_gene_flags.tsv
 
 echo "### Finished test1: ${TEST} on $(date)"
 
 
 # Test 2
 add_pval_flags.py \
-    -de=$INPUT_DIR/limma_voom_metabolite_file_01fhl.tsv \
+    -de=$INPUT_DIR/limma_voom_metabolite.tsv \
     -id=UniqueID \
     -p=P.Value \
     -t="0.1,0.05,0.01" \
-    -o=$OUTPUT_DIR/add_flags_metabolite_output_file_01fhl.tsv \
-    -fl=$OUTPUT_DIR/add_flags_metabolite_flags_file_01fhl.tsv
+    -o=$OUTPUT_DIR/add_flags_metabolite_output.tsv \
+    -fl=$OUTPUT_DIR/add_flags_metabolite_flags.tsv
 
 echo "### Finished test2: ${TEST} on $(date)"
 

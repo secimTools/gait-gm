@@ -1,10 +1,7 @@
 #!/bin/bash
-#
 # split_wide_dataset.py test
-# Copyright (C) 2018 Oleksandr Moskalenko <om@rc.ufl.edu>
-#
+# Copyright (C) 2018-2021 Oleksandr Moskalenko <om@rc.ufl.edu>
 # Distributed under terms of the MIT license.
-#
 
 SCRIPT=$(basename "${BASH_SOURCE[0]}");
 echo "script $SCRIPT"
@@ -18,7 +15,7 @@ echo "### Starting test: ${TEST}"
 
 
 mkdir -p test-output
-rm -f test-output/gene_* test-output/metabolite_wide_dataset_01fhl.tsv test-output/met_*tsv
+rm -f test-output/gene_* test-output/metabolite_wide_dataset.tsv test-output/met_*tsv
 
 # Test 1 - gene 
 split_wide_dataset.py \
@@ -42,3 +39,4 @@ split_wide_dataset.py \
 
 
 echo "### Finished metabolite test: ${TEST} on $(date)"
+

@@ -34,10 +34,10 @@
   <tests>
     <test>
       <param name="species" value="rat"/>
-      <param name="geneAnnot" value="gene_annotation_file.tsv"/>
+      <param name="geneAnnot" value="gene_annotation.tsv"/>
       <param name="uniqId" value="UniqueID"/>
       <param name="ensemblId" value="GeneName"/>
-      <param name="Output" value="ensembl2symbol_annotation_file.tsv"/>
+      <param name="Output" value="ensembl2symbol_annotation.tsv"/>
     </test>
   </tests>
   <help><![CDATA[

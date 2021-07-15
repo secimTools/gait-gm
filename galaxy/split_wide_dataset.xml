@@ -59,16 +59,16 @@
       <param name="prefix" value="Gene"/>
       <param name="samples" value="2,3,4,5,6,7,8,9,10,11"/>
       <output name="wide" file="gene_wide_dataset.tsv"/>
-      <output name="design" file="gene_design_file.tsv"/>
-      <output name="annot" file="gene_annotation_file.tsv"/>
+      <output name="design" file="gene_design.tsv"/>
+      <output name="annot" file="gene_annotation.tsv"/>
     </test>
     <test>
       <param name="input" value="metabolite_input_dataset.tsv"/>
       <param name="prefix" value="Met"/>
       <param name="samples" value="2,3,4,5,6,7,8,9,10,11"/>
       <output name="wide" file="metabolite_wide_dataset.tsv"/>
-      <output name="design" file="metabolite_design_file.tsv"/>
-      <output name="annot" file="metabolite_annotation_file.tsv"/>
+      <output name="design" file="metabolite_design.tsv"/>
+      <output name="annot" file="metabolite_annotation.tsv"/>
     </test>
   </tests>
   <help><![CDATA[
