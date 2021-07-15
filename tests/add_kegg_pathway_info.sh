@@ -29,7 +29,7 @@ add_kegg_pathway_info.py \
     -km2p=$OUTPUT_DIR/metaboliteKeggId2pathwayId.tsv \
     -go=$OUTPUT_DIR/gene_kegg_pathway.tsv \
     -mo=$OUTPUT_DIR/metabolite_kegg_pathway.tsv \
-    -p=pathwayId2pathwayNames.tsv
+    -p=$OUTPUT_DIR/pathwayId2pathwayNames.tsv
 
 
 echo "### Finished test: ${TEST} on $(date)"
