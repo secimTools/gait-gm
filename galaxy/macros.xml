@@ -8,11 +8,11 @@
         </requirements>
     </xml> <xml name="citations">
         <citations>
-            <citation type="bibtex">@ARTICLE{Kirpich17secimtools,
-            author = {Alexander S. Kirpich, Miguel Ibarra, Oleksandr Moskalenko, Justin M. Fear, Joseph Gerken, Xinlei Mi, Ali Ashrafi, Alison M. Morse, Lauren M. McIntyre},
-            title = {SECIMTools: A suite of Metabolomics Data Analysis Tools},
-            journal = {BMC Bioinformatics},
-            year = {in press}
+            <citation type="bibtex">@ARTICLE{Mor21,gaitgm
+            author = {Danille E Mor, Francisco Huertas, Alison M Morse, Rachel Kaletsky, Coleen T Murphy, Vrinda Kalia, Gary W Miller, Olexander Moskalenko, Ana conesa, Lauren M McIntyre},
+            title = {GAIT-GM integrative cross-omics analyses reveal cholinergic defects in a C. elegans model of Parkinson's disease},
+            journal = {BMC Genomics},
+            year = {submitted}
             }</citation>
         </citations>
     </xml>
