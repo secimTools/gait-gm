@@ -1,4 +1,5 @@
 <tool id="secimtools_add_kegg_pathway_info" name="Add KEGG Pathway Information" version="@WRAPPER_VERSION@">
+    -mo=$OUTPUT_DIR/kegg_pathway_metabolite_output.tsv
   <description>using KEGGIDs</description>
   <macros>
     <import>macros.xml</import>
@@ -28,14 +29,14 @@
         -gid=$dataSets.geneUniqId
         -gn=$dataSets.geneName
         -gkid=$dataSets.geneKeggId
-        -go=$geneOutput
-        -kg2p=$gene_keggID2pathID
         -mka=$dataSets.metKeggAnnot
         -mid=$dataSets.metUniqId
         -mn=$dataSets.metName
         -mkid=$dataSets.metKeggId
-        -mo=$metOutput
+        -kg2p=$gene_keggID2pathID
         -km2p=$met_keggID2pathID
+        -go=$geneOutput
+        -mo=$metOutput
       #end if
       -p=$pathways
   ]]></command>
@@ -108,10 +109,11 @@
       <param name="metUniqId" value="UniqueID"/>
       <param name="metName" value="MetName"/>
       <param name="metKeggId" value="KEGG_ID"/>
-      <output name="kgen2pathway" file="kegg_pathway_gene_output.tsv"/>
-      <output name="kmet2pathway" file="kegg_pathway_metabolite_output.tsv"/>
-      <output name="pathways" file="PATHWAYS"/>
-      <output name="output" file="kegg_downloader_table"/>
+      <output name="gene_keggID2pathID" file="geneKeggId2pathwayId.tsv" />
+      <output name="met_keggID2pathID" file="metaboliteKeggId2pathwayId.tsv" />
+      <output name="geneOutput" file="gene_kegg_pathway.tsv"/>
+      <output name="metOutput" file="metabolite_kegg_pathway.tsv"/>
+      <output name="pathways" file="pathwayId2pathwayNames.tsv"/>
     </test>
   </tests>
   <help><![CDATA[

@@ -21,15 +21,15 @@ add_kegg_pathway_info.py \
     -gid=UniqueID \
     -gn=GeneSymbol \
     -gkid=KEGG_ID \
-    -kg2p=KGEN2PATHWAY \
     -mka=$INPUT_DIR/metabolite_to_keggId_link.tsv \
     -mid=UniqueID \
     -mn=MetName \
     -mkid=KEGG_ID \
-    -km2p=KMET2PATHWAY \
-    -p=PATHWAYS \
-    -go=$OUTPUT_DIR/kegg_pathway_gene_output.tsv \
-    -mo=$OUTPUT_DIR/kegg_pathway_metabolite_output.tsv
+    -kg2p=$OUTPUT_DIR/geneKeggId2pathwayId.tsv \
+    -km2p=$OUTPUT_DIR/metaboliteKeggId2pathwayId.tsv \
+    -go=$OUTPUT_DIR/gene_kegg_pathway.tsv \
+    -mo=$OUTPUT_DIR/metabolite_kegg_pathway.tsv \
+    -p=pathwayId2pathwayNames.tsv
 
 
 echo "### Finished test: ${TEST} on $(date)"
