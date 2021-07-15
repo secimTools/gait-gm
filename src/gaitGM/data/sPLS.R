@@ -30,7 +30,6 @@ sPLS <- function(geneData, metData, keepX){
   # Libraries
   library("mixOmics")
   library("RColorBrewer")
-  library(rasterpdf)
 
   # Force to numbers
   indx <- sapply(geneData, is.factor)
@@ -64,8 +63,7 @@ plotInPdf <- function(splsObjects, figurePath, multipleNames){
     :type multipleNames: List
   "
 
-  #pdf(file=figurePath, height = 12, width = 10)
-  raster_pdf(file=figurePath, height = 12, width = 10, units = "in", res = 300)
+  pdf(file=figurePath, height = 12, width = 10)
 
   i <- 1
   for (SPLS in splsObjects){

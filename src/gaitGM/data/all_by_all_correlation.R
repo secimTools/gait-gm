@@ -198,7 +198,6 @@ plot_relations_network <- function(relations.sif, figurePath){
 
   # Libraries
   library(igraph)
-  library(rasterpdf)
 
   # Only plot first 500 strong correlations
   numRelations <- nrow(relations.sif)
@@ -211,8 +210,7 @@ plot_relations_network <- function(relations.sif, figurePath){
   V(graph)[relations.sif[,1]]$color <- "royalblue1"
   V(graph)[relations.sif[,2]]$color <- "forestgreen"
   E(graph)$color <- ifelse(relations.sif[,3] > 0,'firebrick2','deepskyblue')
-  #pdf(file=figurePath, height = 11, width = 8.5)
-  raster_pdf(file=figurePath, height = 11, width = 8.5, units = "in", res = 150)
+  pdf(file=figurePath, height = 11, width = 8.5)
 
   plot.igraph(graph,
               layout=layout.fruchterman.reingold,
