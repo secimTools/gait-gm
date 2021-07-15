@@ -63,17 +63,17 @@
   </outputs>
   <tests>
     <test>
-      <param name="geneDataset" value="test-data/gene_wide_dataset.tsv"/>
+      <param name="geneDataset" value="gene_wide_dataset.tsv"/>
       <param name="geneId" value="UniqueID"/>
-      <param name="geneAnnot" value="test-data/gene_annotation.tsv"/>
+      <param name="geneAnnot" value="gene_annotation.tsv"/>
       <param name="geneName" value="GeneName"/>
-      <param name="metDataset" value="test-data/metabolite_wide_dataset.tsv"/>
+      <param name="metDataset" value="metabolite_wide_dataset.tsv"/>
       <param name="metId" value="UniqueID"/>
-      <param name="metAnnot" value="test-data/metabolite_annotation.tsv"/>
+      <param name="metAnnot" value="metabolite_annotation.tsv"/>
       <param name="metName" value="MetName"/>
-      <output name="output" file="testout/all_by_all_correlation/correlation.tsv"/>
-      <output name="corMat" file="testout/all_by_all_correlation/correlation_matrix.tsv"/>
-      <output name="figure" file="testout/all_by_all_correlation/correlation_figure.pdf"/>
+      <output name="output" file="correlation.tsv"/>
+      <output name="corMat" file="correlation_matrix.tsv"/>
+      <output name="figure" file="correlation_figure.pdf"/>
     </test>
   </tests>
   <help><![CDATA[
