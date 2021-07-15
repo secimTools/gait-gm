@@ -17,10 +17,10 @@ echo "### Starting test: ${TEST}"
 
 add_kegg_anno_info.py \
     -s=rno \
-    -ga=$INPUT_DIR/ensembl2symbol_annotation_file.tsv \
+    -ga=$INPUT_DIR/ensembl2symbol_annotation.tsv \
     -gid=UniqueID \
-    -gn=GeneSymbol \
-    -ma=$INPUT_DIR/metabolite_annotation_file.tsv \
+    -gn=GeneName \
+    -ma=$INPUT_DIR/metabolite_annotation.tsv \
     -mid=UniqueID \
     -mn=MetName \
     -go=$OUTPUT_DIR/gene_to_keggId_link.tsv \
