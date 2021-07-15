@@ -18,11 +18,11 @@ echo "### Starting test: ${TEST}"
 all_by_all_correlation.py \
     -g=$INPUT_DIR/gene_wide_dataset.tsv \
     -gid=UniqueID \
-    -ga=$INPUT_DIR//gene_annotation.tsv \
+    -ga=$INPUT_DIR/gene_annotation.tsv \
     -gn=GeneName \
-    -m=$INPUT_DIR//metabolite_wide_dataset.tsv \
+    -m=$INPUT_DIR/metabolite_wide_dataset.tsv \
     -mid=UniqueID \
-    -ma=$INPUT_DIR//metabolite_annotation.tsv \
+    -ma=$INPUT_DIR/metabolite_annotation.tsv \
     -mn=MetName \
     -me=pearson \
     -t=0.05 \
