@@ -80,11 +80,13 @@
 
 **Tool Description**
 
-  The tool performs a correlation analysis between genes (in a gene expression wide dataset) and metabolites (in a metabolite wide dataset) 
-  to generate a table of correlation coefficients. P-values for the correlation coefficients are calculated by simulating individual gene and 
-  metabolite datasets 1000 times using a normal distribution with means and standard deviations generated from the data. Sample size reflects 
-  the input datasets. Correlations are calculated on the simulated data. Correlations must be higher/lower than 95% of the randomly simulated 
-  values to be considered significant. 
+  The tool performs a correlation analysis between genes (Gene Expression Wide Dataset) and metabolites (Metabolite Wide Dataset) to generate 
+ a table of correlation coefficients.  P-values for the correlation coefficients are calculated by simulating gene and metabolite datasets 
+ 1000 times using the mean and standard deviation of both datasets.
+
+  The tool outputs 2 TSV files and a PDF figure. The 'correlation file' contains gene-metabolite correlation coefficients with p-values 
+  less than the user-specified threshold. The tool also outputs the results in matrix format, the ‘correlation matrix file’. The ‘correlation 
+  figure’ is a network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coefficients.   
 
 --------------------------------------------------------------------------------
 

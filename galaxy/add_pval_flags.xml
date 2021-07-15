@@ -44,8 +44,9 @@
   <help><![CDATA[
 **Tool Description**
 
-  This tool generates an indicator variable (0 or 1) to identify p-values below a user-specified threshold.  A “1” is used to indicate (flag)
-  p-values less than the indicated threshold p-value. The user can flag nominal p-values or p-values after correction for multiple testing.
+ This tool generates 0/1 indicator variables to identify (‘flag’) p-values less than a user-specified threshold or less than the 
+ default values of 0.1, 0.05 and 0.01.  The flag_threshold variable is equal to 1 if the p-value is less than or equal to the 
+ threshold and equal to 0 if greater than the threshold.  You can flag nominal p-values or p-values after correction for multiple testing.
 
 --------------------------------------------------------------------------------
 
