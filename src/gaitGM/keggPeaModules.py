@@ -1,4 +1,4 @@
-#!/home/moskalenko/projects/software/bioinformatics/secim/GAIT-GM/_conda/1.0.0/bin/python
+#!/usr/bin/env python
 ######################################################################################
 # AUTHOR: Francisco Huertas <f.huertas@ufl.edu>
 # CONTRIBUTORS: Alison Morse <ammorse@ufl.edu>, Oleksandr Moskalenko <om@rc.ufl.edu>
@@ -1481,7 +1481,7 @@ def prepareSPLSGenePanaData(args):
     """
     pandas2ri.activate()
 
-    with ires.path("gait-gm.data", "PCA2GO.2.R") as my_r_script_path:
+    with ires.path("gaitGM.data", "PCA2GO.2.R") as my_r_script_path:
         f = open(my_r_script_path, "r")
         rFile = f.read()
     PANAScript = STAP(rFile, "PCA2GO")
