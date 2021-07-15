@@ -20,7 +20,7 @@ rm -f test-output/gene_* test-output/metabolite_wide_dataset.tsv test-output/met
 # Test 1 - gene 
 split_wide_dataset.py \
     -i=$INPUT_DIR/gene_input_dataset.tsv \
-    -p=gene \
+    -p=Gene \
     -s=2,3,4,5,6,7,8,9,10,11 \
     -w=$OUTPUT_DIR/gene_wide_dataset.tsv \
     -d=$OUTPUT_DIR/gene_design_file.tsv \
