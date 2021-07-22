@@ -4,9 +4,9 @@
       <import>macros.xml</import>
   </macros>
   <expand macro="requirements" />
-  <stdio> 
-    <exit_code range="2" level="fatal" description="Not enough metabolites for the Analysis."/> 
-  </stdio> 
+  <stdio>
+    <exit_code range="2" level="fatal" description="Not enough metabolites for the Analysis."/>
+  </stdio>
   <command detect_errors="exit_code"><![CDATA[
     sPLS.py
       -g=$metsOption.geneDataset
@@ -67,7 +67,7 @@
   ]]></command>
   <inputs>
     <param name="metDataset" type="data" format="tabular" label="Metabolite Wide Dataset for Integration" help="Select the Metabolite Wide Dataset from your history"/>
-    <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/> 
+    <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/>
     <conditional name="useMetAnnoCond">
       <param name="useMetAnno" type="select" label="Use Metabolite Annotation File?" help="You can choose to input a file containing metabolite annotation information (e.g. metabolite names, identifiers, etc.) to use for labeling the output files.">
         <option value="n">No</option>
@@ -75,9 +75,9 @@
       </param>
       <when value="y">
         <param name="metAnno" type="data" format="tabular" label="Metabolomic Annotation File" help="Select the Metabolomic Annotation File from your history."/>
-        <param name="metName" type="text" size="30" value="" label="Metabolite Names" help="Name of the column in your Metabolomic Annotation Dataset that contains metabolite annotation information."/> 
+        <param name="metName" type="text" size="30" value="" label="Metabolite Names" help="Name of the column in your Metabolomic Annotation Dataset that contains metabolite annotation information."/>
       </when>
-    </conditional> 
+    </conditional>
     <conditional name="metsOption">
       <param name="allMets" type="select" display="radio" label="Select which option to use for subsetting the Metabolite Wide Dataset" help="Select one of the options above.">
         <option value="generic">By metabolite class -- Uses the 'Name_in_KEGG' column generated from the 'Link Name to KEGGID' tool to subset.</option>
@@ -95,9 +95,9 @@
           </param>
           <when value="y">
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
-            <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotation information."/> 
+            <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotation information."/>
           </when>
-        </conditional>   
+        </conditional>
         <conditional name="genesOption">
           <param name="allGenes" type="select" display="radio" label="Select which option to use for subsetting the Gene Expression Wide Dataset" help="Select one of the options above.">
             <option value="all">Include all genes in the Gene Expression Wide Dataset -- no subsetting.</option>
@@ -155,7 +155,7 @@
           </param>
           <when value="y">
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
-            <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/> 
+            <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/>
           </when>
         </conditional>
         <conditional name="genesOption">
@@ -210,9 +210,9 @@
           </param>
           <when value="y">
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
-            <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/> 
+            <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/>
           </when>
-        </conditional>   
+        </conditional>
         <conditional name="genesOption">
           <param name="allGenes" type="select" display="radio" label="Gene Dataset Subsetting Option" help="Select one of the following.">
             <option value="all">Include all genes in the Gene Expression Wide Dataset -- no subsetting.</option>
@@ -333,33 +333,33 @@
 
 **Tool Description**
 
-  NOTE: The parameters you select are data dependent.  
-  
-  This tool carries out the integrated analysis of metabolite and gene expression data. Here, metabolite data are considered the dependent variable 
-  and genes the explanatory variable. The tool allows for several combinations of metabolite and gene models. A note of caution: a complete metabolite 
-  and gene expression dataset with no filtering will be challenging to interpret using this tool.  
+  NOTE: The parameters you select are data dependent.
 
-  We recommend that both gene expression and metabolite datasets be reduced to reflect a common biological hypothesis before running this tool. For example, 
-  metabolite data can be subset by class (i.e. using the 'Name_in_KEGG' column generated from the 'Link Name  to KEGGID' tool). Users who want to include 
-  similarly behaving compounds without regard to identification or type of compound can estimate modules with the Modulated Modularity Clustering (MMC) tool 
-  (Stone and Ayroles 2009). Each module can be examined separately. Finally, metabolite data can be reduced by using both metabolite class and the MMC tool.  
+  This tool carries out the integrated analysis of metabolite and gene expression data. Here, metabolite data are considered the dependent variable
+  and genes the explanatory variable. The tool allows for several combinations of metabolite and gene models. A note of caution: a complete metabolite
+  and gene expression dataset with no filtering will be challenging to interpret using this tool.
+
+  We recommend that both gene expression and metabolite datasets be reduced to reflect a common biological hypothesis before running this tool. For example,
+  metabolite data can be subset by class (i.e. using the 'Name_in_KEGG' column generated from the 'Link Name  to KEGGID' tool). Users who want to include
+  similarly behaving compounds without regard to identification or type of compound can estimate modules with the Modulated Modularity Clustering (MMC) tool
+  (Stone and Ayroles 2009). Each module can be examined separately. Finally, metabolite data can be reduced by using both metabolite class and the MMC tool.
   Similarly, gene expression data can be reduced in scope by uploading and using a custom list of genes of interest or by using metagenes as implemented in PANA
-  (Ponzoni et al. 2014).  
+  (Ponzoni et al. 2014).
 
   1) Classes of metabolites can be modeled as a function of metagenes.
   2) Classes of metabolites can be modeled as a function of a set of individual genes.
   3) Unbiased clusters of metabolites can be modeled as a function of metagenes
   4) Unbiased clusters of metabolites can be modeled as a function of a set of individual genes.
 
-  The tool executes a partial least squares regression with variable selection (sparse PLS, sPLS) as implemented in the 'mixOmics' package (Rohart F., Gautier, B, Singh, 
-  A and Lê Cao, K. A. mixOmics: an R package for ‘omics feature selection and multiple data integration. On bioRxiv). The mixomics sPLS function is run in ‘classic mode’ 
-  (http://mixomics.org/methods/spls/) with the number of components included in the model set to 2. In addition, the user selects the number of variables (genes) for 
-  each component to use in model construction. 
+  The tool executes a partial least squares regression with variable selection (sparse PLS, sPLS) as implemented in the 'mixOmics' package (Rohart F., Gautier, B, Singh,
+  A and Lê Cao, K. A. mixOmics: an R package for ‘omics feature selection and multiple data integration. On bioRxiv). The mixomics sPLS function is run in ‘classic mode’
+  (http://mixomics.org/methods/spls/) with the number of components included in the model set to 2. In addition, the user selects the number of variables (genes) for
+  each component to use in model construction.
 
-  This tool needs at least 1 subset with a minimum number of 3 metabolites to run properly. If the user selects subset metabolites by class and no metabolite groups are 
-  identified or small metabolite groups with less than 3 members are found, the tool will stop and a warning message will be generated to try the MMC option instead. 
-  Similarly, if the user selects subset metabolites using MMC clusters and there are no clusters with at least 3 metabolites, the tool will stop and a warning message 
-  will be generated to try the 'by class’ option instead. 
+  This tool needs at least 1 subset with a minimum number of 3 metabolites to run properly. If the user selects subset metabolites by class and no metabolite groups are
+  identified or small metabolite groups with less than 3 members are found, the tool will stop and a warning message will be generated to try the MMC option instead.
+  Similarly, if the user selects subset metabolites using MMC clusters and there are no clusters with at least 3 metabolites, the tool will stop and a warning message
+  will be generated to try the 'by class’ option instead.
 
 --------------------------------------------------------------------------------
 
@@ -367,7 +367,7 @@
 
 **Please see the UserGuide for more details regarding tool inputs and options.**
 
-**Metabolite Wide Dataset**  
+**Metabolite Wide Dataset**
   A wide formatted dataset that contains measurements for each sample (samples are in columns):
 
     +-----------+---------+---------+---------+-----+
@@ -384,7 +384,7 @@
     | ...       | ...     | ...     | ...     | ... |
     +-----------+---------+---------+---------+-----+
 
-**Unique Metabolite FeatureID**  
+**Unique Metabolite FeatureID**
   Name of the column in your Metabolite Wide Dataset that contains unique identifiers.
 
 **Optional - Metabolite Annotation File**
@@ -392,9 +392,9 @@
 
 **Optional - Metabolite Names**
   Column name in the Metabolite Annotation File to use for labeling output files.
-  
+
 **Data reduction (subsetting) of Metabolite Data**
-  1) By metabolite class - uses a pre-defined grouping of metabolites based on the 'Name_in_KEGG' column in the Metabolite to KEGGID Link File. 
+  1) By metabolite class - uses a pre-defined grouping of metabolites based on the 'Name_in_KEGG' column in the Metabolite to KEGGID Link File.
   2) By MMC pattern - runs the SECIMTools MMC tool and uses the tool-generated pattern blocks for subsetting.  Please see Stone and Ayroles (2009) for MMC options.
   3) By both metabolite class AND MMC pattern
 
@@ -432,8 +432,8 @@
   2) Use a custom tsv file containing specific genes of interest - select a custom gene list from your history
   3) Include genes linked to each metabolite class through common KEGG pathways
   4) Use Metagenes from PANA (PAthway Network Analysis from gene expression data)
-    
-**Gene Expression KEGG Pathway File** 
+
+**Gene Expression KEGG Pathway File**
   Contains links between gene symbols and KEGG Pathways. Can be generated using the 'Add KEGG Pathway Information' tool
 
 **Metabolomic KEGG Pathway File**
@@ -447,7 +447,7 @@
 
 **GeneKEGGID2PathwayID**
   Contains KEGG links between gene KEGGIDs and KEGG PathwayIDs. Can be generated from the 'Add KEGG Pathway Information' tool
-      
+
 **Number of Genes to Keep in Model**
   Default: 10.  This is the number of genes to keep for each principle component in the sPLS analysis.
 
@@ -459,13 +459,13 @@
 **OUTPUT**
 
 **For metabolite reduction by metabolite class and all genes:**
-  (1) A PDF containing a sPLS figure for each metabolite class. 
+  (1) A PDF containing a sPLS figure for each metabolite class.
   (2) A sPLS Correlation TSV file containing the correlations for each metabolite-gene pair and what subset (metabolite class) the pair locate to.
 
 **For metabolite reduction by MMC the following files will be output in addition to files (1) and (2) above**
   (3) A MMC PDF Figure containing unsorted, sorted and sorted-smoothed heatmaps of the variance-covariance matrices
   (4) A MMC Output TSV file containing algorithm summaries in the following columns:
-  
+
        - Unique metabolite featureID
        - Module:  Contains the module number for each feature calculated by the MMC tool.
        - Entry Index:  Contains the original order of the names of the rows of the input Metabolite Wide Dataset.
