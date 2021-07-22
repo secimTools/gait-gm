@@ -13,7 +13,7 @@ from argparse import RawDescriptionHelpFormatter
 import matplotlib
 from rpy2 import robjects
 from rpy2.robjects import pandas2ri
-from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage as STAP
+from rpy2.robjects.packages import STAP
 import gaitGM.keggPeaModules as modules
 from secimtools.dataManager import logger as sl
 from importlib import resources as ires
