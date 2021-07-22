@@ -1,5 +1,4 @@
 <tool id="secimtools_add_kegg_pathway_info" name="Add KEGG Pathway Information" version="@WRAPPER_VERSION@">
-    -mo=$OUTPUT_DIR/kegg_pathway_metabolite_output.tsv
   <description>using KEGGIDs</description>
   <macros>
     <import>macros.xml</import>
