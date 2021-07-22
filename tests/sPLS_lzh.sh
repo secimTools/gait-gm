@@ -33,5 +33,9 @@ sPLS.py \
     -o1=${OUTPUT_DIR}/spls_correlation.tsv \
     -f1=${OUTPUT_DIR}/spls_figure.pdf \
     -o3=${OUTPUT_DIR}/spls_pana_outputTable.tsv
-
-echo "### Finished metabolite test: ${TEST} on $(date)"
+ec=?!
+if [[ $ec ]]; then
+    echo "### Finished metabolite test: ${TEST} on $(date)"
+else
+    echo "Test ${TEST} failed. Exit code $ec"
+fi
