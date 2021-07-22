@@ -273,13 +273,17 @@
       <param name="geneDataset" value="gene_wide_dataset.tsv"/>
       <param name="geneId" value="UniqueID"/>
       <param name="allGenes" value="pana"/>
+      <param name="geneKeggAnno" value="gene_to_keggId_link.tsv"/>
+      <param name="geneKeggName" value="GeneSymbol"/>
+      <param name="path2names" value="pathwayId2pathwayNames.tsv"/>
+      <param name="path2genes" value="geneKeggId2pathwayId.tsv"/>
       <param name="keepX" value="10"/>
       <param name="threshold" value="0.8"/>
-      <param name="cutoff" value="0.20" />
+      <param name="cutoff" value="0.23" />
       <param name="facSel" value="single" />
-      <output name="splsOut" file="spls_correlation.tsv"/>
-      <output name="figure1" file="spls_figure.pdf"/>
-      <output name="panaOut" file="spla_pana_outputTable.tsv"/>
+      <output name="splsOut" file="spls_correlation.tsv" compare="diff" lines_diff="1000"/>
+      <output name="figure1" file="spls_figure.pdf" compare="sim_size" delta="1000000"/>
+      <output name="panaOut" file="spls_pana_outputTable.tsv" compare="diff" lines_diff="30000"/>
     </test>
       <!-- sPLS_met_generic_gene_all -->
     <test>
@@ -295,7 +299,7 @@
       <param name="threshold" value="0.8"/>
       <param name="cutoff" value="0.20" />
       <param name="facSel" value="single" />
-      <output name="splsOut" file="spls_correlation_generic_all.tsv" lines_diff="1000"/>
+      <output name="splsOut" file="spls_correlation_generic_all.tsv" compare="diff" lines_diff="1000"/>
       <output name="figure1" file="spls_figure_generic_all.pdf" compare="sim_size" delta="1000000"/>
     </test>
       <!-- sPLS_met_mmc_gene_pana -->
@@ -321,11 +325,11 @@
       <param name="keepX" value="5"/>
       <param name="threshold" value="0.8"/>
       <param name="cutoff" value="0.20" />
-      <output name="splsOut" file="integration_mmc_pana_genes_sPLS_output.tsv" lines_diff="1000"/>
-      <output name="figure1" file="integration_mmc_pana_genes_sPLS_fig.pdf" delta="1000000"/>
-      <output name="figure2" file="integration_mmc_pana_genes_MMC_heatmap.pdf" delta="1000000"/>
-      <output name="mmcOut" file="integration_mmc_pana_genes_MMC_output.tsv" lines_diff="1000"/>
-      <output name="panaOut" file="integration_mmc_pana_genes_PANA_output.tsv" lines_diff="1000"/>
+      <output name="splsOut" file="integration_mmc_pana_genes_sPLS_output.tsv" compare="diff" lines_diff="100000"/>
+      <output name="figure1" file="integration_mmc_pana_genes_sPLS_fig.pdf" compare="sim_size" delta="10000000"/>
+      <output name="figure2" file="integration_mmc_pana_genes_MMC_heatmap.pdf" compare="sim_size" delta="10000000"/>
+      <output name="mmcOut" file="integration_mmc_pana_genes_MMC_output.tsv" compare="diff" lines_diff="100000"/>
+      <output name="panaOut" file="integration_mmc_pana_genes_PANA_output.tsv" compare="diff" lines_diff="100000"/>
     </test>
 
   </tests>
