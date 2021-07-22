@@ -72,8 +72,8 @@
       <param name="metAnnot" value="metabolite_annotation.tsv"/>
       <param name="metName" value="MetName"/>
       <output name="output" file="correlation.tsv"/>
-      <output name="corMat" file="correlation_matrix.tsv"/>
-      <output name="figure" file="correlation_figure.pdf"/>
+      <output name="corMat" file="correlation_matrix.tsv" compare="diff" lines_diff="100"/>
+      <output name="figure" file="correlation_figure.pdf" compare="sim_size"/>
     </test>
   </tests>
   <help><![CDATA[
