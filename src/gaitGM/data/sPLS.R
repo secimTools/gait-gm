@@ -27,9 +27,12 @@ sPLS <- function(geneData, metData, keepX){
     :type SPLS: spls object
   "
 
+  # Do not assume an X11 environment
+  Sys.setenv(RGL_USE_NULL = "yes")
+
   # Libraries
-  library("mixOmics")
-  library("RColorBrewer")
+  suppressPackageStartupMessages(library("mixOmics"))
+  suppressPackageStartupMessages(library("RColorBrewer"))
 
   # Force to numbers
   indx <- sapply(geneData, is.factor)
