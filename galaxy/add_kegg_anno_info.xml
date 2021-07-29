@@ -99,11 +99,14 @@ creating either:
 (a) a Gene to KEGGID Link or
 (b) a Metabolite to KEGGID Link dataset.
 
- For gene expression data, the tool is designed to
-  take the output from the 'Map ENSEMBLIDs to Gene Symbols' tool as input. If your input dataset contains a Selected column, the tool will
-  link GeneSymbols to KEGGIDs where Selected = 'Yes'. Input Files without a Selected column must have a column containing unique FeatureIDs.
-  This tool takes an annotation dataset containing unique FeatureIDs, ENSEMBLIDs (for gene expression data) and GeneSymbol/MetaboliteName
-  and adds the following columns:
+For gene expression data, the tool is designed to
+take the output from the 'Map ENSEMBLIDs to Gene Symbols' tool as input. If your input dataset
+contains a Selected column, the tool will
+link GeneSymbols to KEGGIDs where Selected = 'Yes'. Input Files without a Selected column must
+have a column containing unique FeatureIDs.
+This tool takes an annotation dataset containing unique FeatureIDs, ENSEMBLIDs (for gene
+expression data) and GeneSymbol/MetaboliteName
+and adds the following columns:
 
   1) Name_in_KEGG, the name found in KEGG
   2) Matched, a column indicating whether a match was found in KEGG,
@@ -155,11 +158,11 @@ creating either:
 
 **Unique FeatureID**
 
-  Name of the column in your gene expression or metabolomic Annotation dataset that contains the Unique FeatureIDs.
+Name of the column in your gene expression or metabolomic Annotation dataset that contains the Unique FeatureIDs.
 
 **Gene Symbol or Metabolite Names**
 
-  Name of the column in your gene expression or metabolomic Annotation dataset with the names to use for matching to KEGGIDs.
+Name of the column in your gene expression or metabolomic Annotation dataset with the names to use for matching to KEGGIDs.
 
 --------------------------------------------------------------------------------
 

@@ -77,6 +77,7 @@
         <param name="metAnno" type="data" format="tabular" label="Metabolomic Annotation File" help="Select the Metabolomic Annotation File from your history."/>
         <param name="metName" type="text" size="30" value="" label="Metabolite Names" help="Name of the column in your Metabolomic Annotation Dataset that contains metabolite annotation information."/>
       </when>
+      <when value="n" />
     </conditional>
     <conditional name="metsOption">
       <param name="allMets" type="select" display="radio" label="Select which option to use for subsetting the Metabolite Wide Dataset" help="Select one of the options above.">
@@ -97,6 +98,7 @@
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
             <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotation information."/>
           </when>
+          <when value="n" />
         </conditional>
         <conditional name="genesOption">
           <param name="allGenes" type="select" display="radio" label="Select which option to use for subsetting the Gene Expression Wide Dataset" help="Select one of the options above.">
@@ -105,6 +107,7 @@
             <option value="path">Include genes linked to each metabolite class through common KEGG pathways.</option>
             <option value="pana">Use Metagenes from PANA (PAthway Network Analysis from gene expression data).</option>
           </param>
+          <when value="all" />
           <when value="geneList">
             <param name="relatedGeneList" type="data" format="tabular" label="Select a Custom Gene List from your history" help="This custom list must consist of a single column of Gene Symbols."/>
           </when>
@@ -124,13 +127,14 @@
             </param>
             <param name="cutoff" type="float" value="0.20" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.20"/>
             <conditional name="PANAAnno">
-            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathwayIDs.">
-            		<option value="no">No</option>
-            		<option value="yes">Yes</option>
-          		</param>
-          		<when value="yes">
-            		<param name="path2names" type="data" format="tabular" label="Pathway Names File" help="Select the Pathway Names File from your history.  This file can be generated from the 'Add KEGG Pathway Information' tool."/>
-            	</when>
+                <param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathwayIDs.">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </param>
+                  <when value="yes">
+                    <param name="path2names" type="data" format="tabular" label="Pathway Names File" help="Select the Pathway Names File from your history.  This file can be generated from the 'Add KEGG Pathway Information' tool."/>
+                </when>
+                <when value="no" />
             </conditional>
           </when>
         </conditional>
@@ -157,6 +161,7 @@
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
             <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/>
           </when>
+          <when value="n"/>
         </conditional>
         <conditional name="genesOption">
           <param name="allGenes" type="select" display="radio" label="Select which option to use for subsetting the Gene Dataset" help="Select one of the options above.">
@@ -164,6 +169,7 @@
             <option value="geneList">Use a custom tsv file containing specific genes of interest.</option>
             <option value="pana">Use Metagenes from PANA (PAthway Network Analysis from gene expression data).</option>
           </param>
+          <when value="all" />
           <when value="geneList">
             <param name="relatedGeneList" type="data" format="tabular" label="Select a Custom Gene List from your history" help="This custom list must contain Gene Symbol IDs and must be a single column."/>
           </when>
@@ -179,13 +185,14 @@
             </param>
             <param name="cutoff" type="float" value="0.23" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.23"/>
             <conditional name="PANAAnno">
-            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathway IDs.">
-            		<option value="no">No</option>
-            		<option value="yes">Yes</option>
-          		</param>
-          		<when value="yes">
-            		<param name="path2names" type="data" format="tabular" label="Pathway Names File" help="Select the Pathway Names File from your history. This file can be generated from the 'Add KEGG Pathway Information' tool."/>
-            	</when>
+                <param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathway IDs.">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </param>
+                  <when value="yes">
+                    <param name="path2names" type="data" format="tabular" label="Pathway Names File" help="Select the Pathway Names File from your history. This file can be generated from the 'Add KEGG Pathway Information' tool."/>
+                </when>
+                <when value="no" />
             </conditional>
           </when>
         </conditional>
@@ -212,6 +219,7 @@
             <param name="geneAnno" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history."/>
             <param name="geneName" type="text" size="30" value="" label="Gene Names" help="Name of the column in your Gene Expression Annotation Dataset that contains gene annotations."/>
           </when>
+          <when value="n" />
         </conditional>
         <conditional name="genesOption">
           <param name="allGenes" type="select" display="radio" label="Gene Dataset Subsetting Option" help="Select one of the following.">
@@ -219,6 +227,7 @@
             <option value="geneList">Upload a custion list containing specific genes of interest.</option>
             <option value="pana">Use Metagenes (PANA Approach).</option>
           </param>
+          <when value="all" />
           <when value="geneList">
             <param name="relatedGeneList" type="data" format="tabular" label="Select a Custom Gene List from your history" help="The list must consist of a single column of Gene Symbols."/>
           </when>
@@ -234,13 +243,14 @@
             </param>
             <param name="cutoff" type="float" value="0.23" label="Variability cut-off value" help="Select the variability cut-off value. Default: 0.23"/>
             <conditional name="PANAAnno">
-            	<param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathwayIDs.">
-            		<option value="no">No</option>
-            		<option value="yes">Yes</option>
-          		</param>
-          		<when value="yes">
-            		<param name="path2names" type="data" format="tabular" label="Pathway Names File" help="Select the Pathway Names File from your history. This file can be generated from the 'Add KEGG Pathway Information' tool."/>
-            	</when>
+                <param name="usePANAAnno" type="select" label="Include Pathway Names in results files and figures?" help="You can choose to input a file containing annotations for the KEGG pathwayIDs.">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </param>
+                <when value="yes">
+                    <param name="path2names" type="data" format="tabular" label="Pathway Names File" help="Select the Pathway Names File from your history. This file can be generated from the 'Add KEGG Pathway Information' tool."/>
+                </when>
+                <when value="no" />
             </conditional>
           </when>
         </conditional>

@@ -40,6 +40,7 @@
           <when value="y">
             <param name="prefix2" type="text" size="30" value="" label="Prefix to use during generation of unique IDs" help="This prefix will be prepended to your NUMERIC unique FeatureID, with an underbar in between."/>
           </when>
+          <when value="n" />
         </conditional>
       </when>
       <when value="n">

@@ -36,6 +36,7 @@
         <param name="geneAnnot" type="data" format="tabular" label="Gene Expression Annotation File" help="Select the Gene Expression Annotation File from your history"/>
         <param name="geneAnnotName" type="text" value="" label="Gene Labels" help="Name of the column in the Gene Expression Annotation File to use for labeling output files."/>
       </when>
+      <when value="No" />
     </conditional>
     <param name="metDataset" type="data" format="tabular" label="Metabolite Wide Dataset" help="Select the Metabolite Wide Dataset from your history"/>
     <param name="metId" type="text" size="30" value="" label="Unique Metabolite FeatureID" help="Name of the column in your Metabolite Wide Dataset that contains unique identifiers."/>
@@ -48,6 +49,7 @@
         <param name="metAnnot" type="data" format="tabular" label="Metabolite Annotation File" help="Select the Metabolite Annotation File from your history"/>
         <param name="metAnnotName" type="text" value="" label="Metabolite Labels" help="Name of the column in the Metabolite Annotation File to use for labeling output files"/>
       </when>
+      <when value="No" />
     </conditional>
     <param name="method" type="select" label="Correlation Method" help="Select a correlation method.">
       <option value="pearson">Pearson</option>
@@ -80,13 +82,18 @@
 
 **Tool Description**
 
-  The tool performs a correlation analysis between genes (Gene Expression Wide Dataset) and metabolites (Metabolite Wide Dataset) to generate
- a table of correlation coefficients.  P-values for the correlation coefficients are calculated by simulating gene and metabolite datasets
- 1000 times using the mean and standard deviation of both datasets.
+The tool performs a correlation analysis between genes (Gene Expression Wide Dataset) and
+metabolites (Metabolite Wide Dataset) to generate
+a table of correlation coefficients. P-values for the correlation coefficients are calculated by
+simulating gene and metabolite datasets 1000 times using the mean and standard deviation of both
+datasets.
 
-  The tool outputs 2 TSV files and a PDF figure. The 'correlation file' contains gene-metabolite correlation coefficients with p-values
-  less than the user-specified threshold. The tool also outputs the results in matrix format, the ‘correlation matrix file’. The ‘correlation
-  figure’ is a network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coefficients.
+The tool outputs 2 TSV files and a PDF figure. The 'correlation file' contains gene-metabolite
+correlation coefficients with p-values
+less than the user-specified threshold. The tool also outputs the results in matrix format, the
+‘correlation matrix file’. The ‘correlation
+figure’ is a network representation of the top 500 gene-metabolite correlations based on the
+absolute value of the correlation coefficients.
 
 --------------------------------------------------------------------------------
 
