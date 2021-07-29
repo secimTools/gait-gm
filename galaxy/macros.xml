@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <macros>
-    <token name="@WRAPPER_VERSION@">21.6.10</token>
+    <token name="@WRAPPER_VERSION@">21.7.22</token>
     <xml name="requirements">
         <requirements>
             <requirement type="package" version="@WRAPPER_VERSION@">gait-gm</requirement>
@@ -9,7 +9,7 @@
     </xml> <xml name="citations">
         <citations>
             <citation type="bibtex">@ARTICLE{Mor21,gaitgm
-            author = {Danille E Mor, Francisco Huertas, Alison M Morse, Rachel Kaletsky, Coleen T Murphy, Vrinda Kalia, Gary W Miller, Olexander Moskalenko, Ana conesa, Lauren M McIntyre},
+            author = {Danille E Mor, Francisco Huertas, Alison M Morse, Rachel Kaletsky, Coleen T Murphy, Vrinda Kalia, Gary W Miller, Oleksandr Moskalenko, Ana conesa, Lauren M McIntyre},
             title = {GAIT-GM integrative cross-omics analyses reveal cholinergic defects in a C. elegans model of Parkinson's disease},
             journal = {BMC Genomics},
             year = {submitted}

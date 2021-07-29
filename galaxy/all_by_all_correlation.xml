@@ -71,22 +71,22 @@
       <param name="metId" value="UniqueID"/>
       <param name="metAnnot" value="metabolite_annotation.tsv"/>
       <param name="metName" value="MetName"/>
-      <output name="output" file="correlation.tsv"/>
-      <output name="corMat" file="correlation_matrix.tsv" compare="diff" lines_diff="100"/>
-      <output name="figure" file="correlation_figure.pdf" compare="sim_size"/>
+      <output name="output" file="correlation.tsv"  compare="diff" lines_diff="10000"/>
+      <output name="corMat" file="correlation_matrix.tsv" compare="diff" lines_diff="10000"/>
+      <output name="figure" file="correlation_figure.pdf" compare="sim_size"  delta="1000000"/>
     </test>
   </tests>
   <help><![CDATA[
 
 **Tool Description**
 
-  The tool performs a correlation analysis between genes (Gene Expression Wide Dataset) and metabolites (Metabolite Wide Dataset) to generate 
- a table of correlation coefficients.  P-values for the correlation coefficients are calculated by simulating gene and metabolite datasets 
+  The tool performs a correlation analysis between genes (Gene Expression Wide Dataset) and metabolites (Metabolite Wide Dataset) to generate
+ a table of correlation coefficients.  P-values for the correlation coefficients are calculated by simulating gene and metabolite datasets
  1000 times using the mean and standard deviation of both datasets.
 
-  The tool outputs 2 TSV files and a PDF figure. The 'correlation file' contains gene-metabolite correlation coefficients with p-values 
-  less than the user-specified threshold. The tool also outputs the results in matrix format, the ‘correlation matrix file’. The ‘correlation 
-  figure’ is a network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coefficients.   
+  The tool outputs 2 TSV files and a PDF figure. The 'correlation file' contains gene-metabolite correlation coefficients with p-values
+  less than the user-specified threshold. The tool also outputs the results in matrix format, the ‘correlation matrix file’. The ‘correlation
+  figure’ is a network representation of the top 500 gene-metabolite correlations based on the absolute value of the correlation coefficients.
 
 --------------------------------------------------------------------------------
 

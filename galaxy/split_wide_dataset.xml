@@ -4,9 +4,9 @@
     <import>macros.xml</import>
   </macros>
   <expand macro="requirements" />
-  <stdio> 
-    <exit_code range="1" level="fatal" description="Repeated Unique IDs"/> 
-  </stdio> 
+  <stdio>
+    <exit_code range="1" level="fatal" description="Repeated Unique IDs"/>
+  </stdio>
   <command detect_errors="exit_code"><![CDATA[
   split_wide_dataset.py
     -i=$input
@@ -77,20 +77,20 @@
 
 **Tool Description**
 
-  This tool takes a single file containing both feature data (e.g. gene or metabolite expression values) and annotation 
-  information (e.g. m/z ratio, compound name) and generates the following three files; 
+  This tool takes a single file containing both feature data (e.g. gene or metabolite expression values) and annotation
+  information (e.g. m/z ratio, compound name) and generates the following three files;
 
-  (1) a wide dataset containing a unique row identifier and the expression values, 
-  (2) a wide annotation file with the unique row identifier and any non-data descriptor columns, and 
-  (3) a design file with a single column called ‘sampleID’ with the name of the columns containing the expression data.  
+  (1) a wide dataset containing a unique row identifier and the expression values,
+  (2) a wide annotation file with the unique row identifier and any non-data descriptor columns, and
+  (3) a design file with a single column called ‘sampleID’ with the name of the columns containing the expression data.
 
-  If the input dataset does not already contain a column with a unique identifier, the tool will create one.  
-  The user can specify a prefix for the unique identifier column (e.g. 'met' for metabolite data).  In cases where the input 
-  dataset contains a numeric identifier, the tool will append a user-specified prefix or, if no prefix is specified, an underbar.   
-  Since the user specifies which columns contain expression values, the resulting wide dataset contains only these data columns 
-  and the unique row identifier column.  Columns not specified as containing expression values are output into the annotation dataset. 
-  The resulting design file template contains a single column called ‘sampleID’ that contains the names of the user-specified samples 
-  in the input data file.  The design file can be modified by the user to include additional metadata columns.  
+  If the input dataset does not already contain a column with a unique identifier, the tool will create one.
+  The user can specify a prefix for the unique identifier column (e.g. 'met' for metabolite data).  In cases where the input
+  dataset contains a numeric identifier, the tool will append a user-specified prefix or, if no prefix is specified, an underbar.
+  Since the user specifies which columns contain expression values, the resulting wide dataset contains only these data columns
+  and the unique row identifier column.  Columns not specified as containing expression values are output into the annotation dataset.
+  The resulting design file template contains a single column called ‘sampleID’ that contains the names of the user-specified samples
+  in the input data file.  The design file can be modified by the user to include additional metadata columns.
 
 --------------------------------------------------------------------------------
 
@@ -112,7 +112,7 @@
   | ...     | ...       | ...     | ...     | ... |
   +---------+-----------+---------+---------+-----+
 
-    **NOTE:** The input dataset has features in rows and samples in columns. Any descriptor columns that are present will be used to populate the Annotation File. 
+    **NOTE:** The input dataset has features in rows and samples in columns. Any descriptor columns that are present will be used to populate the Annotation File.
 
 **Unique FeatureID**
 

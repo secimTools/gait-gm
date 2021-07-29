@@ -53,15 +53,15 @@
     <conditional name="dataSets">
       <param name="whichDataSet" type="select" display="radio" label="Select the Datasets you want to add KEGG pathway information to.  Note: datasets must contain KEGGIDs.">
         <option value="both" selected="true">Gene Expression + Metabolomic Files with KEGGIDs</option>
-        <option value="geneDataset">Gene Expression File with KEGGIDs</option> 
+        <option value="geneDataset">Gene Expression File with KEGGIDs</option>
         <option value="metDataset">Metabolomic File with KEGGIDs</option>
-        <validator type="no_options" message="You must select at least one option." /> 
+        <validator type="no_options" message="You must select at least one option." />
       </param>
       <when value="both">
         <param name="geneKeggAnnot" type="data" format="tabular" label="Gene to KEGGID Link File" help="Select the Gene to KEGGID Link File that contains KEGG identifiers from your history"/>
-        <param name="geneUniqId" type="text" size="30" value="" label="Gene unique FeatureID" help="Name of the column in your Gene to KEGGID Link File that contains unique FeatureIDs."/> 
+        <param name="geneUniqId" type="text" size="30" value="" label="Gene unique FeatureID" help="Name of the column in your Gene to KEGGID Link File that contains unique FeatureIDs."/>
         <param name="geneName" type="text" size="30" value="" label="Gene Symbol" help="Name of the column in your Gene to KEGGID Link File that contains Gene Symbols."/>
-        <param name="geneKeggId" type="text" size="30" value="" label="Gene KEGGID" help="Name of the column in your Gene to KEGGID Link File that contains KEGGIDs."/> 
+        <param name="geneKeggId" type="text" size="30" value="" label="Gene KEGGID" help="Name of the column in your Gene to KEGGID Link File that contains KEGGIDs."/>
         <param name="metKeggAnnot" type="data" format="tabular" label="Metabolite to KEGGID Link File" help="Select the Metabolite to KEGGID Link File that contains KEGG identifiers from your history"/>
         <param name="metUniqId" type="text" size="30" value="" label="Metabolite unique FeatureID" help="Name of the column in your Metabolite to KEGGID Link File that contains unique FeatureIDs."/>
         <param name="metName" type="text" size="30" value="" label="Metabolite Names" help="Name of the column in your Metabolite to KEGGID Link File that contains Metabolite Names."/>
@@ -69,9 +69,9 @@
       </when>
       <when value="geneDataset">
         <param name="geneKeggAnnot" type="data" format="tabular" label="Gene to KEGGID Link File" help="Select the Gene to KEGGID Link File that contains KEGG identifiers from your history"/>
-        <param name="geneUniqId" type="text" size="30" value="" label="Gene unique FeatureID" help="Name of the column in your Gene to KEGGID Link File that contains unique FeatureIDs."/> 
+        <param name="geneUniqId" type="text" size="30" value="" label="Gene unique FeatureID" help="Name of the column in your Gene to KEGGID Link File that contains unique FeatureIDs."/>
         <param name="geneName" type="text" size="30" value="" label="Gene Symbol" help="Name of the column in your Gene to KEGGID Link File that contains Gene Symbols."/>
-        <param name="geneKeggId" type="text" size="30" value="" label="Gene KEGGID" help="Name of the column in your Gene to KEGGID Link File that contains KEGGIDs."/> 
+        <param name="geneKeggId" type="text" size="30" value="" label="Gene KEGGID" help="Name of the column in your Gene to KEGGID Link File that contains KEGGIDs."/>
       </when>
       <when value="metDataset">
         <param name="metKeggAnnot" type="data" format="tabular" label="Metabolite to KEGGID Link File" help="Select the Metabolite to KEGGID Link File that contains KEGG identifiers from your history"/>
@@ -108,31 +108,31 @@
       <param name="metUniqId" value="UniqueID"/>
       <param name="metName" value="MetName"/>
       <param name="metKeggId" value="KEGG_ID"/>
-      <output name="gene_keggID2pathID" file="geneKeggId2pathwayId.tsv" />
-      <output name="met_keggID2pathID" file="metaboliteKeggId2pathwayId.tsv" />
-      <output name="geneOutput" file="gene_kegg_pathway.tsv"/>
-      <output name="metOutput" file="metabolite_kegg_pathway.tsv"/>
-      <output name="pathways" file="pathwayId2pathwayNames.tsv"/>
+      <output name="gene_keggID2pathID" file="geneKeggId2pathwayId.tsv" compare="diff" lines_diff="10000"/>
+      <output name="met_keggID2pathID" file="metaboliteKeggId2pathwayId.tsv" compare="diff" lines_diff="10000"/>
+      <output name="geneOutput" file="gene_kegg_pathway.tsv" compare="diff" lines_diff="10000"/>
+      <output name="metOutput" file="metabolite_kegg_pathway.tsv" compare="diff" lines_diff="10000"/>
+      <output name="pathways" file="pathwayId2pathwayNames.tsv" compare="diff" lines_diff="10000"/>
     </test>
   </tests>
   <help><![CDATA[
 
 **Tool Description**
 
-  This tool takes a Gene to KEGG Link dataset or a Metabolomic to KEGG Link dataset and adds KEGG Pathway Names using KEGGIDs. 
-  The tool was designed to take the output from the 'Link Name to KEGGID' tool as input (for example the Gene to KEGGID Link dataset), 
+  This tool takes a Gene to KEGG Link dataset or a Metabolomic to KEGG Link dataset and adds KEGG Pathway Names using KEGGIDs.
+  The tool was designed to take the output from the 'Link Name to KEGGID' tool as input (for example the Gene to KEGGID Link dataset),
   but other datasets containing KEGGIDs can be used as well.
 
-  
-  If a 'Gene to KEGG ID link File’ is given, the tool outputs the following three files;  
+
+  If a 'Gene to KEGG ID link File’ is given, the tool outputs the following three files;
 
 	1) a 'Gene KEGG Pathway File' containing the unique FeatureID, Feature_Name, Feature_Type and KEGG_ID columns from the input file plus Pathway_ID and Pathway_Name columns 	containing KEGG pathway identifiers and KEGG pathway names, respectively.  If no pathways are 	linked to the KEGG IDs then these columns return ‘NA’.
 
 	2) a 'GeneKeggID2PathwayID' file containing the KEGG gene identifiers and their associated KEGG pathway identifiers.
 
-	3) a 'PathwayID2PathwayNames' file containing all of the KEGG pathway identifiers and theirassociated KEGG pathway names.  
+	3) a 'PathwayID2PathwayNames' file containing all of the KEGG pathway identifiers and theirassociated KEGG pathway names.
 
-  If a 'Metabolite to KEGG ID link File’ is given, the tool outputs the following three files;  
+  If a 'Metabolite to KEGG ID link File’ is given, the tool outputs the following three files;
 
 	1) a ' Metabolite KEGG Pathway File' containing the unique FeatureID, Feature_Name, Feature_Type and KEGG_ID columns from the input file plus Pathway_ID and Pathway_Name 	columns containing KEGG pathway identifiers and KEGG pathway names, respectively.  If no 	pathways are linked to the KEGG IDs then these columns return ‘NA’.
 
